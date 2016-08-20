@@ -1,0 +1,174 @@
+/*
+Theme Name: Granule
+Theme URI: https://wordpress.com/theme/granule/
+Description:
+Version: 2.0
+Author: Pro Theme Design
+Author URI: https://prothemedesign.com/
+Text Domain: granule
+Domain Path: /languages/
+Tags:
+
+, black
+, blue
+, brown
+, gray
+, green
+, orange
+, pink
+, purple
+, red
+, silver
+, tan
+, white
+, yellow
+, dark
+, light
+
+### Columns
+
+, one-column
+, two-columns
+, three-columns
+, four-columns
+, left-sidebar
+, right-sidebar
+
+### Widths
+
+, fixed-layout
+, fluid-layout
+, responsive-layout
+
+### Features
+
+, accessibility-ready
+, author-bio
+, blog-excerpts
+, breadcrumb-navigation
+, classic-menu
+, custom-background
+, custom-colors
+, custom-header
+, custom-menu
+, editor-style
+, featured-content-with-pages
+, featured-images
+, featured-image-header
+, flexible-header
+, front-page-post-form
+, full-width-template
+, infinite-scroll
+, microformats
+, multiple-menus
+, post-formats
+, post-slider
+, rtl-language-support
+, site-logo
+, sticky-post
+, testimonials
+, theme-options
+, threaded-comments
+, translation-ready
+
+### Subjects
+
+, announcement
+, art
+, artwork
+, blog
+, business
+, cartoon
+, collaboration
+, craft
+, design
+, education
+, fashion
+, food
+, gaming
+, holiday
+, hotel
+, journal
+, lifestream
+, magazine
+, music
+, nature
+, news
+, outdoors
+, photoblogging
+, photography
+, portfolio
+, productivity
+, real-estate
+, school
+, scrapbooking
+, seasonal
+, sports
+, travel
+, tumblelog
+, video
+, wedding
+
+### Styles
+
+, abstract
+, artistic
+, bright
+, clean
+, colorful
+, conservative
+, contemporary
+, curved
+, dark
+, earthy
+, elegant
+, faded
+, flamboyant
+, flowery
+, formal
+, funny
+, futuristic
+, geometric
+, glamorous
+, grungy
+, hand-drawn
+, handcrafted
+, humorous
+, industrial
+, light
+, metallic
+, minimal
+, modern
+, natural
+, paper-made
+, playful
+, professional
+, retro
+, simple
+, sophisticated
+, tech
+, textured
+, traditional
+, urban
+, vibrant
+, whimsical
+
+License: GNU General Public License v2.0 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+@import "lib/_variables";
+@import "lib/_mixins";
+@import "../../../__sass/index";
+
+@import "lib/_theme-general";
+@import "lib/_theme-header";
+@import "lib/_theme-body";
+@import "lib/_theme-elements";
+@import "lib/_theme-footer";
+@import "lib/_theme-the-content";
+@import "lib/_theme-misc";
+
+@import "../../../__sass/lib/media-queries/_responsive";
+@import "lib/_responsive";
+@import "../../../__sass/lib/media-queries/_print";

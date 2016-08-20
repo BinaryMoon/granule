@@ -1,0 +1,30 @@
+/**
+ * 3.5 - Footer
+ */
+// @package Granule
+
+#footer {
+
+	padding: $grid-line-height 0;
+
+	.footer-widgets {
+
+		width: 100%;
+		@include clear;
+
+	}
+
+	.footer-wrap {
+
+		text-align: center;
+
+		.sep {
+
+			margin: 0 $style-spacing;
+			opacity: $style-opacity-separator;
+
+		}
+
+	}
+
+}

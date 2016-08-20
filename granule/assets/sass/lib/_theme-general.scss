@@ -1,0 +1,29 @@
+/**
+ * 3.1 - General Properties
+ */
+// @package Granule
+
+body {
+}
+
+a {
+
+	color: $link-color;
+	text-decoration: none;
+	@include transition( all 0.3s ease-in-out );
+
+	&:hover {
+
+		color: $link-hover-color;
+		@include transition( all 0.3s ease-in-out );
+
+	}
+
+}
+
+.container {
+
+	@include container;
+	@include clear;
+
+}
