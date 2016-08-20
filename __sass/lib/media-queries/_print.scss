@@ -1,0 +1,75 @@
+/**!
+ * 4.2 - Print Styles
+ */
+
+@media print {
+
+	.masthead .branding,
+	.main,
+	.singular .main,
+	.singular .main article,
+	.main article {
+
+		width: 100%;
+
+	}
+
+	nav,
+	footer,
+	.widget,
+	.sharedaddy,
+	a.post-edit-link,
+	a#header-image,
+	#respond,
+	form,
+	.social_links,
+	.sidebar,
+	.taxonomies,
+	#bit.loggedout-follow-normal,
+	.col-sidebar {
+
+		display: none;
+
+	}
+
+	.main article {
+
+		width: 100%;
+
+	}
+
+	a {
+
+		color: $canvas-grey-100;
+		text-decoration: underline;
+		font-weight: bold;
+
+	}
+
+	p {
+
+		color: $canvas-grey-100;
+
+		a {
+
+			@include wrap-text;
+
+			&:after {
+
+				content: " (" attr(href) ")";
+				font-size: 80%;
+
+			}
+
+		}
+
+	}
+
+	footer,
+	.content-comments {
+
+		page-break-before: always;
+
+	}
+
+}

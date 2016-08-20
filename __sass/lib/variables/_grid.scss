@@ -1,0 +1,19 @@
+
+// total width of website container
+$grid-total-width: 82em !default;
+
+// number of columns
+$grid-columns: 12 !default;
+
+// size of gutter between columns
+$grid-gutter: 3rem !default;
+
+// column gutter size as proportion of individual column width
+$grid-column-gutter: 1 / 2 !default;
+
+// vertical spacing
+$grid-line-height: 1.5rem !default;
+
+// line height multiplier - for things like margins - to encourage consistency
+$grid-line-height-multiplier: 2 !default;
+

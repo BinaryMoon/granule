@@ -1,0 +1,23 @@
+
+@if ( $debug == true ) {
+
+	body {
+
+		background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px);
+		background-position: left top;
+		background-repeat: repeat;
+		//background-size: 100% #{$leading + 'px'};
+		background-size: 100% $grid-line-height;
+
+	}
+
+	.grid-sizer {
+
+		height: 1em;
+		background: green;
+		top: -1em;
+		position: relative;
+
+	}
+
+}

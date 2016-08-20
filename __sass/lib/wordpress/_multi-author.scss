@@ -1,0 +1,29 @@
+/**!
+ * 2.9 - Multi Author
+ * Hide author info for single author blogs
+ */
+
+.multi-author-false {
+
+	.post-meta-data {
+
+		.byline {
+
+			display: none;
+
+		}
+
+	}
+
+	&.single,
+	&.singular {
+
+		.contributor {
+
+			display: none;
+
+		}
+
+	}
+
+}

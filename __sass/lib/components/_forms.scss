@@ -1,0 +1,236 @@
+
+/**!
+ * 1.3 - Forms
+ */
+
+input {
+
+	margin-bottom: $grid-line-height;
+
+	&.radio {
+
+		margin-right: $style-spacing;
+		margin-left: auto;
+
+	}
+
+}
+
+
+// dimensions
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=search],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="month"],
+input[type="tel"],
+input[type="number"],
+input.text,
+.form-select,
+textarea,
+input.settings-input {
+
+	padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
+	margin-bottom: $grid-line-height;
+	line-height: $grid-line-height;
+	min-height: $grid-line-height;
+	width: 100%;
+
+}
+
+// visuals
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=search],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="month"],
+input[type="tel"],
+input[type="number"],
+input.text,
+.form-select,
+textarea,
+input.settings-input {
+
+	border-radius: $border-radius;
+	background: $form-input-background;
+	border: $border-width solid $form-input-border-color;
+	appearance: none;
+
+	@if ( $form-input-border-width != null ) {
+		border-width: $form-input-border-width;
+	}
+
+	@include transition;
+
+	&:hover {
+
+		border-color: $form-input-border-focus;
+
+	}
+
+	&:focus {
+
+		outline: none;
+		border-color: $form-input-border-focus;
+		background: $canvas-white;
+		color: $canvas-grey-90;
+
+	}
+
+	&::-webkit-input-placeholder {
+
+		color: $form-input-foreground-color;
+
+	}
+
+	&::-moz-placeholder {
+
+		color: $form-input-foreground-color;
+
+	}
+
+	&:-ms-input-placeholder {
+
+		color: $form-input-foreground-color;
+
+	}
+
+	&:-moz-placeholder  {
+
+		color: $form-input-foreground-color;
+
+	}
+
+	&:placeholder {
+
+		color: $form-input-foreground-color;
+
+	}
+
+
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+
+	appearance: none;
+
+}
+
+// hide the select box until it's wrapped in the .form-select
+select {
+
+	width: 19em;
+	max-width: 100%;
+
+}
+
+// generic styles for select boxes
+.form-select {
+
+	padding: 0;
+	position: relative;
+
+	select {
+
+		display: block;
+		height: $grid-line-height * 2;
+		padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
+		background: transparent;
+		border: 0;
+		width: 100%;
+		appearance: none;
+
+		&:hover {
+
+			cursor: pointer;
+
+		}
+
+	}
+
+	&:after {
+
+		@include arrow;
+		width: 0;
+		position: absolute;
+		top: calc( #{$grid-line-height} - 0.25em );
+		right: ( $grid-gutter / 3 );
+		left: auto;
+		border-top-color: $form-input-icon;
+		border-bottom-width: 0;
+		pointer-events: none;
+
+	}
+
+}
+
+textarea {
+
+	width: 100%;
+	min-height: ( $grid-line-height * 10 );
+	margin-bottom: $grid-line-height;
+
+}
+
+// buttons
+input[type=submit],
+a.button,
+button {
+
+	appearance: none;
+	@include button;
+
+}
+
+label {
+
+	display: block;
+	font-weight: bold;
+
+	em {
+
+		opacity: $form-label-opacity;
+
+	}
+
+	&:focus,
+	&:hover {
+
+		cursor:pointer;
+
+	}
+
+}
+
+legend {
+
+	@include modular-scale( eta );
+	padding: 0 ( $grid-gutter / 2 );
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: $font-uppercase-spacing;
+
+}
+
+fieldset {
+
+	border: 1px solid $form-input-border-color;
+
+	ul.radio {
+
+		margin: 0;
+
+	}
+
+}

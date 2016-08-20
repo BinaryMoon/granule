@@ -1,0 +1,37 @@
+// define a block as a column
+@mixin grid( $columns: $grid-columns, $columns-total: $grid-columns ) {
+
+	width: percentage( $columns / $columns-total );
+	float: left;
+	min-height: 1em;
+	padding: 0 grid-gutter( $columns-total );
+
+}
+
+// add margin left to the size of the columns specified
+@mixin grid-push( $offset: 1, $columns-total: $grid-columns ) {
+
+	margin-left: grid-column-width( $offset, $columns-total );
+
+}
+
+// add margin right to the size of the columns specified
+@mixin grid-pull( $offset: 1, $columns-total: $grid-columns ) {
+
+	margin-right: grid-column-width( $offset, $columns-total );
+
+}
+
+// get the gutter size as a percentage
+@function grid-gutter($columns: $grid-columns) {
+
+	@return percentage( ( 1 / $columns ) * $grid-column-gutter );
+
+}
+
+// calculate the percentage size of the specified columns
+@function grid-column-width($columns: 1, $columns-total: $grid-columns) {
+
+	@return ( 100% / $columns-total ) * $columns;
+
+}

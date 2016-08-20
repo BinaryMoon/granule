@@ -1,0 +1,122 @@
+
+/**!
+ * 1.2 - Typography
+ */
+
+body,
+html {
+
+	@include body;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+	color: $body-header-color;
+	font-family: $font-family-header;
+	font-weight: $font-weight;
+	margin: 0 0 ( $grid-line-height * $line-height-margin-multiplier ) 0;
+
+	a {
+
+		color: $body-header-color;
+
+		&:focus,
+		&:hover {
+
+			text-decoration: underline;
+
+		}
+
+	}
+
+}
+
+h1,
+h2,
+h3 {
+
+	@include wrap-text;
+	font-feature-settings: "kern" 1, "liga" 1, "clig" 1, "swsh" 1;
+
+}
+
+h1 {
+
+	@include modular-scale( beta );
+
+}
+
+h2 {
+
+	@include modular-scale( gamma );
+
+}
+
+h3 {
+
+	@include modular-scale( delta );
+
+}
+
+h4 {
+
+	@include modular-scale( epsilon );
+	font-weight: bold;
+
+}
+
+h5,
+h6 {
+
+	@include modular-scale( zeta );
+	font-weight: bold;
+
+}
+
+hr {
+
+	margin: ( $grid-line-height * $grid-line-height-multiplier ) auto;
+	border: none;
+	border-bottom: $border-width solid $border-color;
+
+}
+
+p {
+
+	margin: 0 0 ( $grid-line-height * $line-height-margin-multiplier ) 0;
+
+	// hide empty paragraphs
+	&:empty {
+
+		display: none;
+
+	}
+
+}
+
+pre {
+
+	margin: ( $grid-line-height * $grid-line-height-multiplier ) 0;
+	background: $canvas-grey-90;
+	color: $canvas-green;
+	padding: $grid-line-height $style-element-spacing;
+	overflow: auto;
+	display: block;
+	overflow: auto;
+	word-wrap: normal;
+	white-space: pre;
+	tab-size: 4;
+
+	&.compress {
+
+		max-height: $grid-line-height * 15;
+
+	}
+
+}
