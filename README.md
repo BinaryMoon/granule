@@ -14,12 +14,13 @@ Things to note:
 
 ## Features
 
-* SVG Icons
-* SASS styles
-* Boilerplate Customizer code
 * Supports most major WordPress functionality (Custom header, Site Logo etc)
 * Supports most Jetpack functionality (Featured Content, Infinite Scroll, Portfolios, Social Menus - and more) - see [jetpack.php for more](https://github.com/BinaryMoon/granule/blob/master/granule/inc/jetpack.php).
 * Follows the [wordpress.com theme developer guidelines](https://developer.wordpress.com/themes/).
+* Pure CSS dropdown menu (with a smattering of js for compatability).
+* SVG Icons
+* SASS styles
+* Boilerplate Customizer code
 
 ## Using Granule
 
