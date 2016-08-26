@@ -65,7 +65,6 @@ body#tinymce.wp-editor h2,
 body#tinymce.wp-editor h3 {
   overflow-wrap: break-word;
   word-wrap: break-word;
-  hyphens: auto;
   font-feature-settings: "kern" 1, "liga" 1, "clig" 1, "swsh" 1;
 }
 body#tinymce.wp-editor h1 {

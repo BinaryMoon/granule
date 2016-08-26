@@ -1,0 +1,197 @@
+/**!
+ * 4.2 - WooCommerce
+ */
+
+.woocommerce {
+
+	h1 {
+
+		font-weight: bold;
+
+	}
+
+	h3,
+	h2 {
+
+		@include post-meta-data( zeta );
+		font-weight: bold;
+
+	}
+
+	.woocommerce-breadcrumb {
+
+
+		a {
+
+			font-weight: bold;
+
+		}
+
+	}
+
+	span.onsale {
+
+		z-index: 1;
+
+	}
+
+	.product_meta {
+
+		@include post-meta-data;
+
+	}
+
+	.quantity .qty {
+
+		width: 5em;
+
+	}
+
+	#respond input#submit,
+	a.button,
+	button.button,
+	input.button {
+
+		padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
+		margin-bottom: $grid-line-height;
+		line-height: $grid-line-height;
+
+		@include button;
+
+		&.alt {
+
+			@include button( $link-color );
+
+		}
+
+	}
+
+	.the-content {
+
+		padding: 0;
+		width: 100%;
+		float: none;
+
+		p {
+
+			margin: 0;
+
+		}
+
+	}
+
+	div.product {
+
+		.woocommerce-tabs {
+
+			ul.tabs {
+
+				li {
+
+					// make tabs border radius match other site elements
+					border-radius: $border-radius $border-radius 0 0;
+
+					// hide little curvy bits on tabs - they're too fussy
+					&:after,
+					&:before {
+
+						display: none;
+
+					}
+				}
+			}
+		}
+	}
+
+	.products {
+
+		clear: both;
+
+	}
+
+	#reviews {
+
+		#comments {
+
+			ol.commentlist {
+
+				li {
+
+					// remove review borders
+					.comment-text	{
+
+						border: none;
+						padding: 0;
+
+					}
+
+					img.avatar {
+
+						border: none;
+						padding: 0;
+						width: $grid-gutter;
+
+					}
+
+					.comment-text {
+
+						margin-left: $grid-gutter * 1.5;
+						margin-right: 0;
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	table.shop_table {
+
+		border: none;
+
+		td {
+
+			border: none;
+
+		}
+
+	}
+
+}
+
+// Navigation widget
+.woocommerce-cart {
+
+	float: right;
+
+	.cart-contents {
+
+		.amount {
+
+			font-weight: bold;
+
+		}
+
+		.count {
+
+			opacity: $style-opacity-element;
+
+		}
+
+		&:hover {
+
+			text-decoration: none;
+
+			.amount {
+
+				text-decoration: underline;
+
+			}
+		}
+
+	}
+
+}
