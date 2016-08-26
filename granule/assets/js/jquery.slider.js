@@ -1,5 +1,5 @@
 /**
- * slider.js v1.5
+ * jquery.slider.js v1.5
  *
  * This is a super simple javascript slider script.
  *
