@@ -64,12 +64,14 @@ class Granule_Dropdown_Custom_control extends WP_Customize_Control {
 
 	/**
 	 * Control parameters
+	 *
 	 * @var array
 	 */
 	public $params;
 
 	/**
 	 * Default seleted object id
+	 *
 	 * @var integer
 	 */
 	public $default;
@@ -132,6 +134,7 @@ class Granule_DragDrop_List_Control extends WP_Customize_Control {
 
 	/**
 	 * Type of control (for css and js targetting)
+	 *
 	 * @var string
 	 */
 	public $type = 'dragdrop-list';

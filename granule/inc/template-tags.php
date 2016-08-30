@@ -31,7 +31,6 @@ function granule_header() {
 			$header_image_actual_width = $image[1];
 			$header_image_actual_height = $image[2];
 		}
-
 	}
 
 	if ( ! empty( $header_image ) ) {
@@ -263,21 +262,22 @@ function granule_comments_link() {
  */
 function granule_read_more_text() {
 
-	// Default text value.
-	$read_more = sprintf(
-		esc_html__( 'Read more %s', 'granule' ),
-		the_title( '<span class="screen-reader-text">', '</span>', false )
-	);
-
 	// Get post data.
 	$post = get_post();
 	$custom_readmore = get_extended( $post->post_content );
 
 	if ( ! empty( $custom_readmore['more_text'] ) ) {
-		$read_more = esc_html( $custom_readmore['more_text'] );
+
+		echo esc_html( $custom_readmore['more_text'] );
+		return;
+
 	}
 
-	echo $read_more;
+	// Default text value.
+	printf(
+		esc_html__( 'Read more %s', 'granule' ),
+		the_title( '<span class="screen-reader-text">', '</span>', false )
+	);
 
 }
 
