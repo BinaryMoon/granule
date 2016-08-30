@@ -394,6 +394,7 @@ function granule_image_tone( $image ) {
 		} else {
 			$class = 'foreground-light';
 		}
+
 	}
 
 	return $class;

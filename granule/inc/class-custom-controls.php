@@ -52,6 +52,7 @@ class Granule_Category_Dropdown_Custom_control extends WP_Customize_Control {
 <?php
 
 	}
+
 }
 
 /**
@@ -116,6 +117,7 @@ class Granule_Dropdown_Custom_control extends WP_Customize_Control {
 <?php
 
 	}
+
 }
 
 /**
@@ -158,12 +160,13 @@ class Granule_DragDrop_List_Control extends WP_Customize_Control {
 		// Displays checkbox heading.
 		echo '<span class="customize-control-title">' . esc_html( $this->label ) . '</span>';
 
-		$values = explode( ',', $this->value() );
+		// Get the list of selected categories from the string and convert them to an array.
+		$values = array_map( 'intval', explode( ',', $this->value() ) );
 
 		// Displays selected items.
 		echo '<ul class="granule-sortable">';
 		foreach ( get_categories() as $category ) {
-			if ( in_array( $category->term_id, $values ) ) {
+			if ( in_array( (int) $category->term_id, $values, true ) ) {
 				echo '<li data-value="' . (int) $category->term_id . '">' . esc_html( $category->name ) . '</li>';
 			}
 		}
@@ -173,7 +176,7 @@ class Granule_DragDrop_List_Control extends WP_Customize_Control {
 		echo '<select class="granule-dragdrop-select">';
 		echo '<option disabled selected>' . esc_html__( 'Select a category to display +', 'granule' ) . '</option>';
 		foreach ( get_categories() as $category ) {
-			if ( ! in_array( $category->term_id, $values ) ) {
+			if ( ! in_array( (int) $category->term_id, $values, true ) ) {
 				echo '<option value="' . (int) $category->term_id . '">' . esc_html( $category->name ) . '</option>';
 			}
 		}
@@ -196,4 +199,5 @@ class Granule_DragDrop_List_Control extends WP_Customize_Control {
 		wp_enqueue_script( 'granule-theme-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'jquery' ), '1.0', true );
 
 	}
+
 }

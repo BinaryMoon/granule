@@ -130,8 +130,8 @@ function granule_fonts() {
 	if ( $fonts ) {
 		// Build font embed query string.
 		$query_args = array(
-			'family' => urlencode( implode( '|', $fonts ) ),
-			'subset' => urlencode( 'latin,latin-ext' ),
+			'family' => rawurlencode( implode( '|', $fonts ) ),
+			'subset' => rawurlencode( 'latin,latin-ext' ),
 		);
 
 		return add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
@@ -176,7 +176,7 @@ function granule_after_setup_theme() {
 	add_theme_support(
 		'custom-background',
 		apply_filters(
-			'granule-custom-background',
+			'granule_custom_background',
 			array(
 				'default-color' => 'ffffff',
 				'default-image' => '',

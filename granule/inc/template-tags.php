@@ -31,6 +31,7 @@ function granule_header() {
 			$header_image_actual_width = $image[1];
 			$header_image_actual_height = $image[2];
 		}
+
 	}
 
 	if ( ! empty( $header_image ) ) {
@@ -335,7 +336,7 @@ function granule_contributor( $user_id = null, $post_count = null ) {
 ?>
 		<p>
 			<a class="contributor-posts-link" href="<?php echo esc_url( get_author_posts_url( $user_id ) ); ?>">
-				<?php printf( esc_html( _nx( '%d Article', '%d Articles', absint( $post_count ), 'contributor article count', 'granule' ) ), $post_count ); ?>
+				<?php printf( esc_html( _nx( '%d Article', '%d Articles', (int) $post_count, 'contributor article count', 'granule' ) ), (int) $post_count ); ?>
 			</a>
 		</p>
 <?php
