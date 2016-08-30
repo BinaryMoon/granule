@@ -55,6 +55,21 @@ function granule_jetpack_init() {
 	// Add support for Social Menu.
 	add_theme_support( 'jetpack-social-menu' );
 
+	// Add supprt for content options.
+	add_theme_support(
+		'jetpack-content-options',
+		array(
+	        'blog-display' => 'excerpt',			// The default setting of the theme: 'content', 'excerpt' or array( 'content, 'excerpt', ).
+	        'author-bio'   => true,					// Display or not the author bio: true or false.
+	        'post-details' => array(
+	            'stylesheet' => 'granule-style',	// Name of the theme's stylesheet.
+	            'date'       => 'posted-on',		// The class used for the date.
+	            'categories' => 'tax-categories',	// The class used for the categories.
+	            'tags'       => 'tax-tags',			// The class used for the tags.
+	        ),
+	    )
+	);
+
 	// Add support for colour contrast checker.
 	// add_theme_support( 'tonesque' );
 
