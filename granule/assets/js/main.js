@@ -341,7 +341,7 @@
 		// add author icon to comment author titles
 
 		var user_icon = $( '.user-icon-container' ).html();
-		$( '.bypostauthor .fn' ).append( user_icon );
+		$( '.bypostauthor > article .fn' ).append( user_icon );
 
 
 		// skip link fix
