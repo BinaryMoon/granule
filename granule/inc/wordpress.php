@@ -14,7 +14,7 @@
  * Also sets javascript properties that need to access PHP.
  * Fonts are created with {@see granule_fonts}.
  *
- * @global type $wp_scripts
+ * @global array $wp_scripts
  */
 function granule_enqueue() {
 
@@ -80,8 +80,9 @@ add_action( 'wp_enqueue_scripts', 'granule_enqueue' );
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
- * The theme is responsive so the width is likely to be narrower than the value set.
- * Priority 0 to make it available to lower priority callbacks.
+ * The theme is responsive so the width is likely to be narrower than the value
+ * set.
+ * Uses Priority 0 to make it available to lower priority callbacks.
  *
  * @global int $content_width
  */
@@ -281,7 +282,7 @@ add_action( 'widgets_init', 'granule_widgets_init' );
  *
  * The WordPress default excerpt length is 55.
  *
- * @param type $length length of excerpt.
+ * @param int $length length of excerpt.
  * @return int
  */
 function granule_excerpt_length( $length ) {
@@ -513,7 +514,8 @@ add_filter( 'the_content', 'granule_wrapper_content', 9 );
 
 
 /**
- * Add a span around the title prefix so that the prefix can be hidden with CSS if desired.
+ * Add a span around the title prefix so that the prefix can be hidden with CSS
+ * if desired.
  *
  * @param string $title Archive title.
  * @return string Archive title with inserted span around prefix.
@@ -585,7 +587,8 @@ add_filter( 'wp_page_menu','granule_change_menu' );
 
 
 /**
- * Change the colour of the Google url bar to match the background colour of the site.
+ * Change the colour of the Google url bar to match the background colour of the
+ * site.
  *
  * This helps to improve branding and personalisation.
  *
@@ -608,7 +611,8 @@ add_filter( 'wp_head', 'granule_theme_colour' );
 
 
 /**
- * Standardize wp_link_pages html so that it matches that used in the_posts_pagination.
+ * Standardize wp_link_pages html so that it matches that used in
+ * the_posts_pagination.
  *
  * This allows simpler styling, and consistent CSS.
  *
@@ -634,7 +638,8 @@ add_filter( 'wp_link_pages_link', 'granule_link_pages_link' );
 
 
 /**
- * Include svg symbols so that they can be 'used' with the {@see granule_svg} function.
+ * Include svg symbols so that they can be 'used' with the {@see granule_svg}
+ * function.
  *
  * This uses `wp_footer` to place the svgs at the bottom of the page, which now
  * works in all major browsers.
@@ -647,7 +652,8 @@ function granule_include_svg_icons() {
 	// If it exists, include it.
 	if ( file_exists( $svg_icons ) ) {
 
-		// The 'svg-defs' is hidden so that the reusable svgs are not visible.
+		// The '.svg-defs' class is hidden so that the reusable svgs are not
+		// visible.
 		echo '<span class="svg-defs">';
 		require_once( $svg_icons );
 		echo '</span>';

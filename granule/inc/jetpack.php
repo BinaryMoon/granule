@@ -147,6 +147,7 @@ function granule_has_featured_posts( $minimum = 1 ) {
 function granule_infinite_scroll_js_settings( $settings ) {
 
 	// Change the text that is displayed in the 'More posts' button.
+	// Posts is quite specific and doesn't work so well with custom post types.
 	$settings['text'] = granule_svg( 'refresh', false ) . esc_html__( 'Load More', 'granule' );
 
 	return $settings;

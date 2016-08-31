@@ -20,7 +20,7 @@ if ( ! class_exists( 'WP_Customize_Control' ) ) {
 /**
  * Theme Customizer properties
  *
- * @param type $wp_customize WP Customize object. Passed by WordPress.
+ * @param object $wp_customize WP Customize object. Passed by WordPress.
  */
 function granule_customize_register( $wp_customize ) {
 
@@ -162,8 +162,8 @@ add_action( 'customize_register', 'granule_customize_register' );
 /**
  * Sanitize checkbox input
  *
- * @param type $setting Value to check and sanitize.
- * @return int|string
+ * @param boolean $setting Value to check and sanitize.
+ * @return boolean
  */
 function granule_sanitize_checkboxes( $setting ) {
 
