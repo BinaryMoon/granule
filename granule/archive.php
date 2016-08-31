@@ -45,8 +45,8 @@
 		the_posts_pagination(
 			array(
 				'mid_size' => 2,
-				'prev_text' => esc_html__( 'Previous Page', 'granule' ),
-				'next_text' => esc_html__( 'Next Page', 'granule' ),
+				'prev_text' => esc_html__( 'Older', 'granule' ),
+				'next_text' => esc_html__( 'Newer', 'granule' ),
 			)
 		);
 
