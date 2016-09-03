@@ -1903,35 +1903,7 @@ blockquote.alignleft, blockquote.alignright {
 }
 
 /**!
- * 2.6 - Edit Post Link
- */
-a.post-edit-link {
-  background: #f2f2f2;
-  color: #000;
-  display: inline-block;
-  text-decoration: none;
-  border-radius: 0.2rem;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  text-align: center;
-  display: block;
-  margin: 3rem 0;
-  clear: both;
-}
-.device-click a.post-edit-link {
-  -webkit-transition: all 0.15s ease-in-out;
-  transition: all 0.15s ease-in-out;
-}
-a.post-edit-link:focus, a.post-edit-link:hover {
-  background: #cccccc;
-  color: #000;
-  text-decoration: none;
-}
-
-/**!
- * 2.7 - Password Required Form
+ * 2.6 - Password Required Form
  */
 .post-password-required form {
   margin-bottom: 3rem;
@@ -1949,7 +1921,7 @@ a.post-edit-link:focus, a.post-edit-link:hover {
 }
 
 /**!
- * 2.8 - Multi Author
+ * 2.7 - Multi Author
  * Hide author info for single author blogs
  */
 .multi-author-false .post-meta-data .byline {
@@ -1960,7 +1932,7 @@ a.post-edit-link:focus, a.post-edit-link:hover {
 }
 
 /**!
- * 2.9 - Comments
+ * 2.8 - Comments
  */
 .content-comments ol.comment-list {
   list-style-type: none;
@@ -2120,7 +2092,8 @@ a.post-edit-link:focus, a.post-edit-link:hover {
   margin: 0;
   position: relative;
 }
-#respond p.comment-form-author input, #respond p.comment-form-author textarea,
+#respond p.comment-form-author input,
+#respond p.comment-form-author textarea,
 #respond p.comment-form-email input,
 #respond p.comment-form-email textarea,
 #respond p.comment-form-comment input,
@@ -2144,10 +2117,11 @@ a.post-edit-link:focus, a.post-edit-link:hover {
 #respond p.comment-subscription-form input {
   display: inline-block;
   margin-right: 0.5em;
+  margin-bottom: 0;
 }
 #respond p.post-subscription-form label,
 #respond p.comment-subscription-form label {
-  display: inline-block;
+  display: inline;
 }
 #respond p.form-allowed-tags,
 #respond p.comment-notes,
@@ -2167,7 +2141,7 @@ a.post-edit-link:focus, a.post-edit-link:hover {
 }
 
 /**!
- * 2.10 - Search Form
+ * 2.9 - Search Form
  */
 form.search-form {
   position: relative;
@@ -2206,7 +2180,7 @@ form.search-form button.search-submit:focus, form.search-form button.search-subm
 }
 
 /**!
- * 2.11 - Embeds
+ * 2.10 - Embeds
  */
 iframe[src*="8tracks.com"], iframe[src*="bandcamp.com"], iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="viddler.com"], iframe[src*="soundcloud.com"], iframe[src*="itchi.io"], iframe.twitter-tweet, iframe.twitter-follow-button {
   display: block;
@@ -2224,7 +2198,7 @@ object {
 }
 
 /**!
- * 2.12 - Sticky Posts
+ * 2.11 - Sticky Posts
  */
 .sticky .post-meta-data .posted-on {
   display: none;

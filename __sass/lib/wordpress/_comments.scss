@@ -1,5 +1,5 @@
 /**!
- * 2.9 - Comments
+ * 2.8 - Comments
  */
 
 .content-comments ol.comment-list {
@@ -191,7 +191,8 @@
 	p.comment-form-comment,
 	p.comment-form-url {
 
-		input, textarea {
+		input,
+		textarea {
 
 			width: 100%;
 
@@ -214,12 +215,13 @@
 
 			display: inline-block;
 			margin-right: $style-spacing;
+			margin-bottom: 0;
 
 		}
 
 		label {
 
-			display: inline-block;
+			display: inline;
 
 		}
 
