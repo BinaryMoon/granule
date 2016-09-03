@@ -304,23 +304,6 @@ add_filter( 'jetpack_implode_frontend_css', '__return_false' );
 
 
 /**
- * Change the Sharedaddy sharing text heading.
- *
- * @param array $options Default Jetpack sharing options.
- * @return type
- */
-function granule_sharethis_options( $options ) {
-
-	$options['global']['sharing_label'] = esc_html__( 'Share', 'label' );
-
-	return $options;
-
-}
-
-add_filter( 'option_sharing-options', 'granule_sharethis_options' );
-
-
-/**
  * Use the Jetpack Video Embed HTML to make sure the video post types are responsive.
  *
  * Has a simple fallback in case Jetpack is not being used.
