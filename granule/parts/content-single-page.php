@@ -16,7 +16,10 @@
 
 <?php
 	granule_breadcrumbs();
+
 	the_title( '<h1 class="entry-title">', '</h1>' );
+
+	get_template_part( 'parts/post-meta' );
 ?>
 
 	</header>
@@ -30,8 +33,6 @@
 			the_title( '<span class="screen-reader-text">', '</span>', false )
 		)
 	);
-
-	get_template_part( 'parts/edit-post' );
 
 	wp_link_pages(
 		array(

@@ -27,17 +27,7 @@
 	<section class="entry entry-archive">
 
 <?php
-	if ( get_the_title() ) {
-?>
-
-		<h2 class="entry-title">
-			<a href="<?php the_permalink() ?>" rel="bookmark">
-				<?php the_title(); ?>
-			</a>
-		</h2>
-
-<?php
-	}
+	the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 
 	get_template_part( 'parts/post-meta' );
 ?>

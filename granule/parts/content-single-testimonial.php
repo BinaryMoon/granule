@@ -32,9 +32,9 @@
 	if ( $image ) {
 		echo $image;
 	}
-?>
 
-		<h3><?php the_title(); ?></h3>
+	the_title( '<h3>', '</h3>' ); 
+?>
 
 	</div>
 

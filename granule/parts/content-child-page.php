@@ -16,15 +16,15 @@
 <?php
 	if ( $image ) {
 ?>
+
 	<a href="<?php the_permalink(); ?>"><?php echo $image; ?></a>
+
 <?php
 	}
+
+	the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+
+	the_excerpt();
+
 ?>
-
-	<h2>
-		<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-	</h2>
-
-	<?php the_excerpt(); ?>
-
 </div>
