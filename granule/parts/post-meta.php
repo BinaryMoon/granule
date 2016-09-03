@@ -20,6 +20,8 @@
 	granule_post_author();
 
 	granule_the_main_category();
+
+	get_template_part( 'parts/edit-post' );
 ?>
 
 	</div>
