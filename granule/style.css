@@ -1115,6 +1115,7 @@ main div#jp-relatedposts {
 }
 .infinite-scroll .infinite-loader .spinner {
   margin: 0 auto;
+  left: 0 !important;
 }
 .infinite-scroll #infinite-footer {
   position: fixed;
