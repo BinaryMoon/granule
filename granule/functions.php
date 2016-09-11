@@ -45,6 +45,7 @@
 /**
  * GRANULE 2 TODO
  * ---
+ * use get_theme_file_uri for js and css enqueues
  * can I override the jetpack testimonial html to match the code I use?
  * look into adding swiping to the slider lib - http://stackoverflow.com/questions/2264072/detect-a-finger-swipe-through-javascript-on-the-iphone-and-android/23230280#23230280
  * new page template - team. Lists users, and their gravatars, ignores the posts they have published
