@@ -663,3 +663,17 @@ function granule_include_svg_icons() {
 }
 
 add_action( 'wp_footer', 'granule_include_svg_icons' );
+
+
+/**
+ * Add a pingback url auto-discovery header for singularly identifiable articles.
+ */
+function granule_pingback_header() {
+
+	if ( is_singular() && pings_open() ) {
+		echo '<link rel="pingback" href="' . esc_url( get_bloginfo( 'pingback_url' ) ) . '">';
+	}
+
+}
+
+add_action( 'wp_head', 'granule_pingback_header' );
