@@ -61,11 +61,13 @@ function granule_jetpack_init() {
 		array(
 	        'blog-display' => 'excerpt',			// The default setting of the theme: 'content', 'excerpt' or array( 'content, 'excerpt', ).
 	        'author-bio'   => true,					// Display or not the author bio: true or false.
+			'masonry'      => '#main-content',		// A CSS selector matching the elements that triggers a masonry refresh if the theme is using a masonry layout.	
 	        'post-details' => array(
 	            'stylesheet' => 'granule-style',	// Name of the theme's stylesheet.
-	            'date'       => 'posted-on',		// The class used for the date.
-	            'categories' => 'tax-categories',	// The class used for the categories.
-	            'tags'       => 'tax-tags',			// The class used for the tags.
+	            'date'       => '.posted-on',		// A CSS selector matching the elements that display the post date.
+	            'categories' => '.tax-categories',	// A CSS selector matching the elements that display the post categories.
+	            'tags'       => '.tax-tags',		// A CSS selector matching the elements that display the post tags.
+				'author'     => '.byline',			// A CSS selector matching the elements that display the post author.
 	        ),
 	    )
 	);
