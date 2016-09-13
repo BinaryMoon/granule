@@ -8,9 +8,10 @@ Things to note:
 
 * It is not a theme framework or a parent theme.
 * The theme code does not care about backwards compatibility. There's no need since the theme is not a parent theme.
-* The code always supports the latest version of WordPress.
-* [WordPress coding standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/php/) should be followed. I do this locally using [PHPCS](https://github.com/squizlabs/PHP_CodeSniffer).
+* The code always supports the latest version of WordPress, bckwards compatability is not considered.
+* [WordPress coding standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/php/) should be followed. I do this locally using [PHPCS](https://github.com/squizlabs/PHP_CodeSniffer), with the [WordPress Coding Standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards).
 * Docblocks are used extensively so that I can generate code documentation. This is a relatively recent addition and something I am iterating on.
+* Accessibility is baked in (following the [WordPress.org standards](https://make.wordpress.org/themes/handbook/review/accessibility/)). However I am sure it's not perfect and is something I am keen to improve.
 
 ## Example Themes
 
