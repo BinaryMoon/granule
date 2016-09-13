@@ -12,6 +12,15 @@ Things to note:
 * [WordPress coding standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/php/) should be followed. I do this locally using [PHPCS](https://github.com/squizlabs/PHP_CodeSniffer).
 * Docblocks are used extensively so that I can generate code documentation. This is a relatively recent addition and something I am iterating on.
 
+## Example Themes
+
+Below is a selection of the recent themes that Granule was used to create:
+
+* [Carmack](https://prothemedesign.com/theme/carmack/)
+* [Romero](https://prothemedesign.com/theme/romero/)
+* [Passenger](https://prothemedesign.com/theme/passenger/)
+* [Monet](https://prothemedesign.com/theme/monet/)
+
 ## Features
 
 * Supports most major WordPress functionality (Custom header, Site Logo etc)
