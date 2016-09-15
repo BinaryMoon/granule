@@ -34,10 +34,10 @@ function granule_enqueue() {
 		wp_enqueue_script( 'masonry' );
 	}
 
-	wp_enqueue_script( 'granule-script-main', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery' ), '1.0', false );
+	wp_enqueue_script( 'granule-script-main', get_template_directory_uri() . '/assets/scripts/main.js', array( 'jquery' ), '1.0', false );
 
 	if ( granule_has_featured_posts() ) {
-		wp_enqueue_script( 'granule-script-slider', get_template_directory_uri() . '/assets/js/jquery.slider.js', array( 'jquery' ), '1.5', false );
+		wp_enqueue_script( 'granule-script-slider', get_template_directory_uri() . '/assets/scripts/jquery.slider.js', array( 'jquery' ), '1.5', false );
 	}
 
 	// Localized Javascript strings and provide access to common properties.
