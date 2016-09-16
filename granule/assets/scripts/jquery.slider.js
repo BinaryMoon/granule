@@ -1,5 +1,5 @@
 /**
- * jquery.slider.js v1.5
+ * jquery.slider.js v1.5.1
  *
  * This is a super simple javascript slider script.
  *
@@ -145,7 +145,7 @@
 
 				slide_count ++;
 				$( this ).attr( 'id', 'slide_' + slide_count );
-				var tab = $( '<button data-slide="' + slide_count + '" class="tab"><span class="screen-reader-text">' + site_settings.i18n.slide_number.replace( '#', slide_count ) + '</span></button>' );
+				var tab = $( '<button type="button" data-slide="' + slide_count + '" class="tab"><span class="screen-reader-text">' + site_settings.i18n.slide_number.replace( '#', slide_count ) + '</span></button>' );
 				nav.append( tab );
 
 			} );
@@ -193,8 +193,8 @@
 			// add next and previous links to the slider nav
 			if ( options.nav_arrows ) {
 
-				var arrow_next = $( '<button class="arrow arrow-next"><span class="screen-reader-text">' + site_settings.i18n.slide_next + '</span></button>' );
-				var arrow_prev = $( '<button class="arrow arrow-prev"><span class="screen-reader-text">' + site_settings.i18n.slide_prev + '</span></a>' );
+				var arrow_next = $( '<button type="button" class="arrow arrow-next"><span class="screen-reader-text">' + site_settings.i18n.slide_next + '</span></button>' );
+				var arrow_prev = $( '<button type="button" class="arrow arrow-prev"><span class="screen-reader-text">' + site_settings.i18n.slide_prev + '</span></a>' );
 
 				arrow_next.on( 'click', function( e ) {
 

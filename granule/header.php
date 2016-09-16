@@ -62,7 +62,7 @@
 
 		<nav class="menu menu-primary" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'granule' ); ?>">
 
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+			<button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false">
 <?php
 	granule_svg( 'menu-rows' );
 	esc_html_e( 'Menu', 'granule' );
