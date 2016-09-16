@@ -140,7 +140,7 @@ class Granule_DragDrop_List_Control extends WP_Customize_Control {
 	public $type = 'dragdrop-list';
 
 	/**
-	 * Construct the Drag and Drop list control
+	 * Construct the Drag and Drop list control.
 	 *
 	 * @param object $manager Control parent object.
 	 * @param int    $id Customizer control id.
@@ -156,7 +156,7 @@ class Granule_DragDrop_List_Control extends WP_Customize_Control {
 
 
 	/**
-	 * Display list of checkboxes for categories
+	 * Display list of checkboxes for categories.
 	 */
 	public function render_content() {
 
@@ -193,7 +193,7 @@ class Granule_DragDrop_List_Control extends WP_Customize_Control {
 
 
 	/**
-	 * Scripts and styles required for this control
+	 * Scripts and styles required for the drag and drop control.
 	 */
 	public function enqueue_scripts() {
 
