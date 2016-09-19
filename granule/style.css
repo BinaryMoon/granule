@@ -2889,6 +2889,7 @@ a.thumbnail img {
   clear: both;
 }
 .the-content ul,
+.the-content dl,
 .the-content ol {
   clear: both;
 }
