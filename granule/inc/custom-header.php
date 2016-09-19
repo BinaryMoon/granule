@@ -41,7 +41,7 @@ add_action( 'after_setup_theme', 'granule_custom_header_support' );
 /**
  * Print custom header styles.
  *
- * May also change other settings related to the header colours.
+ * May also change other CSS properties related to the header colours.
  */
 function granule_colour_styles() {
 
