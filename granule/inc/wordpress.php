@@ -378,6 +378,7 @@ add_filter( 'body_class', 'granule_body_class' );
 /**
  * Add additional post classes to post_class function call.
  *
+ * @see https://core.trac.wordpress.org/ticket/28482
  * @param array $classes Array of post classes.
  * @return array
  */
@@ -398,7 +399,6 @@ function granule_post_class( $classes ) {
 	 * Currently, having the class on pages is not correct use of hentry.
 	 * hentry requires more properties than pages typically have.
 	 * Core is not likely to remove class because of backward compatibility.
-	 * See: https://core.trac.wordpress.org/ticket/28482
 	 */
 	if ( 'page' === get_post_type() ) {
 
