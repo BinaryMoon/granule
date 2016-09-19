@@ -41,6 +41,7 @@
 			'post_type' => 'jetpack-portfolio',
 			'posts_per_page' => 999,
 			'ignore_sticky_posts' => true,
+			'no_found_rows' => true,
 		)
 	);
 
