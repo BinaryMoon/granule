@@ -2,6 +2,17 @@
 /**
  * Header Template
  *
+ * Display the site header content (logo, site title, description). Also houses
+ * the site head.
+ *
+ * The head is kept as small as is reasonably possible. Any head content
+ * should be hooked into the wp_head filter.
+ *
+ * Styles and scripts and enqueued through the {@se granule_enqueue} function found
+ * in inc/wordpress.php
+ *
+ * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#header-php
+ *
  * @package Granule
  * @subpackage TemplatePart
  * @author Ben Gillbanks <ben@prothemedesign.com>

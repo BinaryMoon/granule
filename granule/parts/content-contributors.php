@@ -1,6 +1,6 @@
 <?php
 /**
- * Contributors listing
+ * Contributors Listing Template Partial
  *
  * @package Granule
  * @subpackage TemplatePart

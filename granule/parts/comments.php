@@ -1,6 +1,8 @@
 <?php
 /**
- * Reusable code for adding comments to a page
+ * Comment Form Template
+ *
+ * Reusable code for display comments on a page
  *
  * @package Granule
  * @subpackage TemplatePart

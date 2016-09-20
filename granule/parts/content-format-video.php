@@ -1,6 +1,10 @@
 <?php
 /**
- * Video content
+ * Video Content Template Partial
+ *
+ * Used to display video post format on archive pages.
+ *
+ * Uses `parts/content.php` as a fallback if no videos are found.
  *
  * @package Granule
  * @subpackage TemplatePart

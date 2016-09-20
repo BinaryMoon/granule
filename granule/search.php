@@ -1,6 +1,8 @@
 <?php
 /**
- * Search results template
+ * Search Results Template
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
  * @package Granule
  * @subpackage Template

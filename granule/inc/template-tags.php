@@ -1,6 +1,9 @@
 <?php
 /**
- * Reusable template functions
+ * Reusable Template Functions
+ *
+ * Functions that can be used directly inside theme files to add functionality/
+ * features to the theme.
  *
  * @package Granule
  * @subpackage TemplateTags

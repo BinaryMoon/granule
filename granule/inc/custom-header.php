@@ -1,6 +1,8 @@
 <?php
 /**
- * Custom header codes
+ * Custom Header
+ *
+ * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
  * @package Granule
  * @subpackage CustomHeader

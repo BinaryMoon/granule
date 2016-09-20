@@ -1,6 +1,10 @@
 <?php
 /**
- * Single post content
+ * Single Post Content Template Partial
+ *
+ * This is the default content layout for all single posts (all custom post
+ * types). It can be overriden by creating a new template in the parts folder
+ * with the name content-single-[CUSTOM-POST-TYPE].php.
  *
  * @package Granule
  * @subpackage TemplatePart

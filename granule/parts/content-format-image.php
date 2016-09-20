@@ -1,6 +1,12 @@
 <?php
 /**
- * Image content
+ * Image Content Template Partial
+ *
+ * Used to display image post format on archive pages.
+ *
+ * Will display the featured image. If there's no featured image it will check the post attachments and use those instead.
+ *
+ * Uses `parts/content.php` as a fallback if no images are found.
  *
  * @package Granule
  * @subpackage TemplatePart

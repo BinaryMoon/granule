@@ -1,6 +1,6 @@
 <?php
 /**
- * Child pages listing
+ * Child Pages Listing
  *
  * @package Granule
  * @subpackage TemplatePart

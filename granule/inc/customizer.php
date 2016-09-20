@@ -2,6 +2,8 @@
 /**
  * Theme Customizer
  *
+ * @link https://developer.wordpress.org/themes/advanced-topics/customizer-api/
+ *
  * @package Granule
  * @subpackage ThemeCustomizerSettings
  * @author Ben Gillbanks <ben@prothemedesign.com>

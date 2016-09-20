@@ -1,6 +1,6 @@
 <?php
 /**
- * WordPress.com specific functionality
+ * WordPress.com Specific Functionality
  *
  * @package Granule
  * @subpackage WordPressCom

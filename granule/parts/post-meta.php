@@ -1,6 +1,6 @@
 <?php
 /**
- * Post meta data
+ * Post Meta Data
  *
  * @package Granule
  * @subpackage TemplatePart

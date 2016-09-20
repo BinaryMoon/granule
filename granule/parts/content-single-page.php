@@ -1,6 +1,8 @@
 <?php
 /**
- * Page content
+ * Page Content Template Partial
+ *
+ * Display page content.
  *
  * @package Granule
  * @subpackage TemplatePart

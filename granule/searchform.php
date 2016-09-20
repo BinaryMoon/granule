@@ -1,6 +1,11 @@
 <?php
 /**
- * Generic search form template
+ * Generic Search Form
+ *
+ * Displays the search form in all it's locations. The search widget, and
+ * anywhere `get_search_form()` is called.
+ *
+ * @link https://developer.wordpress.org/reference/functions/get_search_form/
  *
  * @package Granule
  * @subpackage TemplatePart

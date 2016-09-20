@@ -2,10 +2,10 @@
 /**
  * Jetpack Compatibility File
  *
- * @link https://jetpack.com/
  * @package Granule
  * @subpackage Jetpack
  * @author Ben Gillbanks <ben@prothemedesign.com>
+ * @link https://jetpack.com/
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
@@ -61,7 +61,7 @@ function granule_jetpack_init() {
 		array(
 	        'blog-display' => 'excerpt',			// The default setting of the theme: 'content', 'excerpt' or array( 'content, 'excerpt', ).
 	        'author-bio'   => true,					// Display or not the author bio: true or false.
-			'masonry'      => '#main-content',		// A CSS selector matching the elements that triggers a masonry refresh if the theme is using a masonry layout.	
+			'masonry'      => '#main-content',		// A CSS selector matching the elements that triggers a masonry refresh if the theme is using a masonry layout.
 	        'post-details' => array(
 	            'stylesheet' => 'granule-style',	// Name of the theme's stylesheet.
 	            'date'       => '.posted-on',		// A CSS selector matching the elements that display the post date.

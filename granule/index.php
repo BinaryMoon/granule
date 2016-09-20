@@ -2,6 +2,11 @@
 /**
  * Homepage Template
  *
+ * This template is the fallback for every template in the theme. If a required
+ * template doesn't exist then this is the template that will be used.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
  * @package Granule
  * @subpackage Template
  * @author Ben Gillbanks <ben@prothemedesign.com>

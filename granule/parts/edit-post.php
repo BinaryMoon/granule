@@ -1,6 +1,6 @@
 <?php
 /**
- * Edit post link
+ * Edit Post Link
  *
  * @package Granule
  * @subpackage TemplatePart

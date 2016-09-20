@@ -2,6 +2,12 @@
 /**
  * Footer Template
  *
+ * The template for displaying the site footer. This includes the closing divs
+ * that close the content opened in header.php - and all of the content after
+ * (credits, widgets etc.)
+ *
+ * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#footer-php
+ *
  * @package Granule
  * @subpackage TemplatePart
  * @author Ben Gillbanks <ben@prothemedesign.com>

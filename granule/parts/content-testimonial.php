@@ -1,6 +1,8 @@
 <?php
 /**
- * Individual Testimonial layout
+ * Individual Testimonial Template Partial
+ *
+ * Display Jetpack Testimonial
  *
  * @package Granule
  * @subpackage TemplatePart
@@ -33,7 +35,7 @@
 		echo $image;
 	}
 
-	the_title( '<h3>', '</h3>' ); 
+	the_title( '<h3>', '</h3>' );
 ?>
 
 	</div>

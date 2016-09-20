@@ -1922,18 +1922,7 @@ blockquote.alignleft, blockquote.alignright {
 }
 
 /**!
- * 2.7 - Multi Author
- * Hide author info for single author blogs
- */
-.multi-author-false .post-meta-data .byline {
-  display: none;
-}
-.multi-author-false.single .contributor, .multi-author-false.singular .contributor {
-  display: none;
-}
-
-/**!
- * 2.8 - Comments
+ * 2.7 - Comments
  */
 .content-comments ol.comment-list {
   list-style-type: none;
@@ -2142,7 +2131,7 @@ blockquote.alignleft, blockquote.alignright {
 }
 
 /**!
- * 2.9 - Search Form
+ * 2.8 - Search Form
  */
 form.search-form {
   position: relative;
@@ -2181,7 +2170,7 @@ form.search-form button.search-submit:focus, form.search-form button.search-subm
 }
 
 /**!
- * 2.10 - Embeds
+ * 2.9 - Embeds
  */
 iframe[src*="8tracks.com"], iframe[src*="bandcamp.com"], iframe[src*="dailymotion.com"], iframe[src*="slideshare.net"], iframe[src*="viddler.com"], iframe[src*="soundcloud.com"], iframe[src*="itchi.io"], iframe.twitter-tweet, iframe.twitter-follow-button {
   display: block;
@@ -2199,7 +2188,7 @@ object {
 }
 
 /**!
- * 2.11 - Sticky Posts
+ * 2.10 - Sticky Posts
  */
 .sticky .post-meta-data .posted-on {
   display: none;

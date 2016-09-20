@@ -1,6 +1,11 @@
 <?php
 /**
- * Image Attachment template
+ * Image Attachment Template
+ *
+ * This file displays Image attachments on their own page with a link back to
+ * the parent blog post/ page.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package Granule
  * @subpackage Template

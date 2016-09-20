@@ -1,6 +1,8 @@
 <?php
 /**
- * Theme Customizer classes
+ * Theme Customizer Classes
+ *
+ * @link https://developer.wordpress.org/themes/advanced-topics/customizer-api/
  *
  * @package Granule
  * @subpackage ThemeCustomizerCustomControls

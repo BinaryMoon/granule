@@ -1,6 +1,6 @@
 <?php
 /**
- * Generic content
+ * Generic Content Template Partial
  *
  * @package Granule
  * @subpackage TemplatePart

@@ -1,6 +1,12 @@
 <?php
 /**
- * Actions and Filters that customize WordPress
+ * Actions and Filters That Customize WordPress
+ *
+ * Set up the theme and provide helper functions. These functions are attached
+ * to action and filter hooks in WordPress to change core functionality.
+ *
+ * For more information on hooks, actions, and filters,
+ * {@link https://codex.wordpress.org/Plugin_API}
  *
  * @package Granule
  * @subpackage WordPress
@@ -378,7 +384,7 @@ add_filter( 'body_class', 'granule_body_class' );
 /**
  * Add additional post classes to post_class function call.
  *
- * @see https://core.trac.wordpress.org/ticket/28482
+ * @link https://core.trac.wordpress.org/ticket/28482
  * @param array $classes Array of post classes.
  * @return array
  */

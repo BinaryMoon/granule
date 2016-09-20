@@ -2,6 +2,12 @@
 /**
  * Archive Template
  *
+ * This is the fallback archive template which works for all archive types if
+ * there are no specific archive templates. If there are other templates, for
+ * example category.php or tag.php then these will be used instead.
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
  * @package Granule
  * @subpackage Template
  * @author Ben Gillbanks <ben@prothemedesign.com>

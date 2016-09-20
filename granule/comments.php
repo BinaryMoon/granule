@@ -1,7 +1,10 @@
 <?php
 /**
- * Comments template.
- * Displays the comments, and the comment form.
+ * Comments Template
+ *
+ * Displays the comments, and the comment submission form.
+ *
+ * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#comments-php
  *
  * @package Granule
  * @subpackage TemplatePart

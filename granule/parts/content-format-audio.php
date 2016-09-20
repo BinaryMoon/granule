@@ -1,6 +1,10 @@
 <?php
 /**
- * Audio content
+ * Audio Content Template Partial
+ *
+ * Used to display the audio post format on archive pages.
+ *
+ * Uses `parts/content.php` as a fallback if no audio files are found.
  *
  * @package Granule
  * @subpackage TemplatePart

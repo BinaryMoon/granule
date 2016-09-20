@@ -1,6 +1,12 @@
 <?php
 /**
- * Reusable theme functions
+ * Theme Functions Engine.
+ *
+ * This file is simply used as a wrapper to load other files that do all the
+ * work.
+ *
+ * @link https://codex.wordpress.org/Theme_Development
+ * @link https://codex.wordpress.org/Child_Themes
  *
  * @package Granule
  * @subpackage Template

@@ -1,6 +1,10 @@
 <?php
 /**
- * Single post & page template
+ * Single Post & Page Template
+ *
+ * This is the default template for all single posts for all custom post types.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package Granule
  * @subpackage Template

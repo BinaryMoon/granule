@@ -1,6 +1,15 @@
 <?php
 /**
- * Footer Sidebar template
+ * Footer Sidebar Template
+ *
+ * Display the sidebar widgets. Will not output anything if there's no widgets
+ * assigned to specified sidebar.
+ *
+ * A body class is added if the theme has widgets to display here
+ * {@see granule_body_class}. This helps with custom css that adjusts the page
+ * when no widgets exist.
+ *
+ * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#sidebar-php
  *
  * @package Granule
  * @subpackage TemplatePart

@@ -1,6 +1,12 @@
 <?php
 /**
- * No content
+ * No Content Template Partial
+ *
+ * Display an empty template that lets the user know what is happening. The
+ * content is contextual and varies depending upon the page it is displayed on,
+ * and the person who is viewing the content.
+ *
+ * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
  *
  * @package Granule
  * @subpackage TemplatePart

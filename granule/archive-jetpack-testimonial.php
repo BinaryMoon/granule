@@ -1,7 +1,12 @@
 <?php
 /**
  * Testimonials Archive Template
- * Testimonials display at: http://website.com/testimonial/
+ *
+ * This is the template used to display Jetpack Testimonials post type.
+ *
+ * The Testimonials will display at: http://website.com/testimonial/
+ *
+ * @link https://jetpack.com/support/custom-content-types/
  *
  * @package Granule
  * @subpackage Template
@@ -50,7 +55,7 @@
 		while ( have_posts() ) {
 
 			the_post();
-			get_template_part( 'parts/content-single', 'testimonial' );
+			get_template_part( 'parts/content', 'testimonial' );
 
 		}
 ?>

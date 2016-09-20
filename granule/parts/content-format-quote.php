@@ -1,6 +1,13 @@
 <?php
 /**
- * Quote content
+ * Quote Content Template Partial
+ *
+ * Used to display quote post format on archive pages.
+ *
+ * Will display the first blockquote found on the page. If no blockquote is
+ * found then will display entire post.
+ *
+ * Uses `parts/content.php` as a fallback if no quotes are found.
  *
  * @package Granule
  * @subpackage TemplatePart

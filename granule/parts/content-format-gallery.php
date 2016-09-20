@@ -1,6 +1,10 @@
 <?php
 /**
- * Gallery content
+ * Gallery Content Template Partial
+ *
+ * Used to display the gallery post format in archive pages.
+ *
+ * Uses `parts/content.php` as a fallback if no galleries are found.
  *
  * @package Granule
  * @subpackage TemplatePart
