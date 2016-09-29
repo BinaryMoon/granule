@@ -1048,12 +1048,10 @@ main div#jp-relatedposts {
 
 #jp-relatedposts .jp-relatedposts-items {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
      -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -2470,7 +2468,10 @@ main.full-width, .themes-sidebar1-inactive main {
 }
 
 /* single post and page */
-.content-single article h1.entry-title {
+.content-single article .entry-title {
+  font-size: 52px;
+  font-size: 3.25rem;
+  line-height: 1.25;
   font-weight: bold;
 }
 
@@ -2999,9 +3000,8 @@ a.thumbnail img {
   }
 
   #jp-relatedposts .jp-relatedposts-items {
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
     width: 100%;
