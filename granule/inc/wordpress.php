@@ -441,9 +441,15 @@ add_filter( 'post_class', 'granule_post_class' );
  */
 function granule_excerpt_more() {
 
-	$link = sprintf( '<a href="%1$s" class="read-more">%2$s</a>',
+	$link_text = sprintf(
+		esc_html_x( 'Continue Reading %s', 'Name of current post', 'granule' ),
+		'<span class="screen-reader-text">' . esc_html( get_the_title( get_the_ID() ) ) . '</span>'
+	);
+
+	$link = sprintf(
+		'<a href="%1$s" class="read-more">%2$s</a>',
 		esc_url( get_permalink( get_the_ID() ) ),
-		sprintf( esc_html_x( 'Continue Reading %s', 'Name of current post', 'granule' ), '<span class="screen-reader-text">' . esc_html( get_the_title( get_the_ID() ) ) . '</span>' )
+		$link_text
 	);
 
 	return ' &hellip; ' . $link;
