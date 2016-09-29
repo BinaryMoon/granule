@@ -19,7 +19,15 @@
 <?php
 	granule_breadcrumbs();
 
-	the_title( '<h1 class="entry-title">', '</h1>' );
+	if ( is_front_page() ) {
+
+		the_title( '<h2 class="entry-title">', '</h2>' );
+
+	} else {
+
+		the_title( '<h1 class="entry-title">', '</h1>' );
+
+	}
 
 	get_template_part( 'parts/post-meta' );
 ?>
