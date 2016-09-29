@@ -18,7 +18,7 @@
 			interval: 5000,
 			group_selector: 'article',
 			nav_arrows: false,
-			autoplay: false
+			autoplay: 0
 		};
 
 		options = $.extend( defaults, options );
@@ -28,16 +28,20 @@
 			// set the timer that determines how long each slide appears for
 			var start_timer = function() {
 
-				if ( ! autoplay ) {
+				if ( ! autoplay || 0 === autoplay ) {
 
 					return;
 
 				}
 
 				clearInterval( timer );
-				timer = setInterval( function() {
-					next();
-				}, interval );
+
+				timer = setInterval(
+					function() {
+						next();
+					},
+					interval
+				);
 
 			};
 
