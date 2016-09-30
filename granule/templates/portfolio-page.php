@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Projects
+ * Template Name: Portfolio
  *
  * @package Granule
  * @subpackage PageTemplate
