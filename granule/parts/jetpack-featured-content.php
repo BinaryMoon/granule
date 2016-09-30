@@ -40,6 +40,8 @@
 				<h2 class="entry-title"><?php the_title(); ?></h2>
 			</a>
 
+			<?php get_template_part( 'parts/edit-post' ); ?>
+
 		</article>
 
 <?php
