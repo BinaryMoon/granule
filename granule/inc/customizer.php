@@ -33,7 +33,6 @@ function granule_customize_register( $wp_customize ) {
 		'granule_options',
 		array(
 			'title' => esc_html__( 'Theme Options', 'granule' ),
-			'description' => esc_html__( 'Options for the Granule theme.', 'granule' ),
 		)
 	);
 
