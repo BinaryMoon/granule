@@ -6,7 +6,7 @@
  * assigned to specified sidebar.
  *
  * Also includes the `before_sidebar` hook. This is used by
- * {@link wordpress.com} to display WordAds.
+ * {@link wordpress.com} to display WordAds {@link https://wordads.co}.
  *
  * A body class is added if the theme has widgets to display here
  * {@see granule_body_class}. This helps with custom css that adjusts the page
