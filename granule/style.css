@@ -553,9 +553,6 @@ pre.compress {
 /**!
  * 1.3 - Forms
  */
-input {
-  margin-bottom: 1.5rem;
-}
 input.radio {
   margin-right: 0.5em;
   margin-left: auto;
@@ -574,7 +571,7 @@ input[type="month"],
 input[type="tel"],
 input[type="number"],
 input.text,
-.form-select,
+select,
 textarea,
 input.settings-input {
   padding: 0.75rem 1.5rem;
@@ -597,15 +594,12 @@ input[type="month"],
 input[type="tel"],
 input[type="number"],
 input.text,
-.form-select,
+select,
 textarea,
 input.settings-input {
   border-radius: 0.2rem;
   background: #f2f2f2;
   border: 0.2rem solid #f2f2f2;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
 }
 .device-click input[type=text], .device-click
 input[type=password], .device-click
@@ -620,7 +614,7 @@ input[type="month"], .device-click
 input[type="tel"], .device-click
 input[type="number"], .device-click
 input.text, .device-click
-.form-select, .device-click
+select, .device-click
 textarea, .device-click
 input.settings-input {
   -webkit-transition: all 0.15s ease-in-out;
@@ -639,7 +633,7 @@ input[type="month"]:hover,
 input[type="tel"]:hover,
 input[type="number"]:hover,
 input.text:hover,
-.form-select:hover,
+select:hover,
 textarea:hover,
 input.settings-input:hover {
   border-color: #b8960b;
@@ -657,7 +651,7 @@ input[type="month"]:focus,
 input[type="tel"]:focus,
 input[type="number"]:focus,
 input.text:focus,
-.form-select:focus,
+select:focus,
 textarea:focus,
 input.settings-input:focus {
   outline: none;
@@ -678,7 +672,7 @@ input[type="month"]::-webkit-input-placeholder,
 input[type="tel"]::-webkit-input-placeholder,
 input[type="number"]::-webkit-input-placeholder,
 input.text::-webkit-input-placeholder,
-.form-select::-webkit-input-placeholder,
+select::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder,
 input.settings-input::-webkit-input-placeholder {
   color: #666666;
@@ -696,7 +690,7 @@ input[type="month"]::-moz-placeholder,
 input[type="tel"]::-moz-placeholder,
 input[type="number"]::-moz-placeholder,
 input.text::-moz-placeholder,
-.form-select::-moz-placeholder,
+select::-moz-placeholder,
 textarea::-moz-placeholder,
 input.settings-input::-moz-placeholder {
   color: #666666;
@@ -714,7 +708,7 @@ input[type="month"]:-ms-input-placeholder,
 input[type="tel"]:-ms-input-placeholder,
 input[type="number"]:-ms-input-placeholder,
 input.text:-ms-input-placeholder,
-.form-select:-ms-input-placeholder,
+select:-ms-input-placeholder,
 textarea:-ms-input-placeholder,
 input.settings-input:-ms-input-placeholder {
   color: #666666;
@@ -732,7 +726,7 @@ input[type="month"]:-moz-placeholder,
 input[type="tel"]:-moz-placeholder,
 input[type="number"]:-moz-placeholder,
 input.text:-moz-placeholder,
-.form-select:-moz-placeholder,
+select:-moz-placeholder,
 textarea:-moz-placeholder,
 input.settings-input:-moz-placeholder {
   color: #666666;
@@ -750,7 +744,7 @@ input[type="month"]:placeholder,
 input[type="tel"]:placeholder,
 input[type="number"]:placeholder,
 input.text:placeholder,
-.form-select:placeholder,
+select:placeholder,
 textarea:placeholder,
 input.settings-input:placeholder {
   color: #666666;
@@ -763,40 +757,10 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 select {
-  width: 19em;
-  max-width: 100%;
+  height: calc( 3rem + 0.4rem );
 }
-
-.form-select {
-  padding: 0;
-  position: relative;
-}
-.form-select select {
-  display: block;
-  height: 3rem;
-  padding: 0.75rem 1.5rem;
-  background: transparent;
-  border: 0;
-  width: 100%;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-.form-select select:hover {
+select:hover {
   cursor: pointer;
-}
-.form-select:after {
-  position: absolute;
-  border: 0.4em solid transparent;
-  content: "";
-  width: 0;
-  position: absolute;
-  top: calc( 1.5rem - 0.25em );
-  right: 1rem;
-  left: auto;
-  border-top-color: #1a1a1a;
-  border-bottom-width: 0;
-  pointer-events: none;
 }
 
 textarea {

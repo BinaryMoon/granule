@@ -333,11 +333,6 @@
 		$( 'body' ).addClass( is_touch_device() ? 'device-touch' : 'device-click' );
 
 
-		// wrap select boxes
-
-		$( 'select' ).wrap( '<div class="form-select"></div>' );
-
-
 		// add author icon to comment author titles
 
 		var user_icon = $( '.user-icon-container' ).html();

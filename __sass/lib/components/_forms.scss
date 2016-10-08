@@ -5,8 +5,6 @@
 
 input {
 
-	margin-bottom: $grid-line-height;
-
 	&.radio {
 
 		margin-right: $style-spacing;
@@ -15,7 +13,6 @@ input {
 	}
 
 }
-
 
 // dimensions
 input[type=text],
@@ -31,7 +28,7 @@ input[type="month"],
 input[type="tel"],
 input[type="number"],
 input.text,
-.form-select,
+select,
 textarea,
 input.settings-input {
 
@@ -57,14 +54,13 @@ input[type="month"],
 input[type="tel"],
 input[type="number"],
 input.text,
-.form-select,
+select,
 textarea,
 input.settings-input {
 
 	border-radius: $border-radius;
 	background: $form-input-background;
 	border: $border-width solid $form-input-border-color;
-	appearance: none;
 
 	@if ( $form-input-border-width != null ) {
 		border-width: $form-input-border-width;
@@ -127,53 +123,18 @@ input[type="search"]::-webkit-search-decoration {
 
 }
 
-// hide the select box until it's wrapped in the .form-select
 select {
 
-	width: 19em;
-	max-width: 100%;
+	height: calc( #{$grid-line-height * 2} + #{$border-width * 2} );
 
-}
+	&:hover {
 
-// generic styles for select boxes
-.form-select {
-
-	padding: 0;
-	position: relative;
-
-	select {
-
-		display: block;
-		height: $grid-line-height * 2;
-		padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
-		background: transparent;
-		border: 0;
-		width: 100%;
-		appearance: none;
-
-		&:hover {
-
-			cursor: pointer;
-
-		}
-
-	}
-
-	&:after {
-
-		@include arrow;
-		width: 0;
-		position: absolute;
-		top: calc( #{$grid-line-height} - 0.25em );
-		right: ( $grid-gutter / 3 );
-		left: auto;
-		border-top-color: $form-input-icon;
-		border-bottom-width: 0;
-		pointer-events: none;
+		cursor: pointer;
 
 	}
 
 }
+
 
 textarea {
 
