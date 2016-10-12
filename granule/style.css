@@ -1405,6 +1405,33 @@ form.contact-form div.clear-form {
   list-style-type: decimal;
 }
 
+/**!
+ * 4.4 - Landing Page
+ */
+.landing-page {
+  background: transparent center no-repeat;
+  background-size: cover;
+  padding: 3rem 3rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.landing-page main {
+  max-width: 41em;
+  margin: 0 auto;
+  width: 100%;
+}
+
 /**
  * 2.0 - WordPress
  */
