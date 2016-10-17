@@ -36,8 +36,6 @@
 		)
 	);
 
-	get_template_part( 'parts/edit-post' );
-
 	wp_link_pages(
 		array(
 			'before'      => '<div class="pagination">',
