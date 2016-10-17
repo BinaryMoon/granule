@@ -11,8 +11,8 @@
 	edit_post_link(
 		sprintf(
 			/* translators: %s: Name of current post */
-			esc_html__( 'Edit %s', 'granule' ),
-			the_title( '<span class="screen-reader-text">', '</span>', false )
+			esc_html__( 'Edit<span class="screen-reader-text"> %s</span>', 'granule' ),
+			get_the_title()
 		),
 		'<span class="edit-link meta">',
 		'</span>'
