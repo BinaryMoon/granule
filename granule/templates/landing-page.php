@@ -1,9 +1,12 @@
 <?php
 /**
- * Template Name: Landing Page
+ * Landing page template
  *
  * This page allows users to add a 'coming soon' page to their website. The page
- * displays full size with the featured image as the page background.
+ * displays full size with the featured image as the page background and the
+ * content centered.
+ *
+ * Template Name: Landing Page
  *
  * @package Granule
  * @subpackage PageTemplate

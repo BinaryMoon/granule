@@ -1,7 +1,11 @@
 <?php
 /**
- * Full width page template
- * Template Name: Full Width
+ * Full-width page template
+ *
+ * Removes the sidebar from a page, and displays the page content from one side
+ * to the other.
+ *
+ * Template Name: Full-width
  *
  * @package Granule
  * @subpackage PageTemplate

@@ -1,5 +1,9 @@
 <?php
 /**
+ * Child page grid Template
+ *
+ * Displays children of the current page as a grid below the page content.
+ *
  * Template Name: Child Page Grid
  *
  * @package Granule

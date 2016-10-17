@@ -1,6 +1,11 @@
 <?php
 /**
- * Template Name: Contributor Page
+ * Contributors page template
+ *
+ * Displays a list of all users from a website who have published at least one
+ * blog post.
+ *
+ * Template Name: Contributors
  *
  * @package Granule
  * @subpackage PageTemplate

@@ -1,5 +1,10 @@
 <?php
 /**
+ * Portfolio template
+ *
+ * Displays your portfolio on a static page. Mimics the portfolio archive,
+ * however this can be added as a static front page for portfolio websites.
+ *
  * Template Name: Portfolio
  *
  * @package Granule
