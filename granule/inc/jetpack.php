@@ -72,8 +72,10 @@ function granule_jetpack_init() {
 	    )
 	);
 
-	// Add support for colour contrast checker.
-	// add_theme_support( 'tonesque' );
+	/**
+	 * Add support for colour contrast checker.
+	 * add_theme_support( 'tonesque' );
+	 */
 
 }
 

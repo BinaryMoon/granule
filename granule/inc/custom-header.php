@@ -59,6 +59,7 @@ function granule_colour_styles() {
 <?php
 	} else {
 ?>
+	.masthead .site-title,
 	.masthead .site-title a,
 	.masthead .site-title a:hover,
 	.masthead p.site-description {

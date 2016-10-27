@@ -11,7 +11,7 @@
 	edit_post_link(
 		sprintf(
 			/* translators: %s: Name of current post */
-			esc_html__( 'Edit<span class="screen-reader-text"> %s</span>', 'granule' ),
+			wp_kses( __( 'Edit<span class="screen-reader-text"> %s</span>', 'granule' ), array( 'span' => array( 'class' => array() ) ) ),
 			get_the_title()
 		),
 		'<span class="edit-link meta">',

@@ -91,7 +91,7 @@ function granule_customize_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		new Granule_Category_Dropdown_Custom_control(
+		new Granule_Category_Dropdown_Custom_Control(
 			$wp_customize,
 			'granule_primary_content_category',
 			array(
@@ -114,7 +114,7 @@ function granule_customize_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		new Granule_Dropdown_Custom_control(
+		new Granule_Dropdown_Custom_Control(
 			$wp_customize,
 			'granule_archive_layout',
 			array(

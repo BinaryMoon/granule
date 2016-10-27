@@ -1,10 +1,13 @@
 /**
+ * Theme Customizer code
+ *
  * theme-customizer.js v1.1
  * Created by Ben Gillbanks <http://www.binarymoon.co.uk/>
  * Available under GPL2 license
  *
  * @package Granule
  */
+
 /* global wp */
 
 ;( function( $ ) {

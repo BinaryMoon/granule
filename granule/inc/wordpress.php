@@ -43,7 +43,7 @@ function granule_enqueue() {
 	wp_enqueue_script( 'granule-script-main', get_theme_file_uri( '/assets/scripts/global.js' ), array( 'jquery' ), '1.0', false );
 
 	if ( granule_has_featured_posts() ) {
-		wp_enqueue_script( 'granule-script-slider', get_theme_file_uri( '/assets/scripts/jquery.slider.js' ), array( 'jquery' ), '1.5', false );
+		wp_enqueue_script( 'granule-script-slider', get_theme_file_uri( '/assets/scripts/jquery.slider.js' ), array( 'jquery' ), '1.5.1', false );
 	}
 
 	// Localized Javascript strings and provide access to common properties.

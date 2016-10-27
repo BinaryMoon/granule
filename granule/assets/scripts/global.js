@@ -1,21 +1,22 @@
 /**
- * global.js v1
- *
  * The main javascript file for the theme, this makes the magic happen
+ *
+ * global.js v1
  *
  * Created by Ben Gillbanks <https://prothemedesign.com/>
  * Available under GPL2 license
  *
  * @package Granule
  */
- /* global site_settings */
+
+/* global site_settings */
 
 ;( function( window, document, $ ) {
 
 	'use strict';
 
 	/**
-	 * JS mobile detection
+	 * JS mobile detection.
 	 * Is this a touch enabled device or not?
 	 *
 	 * @return boolean
@@ -28,7 +29,7 @@
 
 
 	/**
-	 * Smooth scroll to # anchor
+	 * Smooth scroll to # anchor.
 	 *
 	 * @param  object e Element.
 	 * @return false
@@ -50,7 +51,7 @@
 
 	/**
 	 * Set an elements focus.
-	 * if required sets a tabindex for elements that can't normally be focused
+	 * If required sets a tabindex for elements that can't normally be focused.
 	 *
 	 * @param  string id ID of object to focus.
 	 */
@@ -71,11 +72,11 @@
 
 
 	/**
-	 * Set default heights for social media widgets
+	 * Set default heights for social media widgets.
 	 */
 	var social_widget_heights = function() {
 
-		// Twitter
+		// Twitter.
 		$( 'a.twitter-timeline' ).each(
 			function() {
 
@@ -85,14 +86,14 @@
 			}
 		);
 
-		// Facebook
+		// Facebook.
 		$( '.fb-page' ).each(
 			function() {
 
 				var $set_height = $( this ).data( 'height' );
 				var $show_facepile = $( this ).data( 'show-facepile' );
-				var $show_posts = $( this ).data( 'show-posts' ); // AKA stream
-				var $min_height = $set_height; // set the default 'min-height'
+				var $show_posts = $( this ).data( 'show-posts' ); // AKA stream.
+				var $min_height = $set_height; // Set the default 'min-height'.
 
 				// These values are defaults from the FB widget.
 				var $no_posts_no_faces = 130;
@@ -109,7 +110,7 @@
 					// Showing facepile with or without cover image - both would
 					// be same height.
 					// If the user selected height is lower than the no_posts
-					// height, we'll use that instead
+					// height, we'll use that instead.
 					$min_height = ( $set_height < $no_posts ) ? $set_height : $no_posts;
 
 				} else {
@@ -117,12 +118,12 @@
 					// Either just showing cover, or nothing is selected (both
 					// are same height).
 					// If the user selected height is lower than the
-					// no_posts_no_faces height, we'll use that instead
+					// no_posts_no_faces height, we'll use that instead.
 					$min_height = ( $set_height < $no_posts_no_faces ) ? $set_height : $no_posts_no_faces;
 
 				}
 
-				// apply min-height to .fb-page container
+				// Apply min-height to .fb-page container.
 				$( this ).css( 'min-height', $min_height + 'px' );
 
 			}
@@ -131,7 +132,7 @@
 	};
 
 	/**
-	 * Attachment page navigation
+	 * Attachment page navigation.
 	 */
 	var attachment_page_navigation = function() {
 
@@ -146,14 +147,14 @@
 
 					var url = false;
 
-					switch( e.which ) {
+					switch ( e.which ) {
 
-						// left arrow key (previous attachment)
+						// Left arrow key (previous attachment).
 						case 37:
 							url = $( '.image-previous a' ).attr( 'href' );
 							break;
 
-						// right arrow key (next attachment)
+						// Right arrow key (next attachment).
 						case 39:
 							url = $( '.image-next a' ).attr( 'href' );
 							break;
@@ -172,7 +173,7 @@
 	};
 
 	/**
-	 * Setup Masonry layouts
+	 * Setup Masonry layouts.
 	 */
 	var masonry_setup = function() {
 
@@ -241,7 +242,7 @@
 			}
 		);
 
-		// testimonials
+		// Testimonials.
 		$( 'body.archive .testimonials' ).imagesLoaded(
 			function() {
 
@@ -269,8 +270,7 @@
 
 			attachment_page_navigation();
 
-			// masonry layout
-
+			// Masonry layout.
 			$( window ).load(
 				function() {
 
@@ -283,9 +283,7 @@
 				}
 			);
 
-
-			// featured content slides
-
+			// Featured content slides.
 			if ( $.isFunction( $.fn.elementalSlides ) ) {
 
 				$( '.showcase' ).elementalSlides(
@@ -297,9 +295,7 @@
 
 			}
 
-
-			// fade in infinite scroll posts
-
+			// Fade in infinite scroll posts.
 			$( '#main-content' ).find( 'article' ).addClass( 'post-static' );
 
 			$( 'body' ).on(
@@ -311,9 +307,7 @@
 				}
 			);
 
-
-			// menu toggle
-
+			// Menu toggle.
 			$( '.menu-toggle' ).on(
 				'click',
 				function() {
@@ -324,13 +318,13 @@
 
 					$parent.toggleClass( 'menu-on' );
 
-					// menu is shown
+					// Menu is shown.
 					if ( $parent.hasClass( 'menu-on' ) ) {
 
 						$menu.attr( 'aria-expanded', 'true' );
 						$this.attr( 'aria-expanded', 'true' );
 
-					// menu is hidden
+					// Menu is hidden.
 					} else {
 
 						$menu.attr( 'aria-expanded', 'false' );
@@ -342,8 +336,7 @@
 			);
 
 
-			// set menu items with submenus to aria-haspopup="true".
-
+			// Set menu items with submenus to aria-haspopup="true".
 			$( '.menu-item-has-children' ).each(
 				function() {
 
@@ -353,8 +346,7 @@
 			);
 
 
-			// dropdown menu touch screen improvements
-
+			// Dropdown menu touch screen improvements.
 			$( '.menu' ).find( 'a' ).on(
 				'focus blur',
 				function() {
@@ -365,8 +357,7 @@
 			);
 
 
-			// smooth scroll to element
-
+			// Smooth scroll to element.
 			$( '.scroll-to' ).click(
 				function() {
 
@@ -376,23 +367,20 @@
 			);
 
 
-			// mobile device detection
-
+			// Mobile device detection.
 			$( 'body' ).addClass( is_touch_device() ? 'device-touch' : 'device-click' );
 
 
-			// add author icon to comment author titles
-
+			// Add author icon to comment author titles.
 			var user_icon = $( '.user-icon-container' ).html();
 			$( '.bypostauthor > article .fn' ).append( user_icon );
 
 
-			// skip link fix
-			// based on https://github.com/Automattic/_s/blob/master/js/skip-link-focus-fix.js
-
+			// Skip link fix.
+			// based on https://github.com/Automattic/_s/blob/master/js/skip-link-focus-fix.js .
 			var isWebkit = navigator.userAgent.toLowerCase().indexOf( 'webkit' ) > -1,
-				isOpera  = navigator.userAgent.toLowerCase().indexOf( 'opera' )  > -1,
-				isIe     = navigator.userAgent.toLowerCase().indexOf( 'msie' )   > -1;
+				isOpera  = navigator.userAgent.toLowerCase().indexOf( 'opera' ) > -1,
+				isIe     = navigator.userAgent.toLowerCase().indexOf( 'msie' ) > -1;
 
 			if ( ( isWebkit || isOpera || isIe ) && document.getElementById && window.addEventListener ) {
 				window.addEventListener(

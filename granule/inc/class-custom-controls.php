@@ -25,7 +25,7 @@ if ( ! class_exists( 'WP_Customize_Control' ) ) {
  * Displays a dropdown box that contains a list of categories that can be selected from.
  * Also displays options for 'No Categories', and 'All Categories'.
  */
-class Granule_Category_Dropdown_Custom_control extends WP_Customize_Control {
+class Granule_Category_Dropdown_Custom_Control extends WP_Customize_Control {
 
 	/**
 	 * Render category dropdown element
@@ -62,7 +62,7 @@ class Granule_Category_Dropdown_Custom_control extends WP_Customize_Control {
  *
  * Displays a dropdown box filled with the contents of ...
  */
-class Granule_Dropdown_Custom_control extends WP_Customize_Control {
+class Granule_Dropdown_Custom_Control extends WP_Customize_Control {
 
 	/**
 	 * Control parameters

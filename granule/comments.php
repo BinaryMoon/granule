@@ -57,7 +57,7 @@
 <?php
 		the_comments_navigation();
 
-	}
+	} // End if().
 
 	if ( 'open' === $post->comment_status ) {
 

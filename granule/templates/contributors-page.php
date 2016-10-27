@@ -32,7 +32,6 @@
 			get_template_part( 'parts/content-single', get_post_type() );
 
 		}
-
 	}
 ?>
 
