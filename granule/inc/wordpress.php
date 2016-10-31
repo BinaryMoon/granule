@@ -517,6 +517,12 @@ function granule_wrapper_content( $content ) {
 
 	}
 
+	if ( empty( $content ) ) {
+
+		return $content;
+
+	}
+
 	// Includes some new line characters so that paragraphs tags are properly applied to all paragraphs.
 	return '<div class="the-content">' . "\n\n" . $content . "\n\n" . '</div>';
 
