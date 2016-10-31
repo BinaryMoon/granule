@@ -56,7 +56,7 @@
 			// Display the selected slide.
 			var show_slide = function( slide ) {
 
-				var $slide = $( slide );
+				var $slide = $this.find( slide );
 
 				// Quit if the slide is already the current one.
 				if ( $slide.hasClass( 'current' ) ) {
@@ -113,11 +113,13 @@
 			var slide_count = 0;
 
 			// Remove empty slides.
-			$this.children( options.group_selector ).filter( function() {
+			$this.children( options.group_selector ).filter(
+				function() {
 
-				return $.trim( this.innerHTML ).length < 1;
+					return $.trim( this.innerHTML ).length < 1;
 
-			} ).remove();
+				}
+			).remove();
 
 			var articles = $this.children( options.group_selector );
 			var nav = $this.find( 'nav' );
