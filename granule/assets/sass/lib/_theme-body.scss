@@ -222,7 +222,6 @@ main {
 
 			}
 
-
 		}
 
 	}
@@ -236,6 +235,18 @@ main {
 
 		text-align: center;
 		margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+
+	}
+
+	.attachment-description {
+
+		margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+
+	}
+
+	.attachment-caption {
+
+		font-style: italic;
 
 	}
 

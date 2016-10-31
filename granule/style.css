@@ -2497,6 +2497,12 @@ main.full-width, .themes-sidebar1-inactive main {
   text-align: center;
   margin-bottom: 3rem;
 }
+.attachment .attachment-description {
+  margin-bottom: 3rem;
+}
+.attachment .attachment-caption {
+  font-style: italic;
+}
 
 /**
  * 3.4 - Elements
