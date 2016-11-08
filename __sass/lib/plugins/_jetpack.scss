@@ -36,12 +36,14 @@ img#wpstats {
 // share post widget
 main {
 
+	div.pd-rating,
 	div.sharedaddy,
 	div#jp-relatedposts,
 	#jp-post-flair {
 
 		clear: both;
 		margin: ( $grid-line-height * $grid-line-height-multiplier ) 0;
+		padding: 0;
 
 	}
 
@@ -58,9 +60,6 @@ main div {
 	&.pd-rating,
 	&#jp-relatedposts,
 	&.sharedaddy {
-
-		margin-bottom: $grid-line-height;
-		padding: 0;
 
 		h3.jp-relatedposts-headline em,
 		h3.sd-title {

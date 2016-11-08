@@ -200,6 +200,12 @@
 
 	}
 
+	p.form-submit {
+
+		margin-bottom: $grid-line-height / 2;
+
+	}
+
 	p.logged-in-as {
 
 		@include post-meta-data;
