@@ -55,21 +55,21 @@ function granule_jetpack_init() {
 	// Add support for Social Menu.
 	add_theme_support( 'jetpack-social-menu' );
 
-	// Add supprt for content options.
+	// Add support for wordpress.com content options.
 	add_theme_support(
 		'jetpack-content-options',
 		array(
-	        'blog-display' => 'excerpt',			// The default setting of the theme: 'content', 'excerpt' or array( 'content, 'excerpt', ).
-	        'author-bio'   => true,					// Display or not the author bio: true or false.
+			'blog-display' => 'excerpt',			// The default setting of the theme: 'content', 'excerpt' or array( 'content, 'excerpt', ).
+			'author-bio'   => true,					// Display or not the author bio: true or false.
 			'masonry'      => '#main-content',		// A CSS selector matching the elements that triggers a masonry refresh if the theme is using a masonry layout.
-	        'post-details' => array(
-	            'stylesheet' => 'granule-style',	// Name of the theme's stylesheet.
-	            'date'       => '.posted-on',		// A CSS selector matching the elements that display the post date.
-	            'categories' => '.tax-categories',	// A CSS selector matching the elements that display the post categories.
-	            'tags'       => '.tax-tags',		// A CSS selector matching the elements that display the post tags.
+			'post-details' => array(
+				'stylesheet' => 'granule-style',	// Name of the theme's stylesheet.
+				'date'       => '.posted-on',		// A CSS selector matching the elements that display the post date.
+				'categories' => '.tax-categories',	// A CSS selector matching the elements that display the post categories.
+				'tags'       => '.tax-tags',		// A CSS selector matching the elements that display the post tags.
 				'author'     => '.byline',			// A CSS selector matching the elements that display the post author.
-	        ),
-	    )
+			),
+		)
 	);
 
 	/**
