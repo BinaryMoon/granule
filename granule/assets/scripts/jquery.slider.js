@@ -9,7 +9,7 @@
  * @package Granule
  */
 
-/* global site_settings */
+/* global granule_site_settings */
 
 ;( function( $ ) {
 
@@ -142,7 +142,7 @@
 			if ( nav.length === 0 ) {
 
 				nav = $( '<nav></nav>' );
-				nav.attr( 'aria-label', site_settings.i18n.slide_controls_label );
+				nav.attr( 'aria-label', granule_site_settings.i18n.slide_controls_label );
 				$this.prepend( nav );
 
 			}
@@ -152,7 +152,7 @@
 
 				slide_count ++;
 				$( this ).attr( 'id', 'slide_' + slide_count );
-				var tab = $( '<button type="button" data-slide="' + slide_count + '" class="tab"><span class="screen-reader-text">' + site_settings.i18n.slide_number.replace( '#', slide_count ) + '</span></button>' );
+				var tab = $( '<button type="button" data-slide="' + slide_count + '" class="tab"><span class="screen-reader-text">' + granule_site_settings.i18n.slide_number.replace( '#', slide_count ) + '</span></button>' );
 				nav.append( tab );
 
 			} );
@@ -201,8 +201,8 @@
 			// Add next and previous links to the slider nav.
 			if ( options.nav_arrows ) {
 
-				var arrow_next = $( '<button type="button" class="arrow arrow-next"><span class="screen-reader-text">' + site_settings.i18n.slide_next + '</span></button>' );
-				var arrow_prev = $( '<button type="button" class="arrow arrow-prev"><span class="screen-reader-text">' + site_settings.i18n.slide_prev + '</span></a>' );
+				var arrow_next = $( '<button type="button" class="arrow arrow-next"><span class="screen-reader-text">' + granule_site_settings.i18n.slide_next + '</span></button>' );
+				var arrow_prev = $( '<button type="button" class="arrow arrow-prev"><span class="screen-reader-text">' + granule_site_settings.i18n.slide_prev + '</span></a>' );
 
 				arrow_next.on( 'click', function( e ) {
 

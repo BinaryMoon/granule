@@ -9,7 +9,7 @@
  * @package Granule
  */
 
-/* global site_settings */
+/* global ganule_site_settings */
 
 ;( function( window, document, $ ) {
 
@@ -289,7 +289,7 @@
 				$( '.showcase' ).elementalSlides(
 					{
 						'nav_arrows': true,
-						'autoplay': parseInt( site_settings.slider.autoplay )
+						'autoplay': parseInt( granule_site_settings.slider.autoplay )
 					}
 				);
 

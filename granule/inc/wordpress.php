@@ -49,7 +49,7 @@ function granule_enqueue() {
 	// Localized Javascript strings and provide access to common properties.
 	wp_localize_script(
 		'granule-script-main',
-		'site_settings',
+		'granule_site_settings',
 		array(
 			// Translation strings.
 			'i18n' => array(
