@@ -87,6 +87,7 @@
 			'menu_id' => 'nav',
 			'menu_class' => 'menu-wrap',
 			'container' => false,
+			'item_spacing' => 'discard',
 		)
 	);
 ?>
