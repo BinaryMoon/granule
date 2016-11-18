@@ -7,7 +7,7 @@
 html {
 
 	box-sizing: border-box;
-    text-size-adjust: 100%;
+	text-size-adjust: 100%;
 	-ms-overflow-style: scrollbar;
 
 }
@@ -16,7 +16,7 @@ body {
 
 	@include clear;
 	background-color: $canvas-background;
-    margin: 0;
+	margin: 0;
 
 }
 
@@ -25,6 +25,12 @@ body {
 *:after {
 
 	box-sizing: inherit;
+
+}
+
+*[tabindex='-1']:focus {
+
+	outline: none;
 
 }
 
@@ -156,7 +162,7 @@ input,
 select,
 textarea {
 
-    font: inherit;
+	font: inherit;
 
 }
 
@@ -165,29 +171,29 @@ html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 
-    appearance: button;
-    cursor: pointer;
+	appearance: button;
+	cursor: pointer;
 
 }
 
 button[disabled],
 html input[disabled] {
 
-    cursor: default;
+	cursor: default;
 
 }
 
 input[type="checkbox"],
 input[type="radio"] {
 
-    padding: 0;
+	padding: 0;
 
 }
 
 input[type="search"],
 input.searchfield {
 
-    appearance: textfield;
+	appearance: textfield;
 
 	&:focus::-webkit-input-placeholder {
 
@@ -208,15 +214,15 @@ input.searchfield {
 button::-moz-focus-inner,
 input::-moz-focus-inner {
 
-    border: 0;
-    padding: 0;
+	border: 0;
+	padding: 0;
 
 }
 
 textarea {
 
-    overflow: auto;
-    vertical-align: top;
+	overflow: auto;
+	vertical-align: top;
 
 }
 
