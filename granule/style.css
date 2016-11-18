@@ -230,6 +230,10 @@ body:after {
        box-sizing: inherit;
 }
 
+*[tabindex='-1']:focus {
+  outline: none;
+}
+
 article,
 aside,
 details,
@@ -3481,7 +3485,9 @@ a.thumbnail img {
   a#header-image,
   #respond,
   form,
+  .demosite-header,
   .social_links,
+  .post-meta-data,
   .sidebar,
   .taxonomies,
   #bit.loggedout-follow-normal,
@@ -3499,11 +3505,11 @@ a.thumbnail img {
   p {
     color: #000;
   }
-  p a {
+  .the-content a {
     overflow-wrap: break-word;
     word-wrap: break-word;
   }
-  p a:after {
+  .the-content a:after {
     content: " (" attr(href) ")";
     font-size: 80%;
   }
