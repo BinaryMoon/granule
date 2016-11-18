@@ -333,7 +333,7 @@ function granule_contributor( $user_id = null, $post_count = null ) {
 			</a>
 		</h2>
 <?php
-	echo wpautop( esc_html( get_the_author_meta( 'description', $user_id ) ) );
+	echo wpautop( esc_html( get_the_author_meta( 'description', $user_id ) ) ); // WPCS: XSS OK.
 
 	if ( $post_count ) {
 ?>

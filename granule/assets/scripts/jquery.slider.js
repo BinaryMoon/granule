@@ -1,7 +1,7 @@
 /**
  * Super simple javascript slider.
  *
- * jquery.slider.js v1.5.1
+ * Filename: jquery.slider.js v1.5.1
  *
  * Created by Ben Gillbanks <https://www.binarymoon.co.uk/>
  * Available under GPL2 license

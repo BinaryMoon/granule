@@ -200,7 +200,7 @@ function granule_testimonials_description( $before = '', $after = '' ) {
 	}
 
 	if ( $content ) {
-		echo $before . $content . $after;
+		echo $before . $content . $after; // WPCS: XSS OK.
 	}
 
 	return false;

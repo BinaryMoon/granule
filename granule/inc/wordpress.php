@@ -349,7 +349,7 @@ function granule_nav_menu( $params ) {
 	}
 
 	if ( $echo ) {
-		echo $html;
+		echo $html; // WPCS: XSS OK.
 	}
 
 	return $html;

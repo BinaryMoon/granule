@@ -1,7 +1,7 @@
 /**
  * The main javascript file for the theme, this makes the magic happen
  *
- * global.js v1
+ * Filename: global.js v1
  *
  * Created by Ben Gillbanks <https://prothemedesign.com/>
  * Available under GPL2 license
@@ -9,7 +9,7 @@
  * @package Granule
  */
 
-/* global ganule_site_settings */
+/* global granule_site_settings */
 
 ;( function( window, document, $ ) {
 
@@ -26,7 +26,6 @@
 		return ( ( 'ontouchstart' in window ) || ( navigator.MaxTouchPoints > 0 ) || ( navigator.msMaxTouchPoints > 0 ) );
 
 	};
-
 
 	/**
 	 * Smooth scroll to # anchor.
@@ -48,7 +47,6 @@
 
 	};
 
-
 	/**
 	 * Set an elements focus.
 	 * If required sets a tabindex for elements that can't normally be focused.
@@ -69,7 +67,6 @@
 		}
 
 	};
-
 
 	/**
 	 * Set default heights for social media widgets.
@@ -259,7 +256,6 @@
 
 	};
 
-
 	/**
 	 * Do all the stuffs.
 	 */
@@ -335,17 +331,6 @@
 				}
 			);
 
-
-			// Set menu items with submenus to aria-haspopup="true".
-			$( '.menu-item-has-children' ).each(
-				function() {
-
-					$( this ).attr( 'aria-haspopup', 'true' );
-
-				}
-			);
-
-
 			// Dropdown menu touch screen improvements.
 			$( '.menu' ).find( 'a' ).on(
 				'focus blur',
@@ -356,7 +341,6 @@
 				}
 			);
 
-
 			// Smooth scroll to element.
 			$( '.scroll-to' ).click(
 				function() {
@@ -366,21 +350,18 @@
 				}
 			);
 
-
 			// Mobile device detection.
 			$( 'body' ).addClass( is_touch_device() ? 'device-touch' : 'device-click' );
-
 
 			// Add author icon to comment author titles.
 			var user_icon = $( '.user-icon-container' ).html();
 			$( '.bypostauthor > article .fn' ).append( user_icon );
 
-
 			// Skip link fix.
 			// based on https://github.com/Automattic/_s/blob/master/js/skip-link-focus-fix.js .
-			var isWebkit = navigator.userAgent.toLowerCase().indexOf( 'webkit' ) > -1,
-				isOpera  = navigator.userAgent.toLowerCase().indexOf( 'opera' ) > -1,
-				isIe     = navigator.userAgent.toLowerCase().indexOf( 'msie' ) > -1;
+			var isWebkit = navigator.userAgent.toLowerCase().indexOf( 'webkit' ) > -1;
+			var isOpera = navigator.userAgent.toLowerCase().indexOf( 'opera' ) > -1;
+			var isIe = navigator.userAgent.toLowerCase().indexOf( 'msie' ) > -1;
 
 			if ( ( isWebkit || isOpera || isIe ) && document.getElementById && window.addEventListener ) {
 				window.addEventListener(
@@ -399,7 +380,6 @@
 					false
 				);
 			}
-
 		}
 	);
 

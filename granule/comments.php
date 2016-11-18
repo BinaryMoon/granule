@@ -26,11 +26,19 @@
 		<h2 id="comments" class="comments-title">
 
 <?php
-		printf(
-			esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'granule' ) ),
-			(int) number_format_i18n( get_comments_number() ),
-			'<span>' . get_the_title() . '</span>'
-		);
+		$comment_count = get_comments_number();
+		if ( 1 === $comment_count ) {
+			printf(
+				esc_html_e( 'One thought on &ldquo;%1$s&rdquo;', 'granule' ),
+				'<span>' . get_the_title() . '</span>'
+			);
+		} else {
+			printf( // WPCS: XSS OK.
+				esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'granule' ) ),
+				number_format_i18n( $comment_count ),
+				'<span>' . get_the_title() . '</span>'
+			);
+		}
 ?>
 
 			<a href="#respond" class="scroll-to">
