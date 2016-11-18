@@ -45,6 +45,7 @@
  * remove granule_widgets_overlay_body_class function there are no widgets in an overlay
  * check all registered menus are being used
  * check sidebar names and that sidebar display conditions match the sidebars they display
+ * test print styles
  * go through required accessibility items - https://make.wordpress.org/themes/handbook/review/accessibility/required/
  */
 
