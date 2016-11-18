@@ -22,7 +22,9 @@
 	a#header-image,
 	#respond,
 	form,
+	.demosite-header,
 	.social_links,
+	.post-meta-data,
 	.sidebar,
 	.taxonomies,
 	#bit.loggedout-follow-normal,
@@ -49,6 +51,10 @@
 	p {
 
 		color: $canvas-grey-100;
+
+	}
+
+	.the-content {
 
 		a {
 
