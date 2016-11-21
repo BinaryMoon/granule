@@ -1726,9 +1726,6 @@ blockquote.alignleft, blockquote.alignright {
   overflow: hidden;
   margin-bottom: 3rem;
   width: 100%;
-  float: left;
-  min-height: 1em;
-  padding: 0 4.16667%;
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
