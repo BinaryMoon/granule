@@ -6,7 +6,7 @@
 
 	overflow:hidden;
 	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
-	@include grid( 12 );
+	width: 100%;
 	@include wrap-text;
 
 	.form-select {
