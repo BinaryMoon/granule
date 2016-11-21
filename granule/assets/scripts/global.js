@@ -219,7 +219,9 @@
 		$( '.sidebar-footer .widget' ).imagesLoaded(
 			function() {
 
-				var $footer_widgets = $( '.sidebar-footer' ).masonry(
+				var $footer_widgets = null;
+
+				$footer_widgets = $( '.sidebar-footer' ).masonry(
 					{
 						itemSelector: '.widget',
 						columnWidth: '.grid-sizer',
@@ -229,12 +231,29 @@
 					}
 				);
 
+				// Reflow widgets after 2 seconds to ensure the correct position
+				// due to dynamic widgets like facebook and twitter loading.
 				setTimeout(
 					function() {
 						$footer_widgets.masonry( 'layout' );
 					},
 					2000
 				);
+
+				// Reflow Footer Widgets if changed in the Customizer.
+				if ( 'undefined' !== typeof wp && wp.customize && wp.customize.selectiveRefresh ) {
+
+					wp.customize.selectiveRefresh.bind(
+						'sidebar-updated',
+						function( sidebarPartial ) {
+							if ( 'sidebar-2' === sidebarPartial.sidebarId ) {
+								$footer_widgets.masonry( 'reloadItems' );
+								$footer_widgets.masonry( 'layout' );
+							}
+						}
+					);
+
+å				}
 
 			}
 		);
