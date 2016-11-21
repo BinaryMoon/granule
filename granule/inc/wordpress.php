@@ -202,7 +202,7 @@ function granule_after_setup_theme() {
 	add_image_size( 'granule-archive', 500, 500, true );
 
 	// Add selective refresh to widgets.
-	add_theme_support( 'customize_selective_refresh_widgets' );
+	add_theme_support( 'customize-selective-refresh-widgets' );
 
 	// Attachment page size.
 	add_image_size( 'granule-attachment-fullsize', 1200, 9999 );

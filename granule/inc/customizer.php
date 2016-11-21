@@ -19,12 +19,13 @@ if ( ! class_exists( 'WP_Customize_Control' ) ) {
 
 }
 
+
 /**
  * Theme Customizer properties
  *
- * @param object $wp_customize WP Customize object. Passed by WordPress.
+ * @param WP_Customize_Manager $wp_customize WP Customize object. Passed by WordPress.
  */
-function granule_customize_register( $wp_customize ) {
+function granule_customizer_settings( WP_Customize_Manager $wp_customize ) {
 
 	/**
 	 * Granule theme options section.
@@ -157,7 +158,64 @@ function granule_customize_register( $wp_customize ) {
 
 }
 
-add_action( 'customize_register', 'granule_customize_register' );
+add_action( 'customize_register', 'granule_customizer_settings' );
+
+
+/**
+ * Update Theme Elements without refreshing content.
+ *
+ * @param WP_Customize_Manager $wp_customize Customizer object.
+ */
+function granule_register_customize_refresh( WP_Customize_Manager $wp_customize ) {
+
+	// Ensure selective refresh is enabled.
+	if ( ! isset( $wp_customize->selective_refresh ) ) {
+
+		return false;
+
+	}
+
+	// Update site title.
+	$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
+
+	$wp_customize->selective_refresh->add_partial(
+		'blogname',
+		array(
+			'selector' => '.site-title a',
+			'render_callback' => function() {
+				bloginfo( 'name' );
+			},
+		)
+	);
+
+	// Update site description.
+	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
+
+	$wp_customize->selective_refresh->add_partial(
+		'blogdescription',
+		array(
+			'selector' => '.site-description',
+			'render_callback' => function() {
+				bloginfo( 'description' );
+			},
+		)
+	);
+
+}
+
+add_action( 'customize_register', 'granule_register_customize_refresh' );
+
+
+/**
+ * Binds JS handlers to make the Customizer preview reload changes asynchronously.
+ */
+function granule_customize_preview_js() {
+
+	wp_enqueue_script( 'granule-customize-preview', get_template_directory_uri() . '/assets/scripts/customizer-preview.js', array( 'customize-preview' ), '1.0', true );
+
+}
+
+add_action( 'customize_preview_init', 'granule_customize_preview_js' );
 
 
 /**
