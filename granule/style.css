@@ -1494,10 +1494,6 @@ form.contact-form div.clear-form {
   margin: 0 0 3rem 0;
 }
 
-.wp-post-series-box.expandable {
-  cursor: pointer;
-}
-
 .wp-post-series-box .wp-post-series-name {
   font-weight: bold;
   margin-bottom: 1.5rem;
@@ -1509,10 +1505,6 @@ form.contact-form div.clear-form {
 
 .wp-post-series-box .wp-post-series-description p {
   margin: 0 0 1.5rem 0;
-}
-
-.wp-post-series-box .wp-post-series-nav {
-  display: none;
 }
 
 .wp-post-series-box .wp-post-series-nav ol {
@@ -3472,12 +3464,13 @@ a.thumbnail img {
   .singular .main,
   .singular .main article,
   .main article {
-    width: 100%;
+    width: 100% !important;
   }
   nav,
   footer,
   .widget,
   .sharedaddy,
+  div#jp-relatedposts,
   a.post-edit-link,
   a#header-image,
   #respond,
@@ -3489,7 +3482,7 @@ a.thumbnail img {
   .taxonomies,
   #bit.loggedout-follow-normal,
   .col-sidebar {
-    display: none;
+    display: none !important;
   }
   .main article {
     width: 100%;
