@@ -252,6 +252,7 @@ add_action( 'after_switch_theme', 'granule_flush_rewrite_rules' );
  */
 function granule_breadcrumbs() {
 
+	// Check Jetpack Breadcrumbs are available before outputting them.
 	if ( function_exists( 'jetpack_breadcrumbs' ) ) {
 
 		jetpack_breadcrumbs();
@@ -269,6 +270,7 @@ function granule_breadcrumbs() {
  */
 function granule_social_links() {
 
+	// Check Jetpack Social Menu is available before trying to display it.
 	if ( function_exists( 'jetpack_social_menu' ) ) {
 
 		jetpack_social_menu();
@@ -317,10 +319,12 @@ add_filter( 'jetpack_implode_frontend_css', '__return_false' );
  */
 function granule_video_wrapper( $html ) {
 
+	// If Jetpack integrated function exists then uses that.
 	if ( function_exists( 'jetpack_responsive_videos_embed_html' ) ) {
 
 		return jetpack_responsive_videos_embed_html( $html );
 
+	// If not they use this. It does enough that I we can style the videos with css.
 	} else {
 
 		return '<div class="jetpack-video-wrapper">' . $html . '</div>';
