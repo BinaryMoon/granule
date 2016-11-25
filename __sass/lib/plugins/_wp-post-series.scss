@@ -8,12 +8,6 @@
 	padding: $grid-line-height ( $grid-gutter / 2 ) 0 ( $grid-gutter / 2 );
 	margin: 0 0 ( $grid-line-height * $grid-line-height-multiplier ) 0;
 
-	&.expandable {
-
-		cursor: pointer;
-
-	}
-
 	.wp-post-series-name {
 
 		font-weight: bold;
@@ -35,8 +29,6 @@
 
 	.wp-post-series-nav {
 
-		display: none;
-
 		ol {
 
 			list-style-type: decimal;
@@ -45,10 +37,4 @@
 
 	}
 
-}
-
-.wp-post-series-show-nav, .wp-post-series-show-description,
-.entry-content .wp-post-series-show-nav, .entry-content .wp-post-series-show-description, {
-	//float: right;
-	//padding: 0 1em 0 0;
 }
