@@ -372,6 +372,9 @@
 			// Mobile device detection.
 			$( 'body' ).addClass( is_touch_device() ? 'device-touch' : 'device-click' );
 
+			// Pre-select password field on password protected post.
+			$( '.post-password-form input[type="password"]' ).focus();
+
 			// Add author icon to comment author titles.
 			var user_icon = $( '.user-icon-container' ).html();
 			$( '.bypostauthor > article .fn' ).append( user_icon );
