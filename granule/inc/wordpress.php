@@ -378,20 +378,18 @@ function granule_body_class( $classes ) {
 
 	if ( is_active_sidebar( 'sidebar-1' ) ) {
 		$classes[] = 'themes-sidebar1-active';
-	} else {
-		$classes[] = 'themes-sidebar1-inactive';
 	}
 
 	if ( is_active_sidebar( 'sidebar-2' ) ) {
 		$classes[] = 'themes-sidebar2-active';
-	} else {
-		$classes[] = 'themes-sidebar2-inactive';
 	}
 
 	if ( granule_has_featured_posts() ) {
 		$classes[] = 'themes-has-featured-posts';
-	} else {
-		$classes[] = 'themes-no-featured-posts';
+	}
+
+	if ( display_header_text() ) {
+		$classes[] = 'has-site-title';
 	}
 
 	if ( get_header_image() ) {
