@@ -60,18 +60,25 @@ function granule_jetpack_init() {
 		'jetpack-content-options',
 		array(
 			'blog-display' => 'excerpt',			// The default setting of the theme: 'content', 'excerpt' or array( 'content, 'excerpt', ).
-			'author-bio'   => true,					// Display or not the author bio: true or false.
-			'masonry'      => '#main-content',		// A CSS selector matching the elements that triggers a masonry refresh if the theme is using a masonry layout.
+			'author-bio' => true,					// Display or not the author bio: true or false.
+			'masonry' => '#main-content',		// A CSS selector matching the elements that triggers a masonry refresh if the theme is using a masonry layout.
 			'post-details' => array(
 				'stylesheet' => 'granule-style',	// Name of the theme's stylesheet.
-				'date'       => '.posted-on',		// A CSS selector matching the elements that display the post date.
+				'date' => '.posted-on',		// A CSS selector matching the elements that display the post date.
 				'categories' => '.tax-categories',	// A CSS selector matching the elements that display the post categories.
-				'tags'       => '.tax-tags',		// A CSS selector matching the elements that display the post tags.
-				'author'     => '.byline',			// A CSS selector matching the elements that display the post author.
+				'tags' => '.tax-tags',		// A CSS selector matching the elements that display the post tags.
+				'author' => '.byline',			// A CSS selector matching the elements that display the post author.
+			),
+			'featured-images' => array(
+				'archive' => true, // Enable or not the featured image check for archive pages: true or false
+				'post' => true, // Enable or not the featured image check for single posts: true or false
+				'page' => true, // Enable or not the featured image check for single pages: true or false
+				//'archive-default' => true, // The default setting of the featured image on archive pages, if it's enabled or not: true or false
+				//'post-default' => true, // The default setting of the featured image on single posts, if it's enabled or not: true or false
+				//'page-default' => true, // The default setting of the featured image on single pages, if it's enabled or not: true or false
 			),
 		)
 	);
-
 	/**
 	 * Add support for colour contrast checker.
 	 * add_theme_support( 'tonesque' );
