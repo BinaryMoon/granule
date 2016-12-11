@@ -31,6 +31,7 @@
 
 }
 
+// Reusable button style.
 @mixin button( $color: $canvas-color ) {
 
 	background: $color;
@@ -56,10 +57,78 @@
 
 }
 
+// Element divider.
 @mixin separator {
 
 	content: $separator;
 	margin-right: $style-spacing;
 	opacity: $style-opacity-separator;
+
+}
+
+// The post content layout.
+@mixin the-content {
+
+	// headings
+	h1,
+	h2,
+	h3 {
+
+		margin-top: ( $grid-line-height * 2 );
+		clear: both;
+
+	}
+
+	// clear lists
+	ul,
+	dl,
+	ol {
+
+		clear: both;
+
+	}
+
+	// intro paragraph
+	.intro {
+
+		@include modular-scale( epsilon );
+		margin-bottom: $grid-line-height * $grid-line-height-multiplier * $line-height-margin-multiplier;
+
+	}
+
+	// Drop Caps
+	.drop-cap {
+
+		float: left;
+		font-family: $font-family-serif;
+		font-weight: bold;
+		margin: 0 0.05em 0 -0.2em;
+		@include modular-scale( alpha );
+		line-height: 0.75;
+
+	}
+
+	// Highlight
+	.highlight {
+
+		background: rgba( $canvas-yellow, 0.25 );
+		padding: 3px 6px;
+		border-radius: $border-radius;
+
+	}
+
+	// Button
+	.button {
+
+		@include button;
+
+	}
+
+	// Small caps
+	.small-caps {
+
+		font-variant: small-caps;
+
+	}
 
 }
