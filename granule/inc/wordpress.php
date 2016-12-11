@@ -351,6 +351,12 @@ function granule_nav_menu( $params ) {
 
 	}
 
+	/**
+	 * Apply standard WordPress filter so that html can still be modified by
+	 * plugins.
+	 */
+	apply_filters( 'wp_nav_menu', $html, $params );	
+
 	if ( $echo ) {
 		echo $html; // WPCS: XSS OK.
 	}
