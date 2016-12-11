@@ -2,7 +2,7 @@
  * 5.2 - Print Styles
  */
 
-@media print {
+@include for-print {
 
 	.masthead .branding,
 	.main,

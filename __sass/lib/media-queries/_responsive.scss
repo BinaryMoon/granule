@@ -2,7 +2,7 @@
  * 5.1 - Responsive Styles
  */
 
-@media only screen and ( max-width: $wp-responsive-width-1 ) {
+@include for-phone() {
 
 	// remove comment nesting
 	.content-comments {
