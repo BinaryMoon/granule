@@ -9,7 +9,7 @@
  * @package Granule
  */
 
-/* global granule_site_settings */
+/* global granule_site_settings, wp */
 
 ;( function( window, document, $ ) {
 
@@ -205,6 +205,8 @@
 
 				var $new_articles = $( '#main-content' ).children().not( '.post-loaded, .infinite-loader' ).addClass( 'post-loaded' );
 				$grid.masonry( 'appended', $new_articles );
+				$grid.masonry( 'reloadItems' );
+				$grid.masonry( 'layout' );
 
 				$new_articles.imagesLoaded(
 					function () {
@@ -253,7 +255,7 @@
 						}
 					);
 
-å				}
+				}
 
 			}
 		);
