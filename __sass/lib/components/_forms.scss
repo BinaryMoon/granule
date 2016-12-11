@@ -14,7 +14,6 @@ input {
 
 }
 
-// dimensions
 input[type=text],
 input[type=password],
 input[type=email],
@@ -37,27 +36,6 @@ input.settings-input {
 	line-height: $grid-line-height;
 	min-height: $grid-line-height;
 	width: 100%;
-
-}
-
-// visuals
-input[type=text],
-input[type=password],
-input[type=email],
-input[type=url],
-input[type=search],
-input[type="date"],
-input[type="time"],
-input[type="datetime-local"],
-input[type="week"],
-input[type="month"],
-input[type="tel"],
-input[type="number"],
-input.text,
-select,
-textarea,
-input.settings-input {
-
 	border-radius: $border-radius;
 	background: $form-input-background;
 	border: $border-width solid $form-input-border-color;
@@ -134,7 +112,6 @@ select {
 	}
 
 }
-
 
 textarea {
 
