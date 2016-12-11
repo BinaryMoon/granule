@@ -77,19 +77,7 @@
 				background: $menu-color;
 				left: -999em;
 
-				// arrow pointing up to reference the menu it is a child of
-				&:before {
-
-					@include arrow( $menu-arrow-size );
-					border-bottom-color: $menu-color;
-					border-top-width: 0;
-					top: -$menu-arrow-size;
-					left: $menu-link-padding;
-					right: auto;
-
-				}
-
-				// invisible hotspot that makes it easier to select sub menu items
+				// Invisible hotspot that makes it easier to select sub menu items.
 				&:after {
 
 					display: block;
@@ -104,7 +92,7 @@
 
 				}
 
-				// second level navigation
+				// Second level navigation.
 				ul {
 
 					top: 0;
@@ -173,7 +161,7 @@
 
 			}
 
-			// must use left rather than display:block since it allows keyboard navigation to work properly.
+			// Must use left rather than display:block since it allows keyboard navigation to work properly.
 			&.focus,
 			&:hover {
 
@@ -188,7 +176,7 @@
 
 		}
 
-		// must use left rather than display:block since it allows keyboard navigation to work properly.
+		// Must use left rather than display:block since it allows keyboard navigation to work properly.
 		ul ul li {
 
 			&.focus,

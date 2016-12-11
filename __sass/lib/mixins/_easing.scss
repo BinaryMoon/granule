@@ -16,10 +16,6 @@
 	transition-property: $what;
 }
 
-@mixin animation( $rule ) {
-	animation: $rule;
-}
-
 @mixin transition-easeInSine( $what:all, $duration:0.15s ) {
 	@include transition( $what $duration cubic-bezier(0.47, 0, 0.745, 0.715) );
 }
