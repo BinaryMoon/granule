@@ -5,12 +5,27 @@
 
 #footer {
 
+	$footer-widget-width: 33.3%;
+
 	padding: $grid-line-height 0;
 
 	.footer-widgets {
 
+		.grid-sizer {
+
+			width: $footer-widget-width;
+
+		}
+
 		width: 100%;
 		@include clear;
+
+		.widget {
+
+			float: left;
+			width: $footer-widget-width;
+
+		}
 
 	}
 
