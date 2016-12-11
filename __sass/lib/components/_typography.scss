@@ -103,8 +103,8 @@ p {
 pre {
 
 	margin: ( $grid-line-height * $grid-line-height-multiplier ) 0;
-	background: $canvas-grey-90;
-	color: $canvas-green;
+	background: $canvas-pre-background;
+	color: $canvas-pre-color;
 	padding: $grid-line-height $style-element-spacing;
 	overflow: auto;
 	display: block;
