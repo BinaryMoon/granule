@@ -181,7 +181,7 @@ function granule_register_customize_refresh( WP_Customize_Manager $wp_customize 
 	$wp_customize->selective_refresh->add_partial(
 		'blogname',
 		array(
-			'selector' => '.site-title a',
+			'selector' => '.site-title',
 			'render_callback' => function() {
 				bloginfo( 'name' );
 			},
@@ -201,6 +201,9 @@ function granule_register_customize_refresh( WP_Customize_Manager $wp_customize 
 		)
 	);
 
+	// Show and hide header text.
+	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+
 }
 
 add_action( 'customize_register', 'granule_register_customize_refresh' );
@@ -211,7 +214,7 @@ add_action( 'customize_register', 'granule_register_customize_refresh' );
  */
 function granule_customize_preview_js() {
 
-	wp_enqueue_script( 'granule-customize-preview', get_template_directory_uri() . '/assets/scripts/customizer-preview.js', array( 'customize-preview' ), '1.0', true );
+	wp_enqueue_script( 'granule-customize-preview', get_theme_file_uri( '/assets/scripts/customizer-preview.js' ), array( 'customize-preview' ), '1.0', true );
 
 }
 

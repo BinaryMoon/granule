@@ -54,7 +54,8 @@ function granule_colour_styles() {
 ?>
 	.masthead .site-title,
 	.masthead .site-description {
-		display: none;
+		clip: rect( 1px, 1px, 1px, 1px );
+		position: absolute;
 	}
 <?php
 	} else {
