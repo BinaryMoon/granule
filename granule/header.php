@@ -19,8 +19,7 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
 <head>
