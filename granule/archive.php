@@ -29,7 +29,7 @@
 		the_archive_title( '<h1 class="entry-title entry-archive-title">', '</h1>' );
 		the_archive_description( '<div class="category-description">', '</div>' );
 
-		if ( 'jetpack-portfolio' === get_post_type() ) {
+		if ( is_post_type_archive( 'jetpack-portfolio' ) || is_tax( 'jetpack-portfolio-type' ) ) {
 			granule_project_terms();
 		}
 ?>
