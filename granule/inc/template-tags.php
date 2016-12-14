@@ -404,7 +404,11 @@ function granule_project_terms() {
 	}
 
 	// Make sure the term exists and has some results.
-	if ( ! is_wp_error( $terms ) && ! empty( $terms ) ) {
+	if ( is_wp_error( $terms ) || empty( $terms ) ) {
+		return false;
+	}
+
+	// All clear - let's display the terms.
 ?>
 	<p class="projects-terms">
 
@@ -428,7 +432,6 @@ function granule_project_terms() {
 ?>
 	</p>
 <?php
-	}
 
 }
 

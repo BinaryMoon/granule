@@ -20,9 +20,18 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
-	// if ( is_singular() && is_active_sidebar( 'sidebar-1' ) ) {
-	// if ( is_active_sidebar( 'sidebar-1' ) && ! is_page_template( 'templates/full-width-page.php' ) ) {
-	if ( is_active_sidebar( 'sidebar-1' ) ) {
+	// if ( is_singular() ) {
+	// 	return;
+	// }
+
+	// if ( ! is_page_template( 'templates/full-width-page.php' ) ) {
+	// 	return;
+	// }
+
+	// Quit if sidebar has no content.
+	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+		return;
+	}
 ?>
 
 <!-- Sidebar Main (1) -->
@@ -35,6 +44,3 @@
 ?>
 
 </aside>
-
-<?php
-	}

@@ -17,7 +17,10 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
+	// Quit early if no footer widgets available.
 	if ( is_active_sidebar( 'sidebar-2' ) ) {
+		return;
+	}
 ?>
 
 <!-- Sidebar Footer (2) -->
@@ -29,6 +32,3 @@
 ?>
 
 </aside>
-
-<?php
-	}
