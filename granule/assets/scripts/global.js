@@ -175,10 +175,10 @@
 	var masonry_setup = function() {
 
 		// Masonry grid sizer.
-		$( '#main-content, .sidebar-footer' ).prepend( '<div class="grid-sizer"></div>' );
+		$( '#main-content.content-masonry, .sidebar-footer' ).prepend( '<div class="grid-sizer"></div>' );
 
 		// Blog post content.
-		var $grid = $( '#main-content' ).masonry(
+		var $grid = $( '#main-content.content-masonry' ).masonry(
 			{
 				itemSelector: 'article',
 				columnWidth: '.grid-sizer',
@@ -203,7 +203,7 @@
 			'post-load',
 			function() {
 
-				var $new_articles = $( '#main-content' ).children().not( '.post-loaded, .infinite-loader' ).addClass( 'post-loaded' );
+				var $new_articles = $( '#main-content.content-masonry' ).children().not( '.post-loaded, .infinite-loader' ).addClass( 'post-loaded' );
 				$grid.masonry( 'appended', $new_articles );
 				$grid.masonry( 'reloadItems' );
 				$grid.masonry( 'layout' );
@@ -313,13 +313,13 @@
 			}
 
 			// Fade in infinite scroll posts.
-			$( '#main-content' ).find( 'article' ).addClass( 'post-static' );
+			$( '#main-content.content-masonry' ).find( 'article' ).addClass( 'post-static' );
 
 			$( 'body' ).on(
 				'post-load',
 				function() {
 
-					$( '#main-content' ).find( 'article' ).not( '.post-loaded, .post-static' ).addClass( 'post-loaded' );
+					$( '#main-content.content-masonry' ).find( 'article' ).not( '.post-loaded, .post-static' ).addClass( 'post-loaded' );
 
 				}
 			);

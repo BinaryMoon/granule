@@ -36,7 +36,7 @@
 
 		</header>
 
-		<div id="main-content" class="main-content content-posts">
+		<div id="main-content" class="main-content content-posts content-masonry">
 
 <?php
 		while ( have_posts() ) {
