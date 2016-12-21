@@ -25,7 +25,7 @@ function granule_header() {
 	$header_image_actual_height = get_custom_header()->height;
 
 	// Use custom headers on singular pages, but only if the image is large enough.
-	if ( is_singular() ) {
+	if ( apply_filters( 'granule_featured_image_header', is_singular() ) ) {
 
 		$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'granule-header' );
 
