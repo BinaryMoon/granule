@@ -383,11 +383,9 @@
 
 			// Skip link fix.
 			// based on https://github.com/Automattic/_s/blob/master/js/skip-link-focus-fix.js .
-			var isWebkit = navigator.userAgent.toLowerCase().indexOf( 'webkit' ) > -1;
-			var isOpera = navigator.userAgent.toLowerCase().indexOf( 'opera' ) > -1;
-			var isIe = navigator.userAgent.toLowerCase().indexOf( 'msie' ) > -1;
+			var isIe = /(trident|msie)/i.test( navigator.userAgent );
 
-			if ( ( isWebkit || isOpera || isIe ) && document.getElementById && window.addEventListener ) {
+			if ( isIe && document.getElementById && window.addEventListener ) {
 				window.addEventListener(
 					'hashchange',
 					function() {
