@@ -334,7 +334,7 @@ function granule_contributor( $user_id = null, $post_count = null ) {
 		<h2>
 			<a href="<?php echo esc_url( get_author_posts_url( $user_id ) ); ?>" class="author vcard">
 				<?php the_author_meta( 'display_name', $user_id ); ?>
-				<small><?php esc_html_e( 'View All', 'granule' ); ?></small>
+				<small><?php esc_html_e( 'All Posts', 'granule' ); ?></small>
 			</a>
 		</h2>
 <?php
