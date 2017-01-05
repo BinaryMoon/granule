@@ -37,7 +37,7 @@
 		<section class="footer-wrap" role="contentinfo">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'granule' ) ); ?>" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'granule' ); ?>" rel="generator"><?php printf( esc_html__( 'Proudly powered by %s', 'granule' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'granule' ), 'Granule', '<a href="https://prothemedesign.com/" rel="designer">Pro Theme Design</a>' ); ?>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'granule' ), 'Granule', '<a href="https://prothemedesign.com/">Pro Theme Design</a>' ); ?>
 		</section>
 
 	</footer>
