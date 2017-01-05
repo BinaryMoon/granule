@@ -10,6 +10,7 @@
  *
  * @package Granule
  */
+
 /* global jQuery, document, wp */
 
 ;( function( $, document ) {
