@@ -107,7 +107,7 @@ function granule_content_width() {
 
 }
 
-add_action( 'after_setup_theme', 'granule_content_width', 0 );
+add_action( 'template_redirect', 'granule_content_width', 0 );
 
 
 /**
@@ -182,6 +182,9 @@ add_filter( 'wp_resource_hints', 'granule_resource_hints', 10, 2 );
 function granule_after_setup_theme() {
 
 	load_theme_textdomain( 'granule', get_template_directory() . '/languages' );
+
+	// Set default content width.
+	$GLOBALS['content_width'] = 900; 
 
 	// Title Tag.
 	add_theme_support( 'title-tag' );
@@ -355,7 +358,7 @@ function granule_nav_menu( $params ) {
 	 * Apply standard WordPress filter so that html can still be modified by
 	 * plugins.
 	 */
-	apply_filters( 'wp_nav_menu', $html, $params );	
+	apply_filters( 'wp_nav_menu', $html, $params );
 
 	if ( $echo ) {
 		echo $html; // WPCS: XSS OK.
