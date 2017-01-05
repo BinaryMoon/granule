@@ -920,6 +920,7 @@ table {
   margin-bottom: 3rem;
   margin-top: 3rem;
   width: 100%;
+  table-layout: fixed;
 }
 
 table th {
@@ -1708,6 +1709,7 @@ blockquote.alignleft, blockquote.alignright {
   word-wrap: normal !important;
   text-align: center;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  word-wrap: normal;
 }
 
 .screen-reader-shortcut:focus {
