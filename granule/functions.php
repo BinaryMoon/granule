@@ -29,7 +29,7 @@
  * check sticky styles
  * test custom header, with and without
  * responsive styles
- * content_width
+ * set content_width (in granule_content_width and granule_after_setup_theme)
  * theme_colors
  * check custom page template styles
  * check custom logo properties are appropriate
