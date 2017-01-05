@@ -15,7 +15,9 @@
  * Display header image and link to homepage.
  *
  * On singular pages display featured image if it is large enough to fill the
- * space.
+ * space. Uses get_queried_object_id in case the header image is called outside
+ * the_loop (before the_post has been called) so that we can be sure featured
+ * images are found.
  */
 function granule_header() {
 
@@ -24,10 +26,13 @@ function granule_header() {
 	$header_image_actual_width = get_custom_header()->width;
 	$header_image_actual_height = get_custom_header()->height;
 
-	// Use custom headers on singular pages, but only if the image is large enough.
+	// Use custom headers on singular pages, but only if the image is large
+	// enough.
 	if ( apply_filters( 'granule_featured_image_header', is_singular() ) ) {
 
-		$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'granule-header' );
+		// Use get_queried_object_id so that the content id will always be found
+		// in cases where $post has not been set.
+		$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_queried_object_id() ), 'granule-header' );
 
 		if ( ! empty( $image ) && $image[1] >= $header_image_width ) {
 			$header_image = $image[0];
