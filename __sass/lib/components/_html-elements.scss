@@ -100,11 +100,12 @@ blockquote {
 /* tables */
 table {
 
-    border-collapse: collapse;
-    border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
 	margin-top: $grid-line-height * $grid-line-height-multiplier;
 	width: 100%;
+	table-layout: fixed;
 
 	th {
 
