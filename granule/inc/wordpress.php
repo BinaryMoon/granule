@@ -181,6 +181,7 @@ add_filter( 'wp_resource_hints', 'granule_resource_hints', 10, 2 );
  */
 function granule_after_setup_theme() {
 
+	// Set theme translations directory.
 	load_theme_textdomain( 'granule', get_template_directory() . '/languages' );
 
 	// Set default content width.
