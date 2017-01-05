@@ -32,7 +32,7 @@
 
 <?php
 	if ( $image ) {
-		echo $image;
+		echo $image; // WPCS: XSS OK.
 	}
 
 	the_title( '<h3>', '</h3>' );

@@ -17,7 +17,9 @@
 	if ( $image ) {
 ?>
 
-	<a href="<?php the_permalink(); ?>"><?php echo $image; ?></a>
+	<a href="<?php the_permalink(); ?>">
+		<?php echo $image; // WPCS: XSS OK. ?>
+	</a>
 
 <?php
 	}

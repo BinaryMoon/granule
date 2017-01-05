@@ -26,7 +26,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="post-gallery">
-		<?php echo $gallery; ?>
+		<?php echo $gallery; // WPCS: XSS OK. ?>
 	</div>
 
 	<section class="entry entry-archive">

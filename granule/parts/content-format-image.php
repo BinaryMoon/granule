@@ -28,7 +28,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<a href="<?php the_permalink(); ?>" class="thumbnail">
-		<?php echo $image; ?>
+		<?php echo $image; // WPCS: XSS OK. ?>
 	</a>
 
 	<section class="entry entry-archive">
