@@ -22,7 +22,7 @@
 		<header class="entry-archive-header">
 
 			<h1 class="entry-title entry-archive-title">
-				<?php printf( esc_html__( 'Search results for: %s', 'granule' ), esc_html( get_search_query() ) ); ?>
+				<?php printf( wp_kses( __( '<span>Search results for:</span> %s', 'granule' ), array( 'span' => array() ) ), esc_html( get_search_query() ) ); ?>
 			</h1>
 
 		</header>
