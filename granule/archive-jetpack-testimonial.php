@@ -23,7 +23,9 @@
 
 	if ( have_posts() ) {
 
-		if ( $image = granule_testimonials_image() ) {
+		$image = granule_testimonials_image();
+
+		if ( $image ) {
 
 			$image_allowed_properties = array(
 				'src' => array(),
