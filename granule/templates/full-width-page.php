@@ -6,6 +6,7 @@
  * to the other.
  *
  * Template Name: Full-width
+ * Template Post Type: post, page
  *
  * @package Granule
  * @subpackage PageTemplate
