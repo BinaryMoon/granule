@@ -6,6 +6,7 @@
  * creation of a Guestbook on a site.
  *
  * Template Name: Guestbook
+ * Template Post Type: post, page
  *
  * @package Granule
  * @subpackage PageTemplate
