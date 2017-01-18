@@ -38,9 +38,10 @@
 
 <?php
 
-	// List child pages.
+	// Get a list of the children for the current page.
 	$child_pages = granule_child_pages();
 
+	// If there are any children then display them below in a grid.
 	if ( $child_pages->have_posts() ) {
 ?>
 
