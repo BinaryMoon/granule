@@ -49,6 +49,7 @@
 			$this.val( 'default' );
 
 			selected.remove();
+
 			list_update();
 
 		});
@@ -78,6 +79,7 @@
 			var new_option = '<option value="' + parent.data( 'value' ) + '">' + parent.text() + '</option>';
 			select.append( new_option );
 			parent.remove();
+
 			list_update();
 			return false;
 		});
