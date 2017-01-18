@@ -1,5 +1,5 @@
 /**!
- * 1.4 - HTML Elements
+ * ## - HTML Elements
  */
 
 /* lists */
@@ -18,7 +18,7 @@ ul {
 
 	li + li {
 
-		margin-top: $grid-line-height * ( 1 - $line-height-margin-multiplier );
+		margin-top: $grid-line-height / 4;
 
 	}
 
