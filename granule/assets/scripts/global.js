@@ -223,6 +223,7 @@
 
 				var $footer_widgets = null;
 
+				// Initialise masonry footer widgets.
 				$footer_widgets = $( '.sidebar-footer' ).masonry(
 					{
 						itemSelector: '.widget',
@@ -230,6 +231,15 @@
 						gutter: 0,
 						isOriginLeft: ! $( 'body' ).is( '.rtl' ),
 						percentPosition: true
+					}
+				);
+
+				// Update again once images have loaded.
+				$footer_widgets.imagesLoaded(
+					function() {
+
+						$footer_widgets.masonry( 'layout' );
+
 					}
 				);
 
