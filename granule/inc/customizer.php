@@ -229,15 +229,7 @@ add_action( 'customize_preview_init', 'granule_customize_preview_js' );
  */
 function granule_sanitize_checkboxes( $setting ) {
 
-	if ( true === $setting ) {
-
-		return true;
-
-	} else {
-
-		return false;
-
-	}
+	return (bool) $setting;
 
 }
 
