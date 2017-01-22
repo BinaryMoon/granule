@@ -29,7 +29,7 @@
 		$comment_count = get_comments_number();
 		if ( 1 === $comment_count ) {
 			printf(
-				esc_html_e( 'One thought on &ldquo;%1$s&rdquo;', 'granule' ),
+				esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'granule' ),
 				'<span>' . get_the_title() . '</span>'
 			);
 		} else {
