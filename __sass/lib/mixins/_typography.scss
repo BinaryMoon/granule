@@ -1,6 +1,6 @@
 
 // scale font size and apply dynamic line height
-@mixin modular-scale( $key ) {
+@mixin modular-scale( $key, $line-height: null ) {
 
 	$font-sizes-final: map-merge(
 		(
@@ -20,7 +20,10 @@
 
 	$font: map_get( $font-sizes-final, $key );
 	$size: map_get( $font, size );
-	$line-height: map_get( $font, height );
+
+	@if ( $line-height == null ) {
+		$line-height: map_get( $font, height );		
+	}
 
 	font-size: convert-unit( $size * $font-base, 'px' );
 	font-size: $size / 16 * $font-base ;
