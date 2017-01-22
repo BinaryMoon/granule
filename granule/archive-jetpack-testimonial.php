@@ -35,21 +35,21 @@
 			);
 ?>
 
-	<div class="header-image">
+		<div class="header-image">
 
-		<?php echo wp_kses( $image, array( 'img' => $image_allowed_properties ) ); ?>
+			<?php echo wp_kses( $image, array( 'img' => $image_allowed_properties ) ); ?>
 
-	</div>
+		</div>
 
 <?php
 		}
 ?>
 
 		<header class="entry-archive-header">
+
 			<h1 class="entry-title entry-archive-title"><?php granule_testimonials_title(); ?></h1>
-<?php
-		granule_testimonials_description( '<div class="category-description">', '</div>' );
-?>
+			<?php granule_testimonials_description( '<div class="category-description">', '</div>' ); ?>
+
 		</header>
 
 		<div id="main-content" class="main-content testimonials content-testimonials">
