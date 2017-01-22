@@ -185,7 +185,7 @@ function granule_after_setup_theme() {
 	load_theme_textdomain( 'granule', get_template_directory() . '/languages' );
 
 	// Set default content width.
-	$GLOBALS['content_width'] = 900; 
+	$GLOBALS['content_width'] = 900;
 
 	// Title Tag.
 	add_theme_support( 'title-tag' );
@@ -266,7 +266,8 @@ function granule_after_setup_theme() {
 	);
 
 	// Editor Style.
-	if ( $fonts_url = granule_fonts() ) {
+	$fonts_url = granule_fonts();
+	if ( $fonts_url ) {
 		add_editor_style( $fonts_url );
 	}
 
@@ -518,12 +519,22 @@ function granule_post_terms( $content = '' ) {
 
 	$terms = '';
 
-	// Add Categories.
-	$terms .= '<p class="taxonomy tax-categories">' . get_the_category_list( esc_html_x( ', ', 'Category/ Tag list separator (includes a space after the comma)', 'granule' ) ) . '</p>';
+	/* translators: used between list items, there is a space after the comma */
+	$categories_list = get_the_category_list( esc_html__( ', ', 'granule' ) );
+	if ( $categories_list ) {
 
-	// Add Tags.
-	if ( get_the_tags( get_the_ID() ) ) {
-		$terms .= '<p class="taxonomy tax-tags">' . get_the_tag_list( '', esc_html_x( ', ', 'Category/ Tag list separator (includes a space after the comma)', 'granule' ), '' ) . '</p>';
+		/* translators: %1$s will be replaced with a list of categories */
+		$terms .= sprintf( '<p class="taxonomy tax-categories">' . esc_html__( 'Posted in: %1$s', 'granule' ) . '</p>', $categories_list ); // WPCS: XSS OK.
+
+	}
+
+	/* translators: used between list items, there is a space after the comma */
+	$tags_list = get_the_tag_list( '', esc_html__( ', ', 'granule' ) );
+	if ( $tags_list ) {
+
+		/* translators: %1$s will be replaced with a list of tags */
+		$terms .= sprintf( '<p class="taxonomy tax-tags">' . esc_html__( 'Tagged as: %1$s', 'granule' ) . '</p>', $tags_list ); // WPCS: XSS OK.
+
 	}
 
 	// Output everything.
