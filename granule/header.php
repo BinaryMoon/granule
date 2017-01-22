@@ -42,7 +42,7 @@
 		<div class="branding">
 
 <?php
-	if ( is_front_page() ) {
+	if ( is_front_page() && ! is_paged() ) {
 ?>
 			<h1 class="site-title">
 				<?php bloginfo( 'name' ); ?>
