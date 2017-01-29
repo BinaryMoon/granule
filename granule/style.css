@@ -1296,7 +1296,7 @@ div.jetpack-testimonial-shortcode.column-4 .testimonial-entry:nth-of-type(4n + 1
 
 .entry-breadcrumbs a {
   font-weight: bold;
-  margin-right: 1.5em;
+  margin-right: 1em;
   position: relative;
 }
 
@@ -1309,6 +1309,7 @@ div.jetpack-testimonial-shortcode.column-4 .testimonial-entry:nth-of-type(4n + 1
   border: 0.4em solid transparent;
   content: "";
   right: -0.8em;
+  left: auto;
   top: 50%;
   margin-top: -0.4em;
   border-right-width: 0;
@@ -2536,13 +2537,13 @@ a:hover {
 
 .masthead .menu li a {
   display: block;
-  padding: 0.75rem 1.5em;
+  padding: 0.75rem 1em;
   position: relative;
 }
 
 .masthead .menu li.menu-item-has-children > a {
-  padding-right: 2.7em;
-  padding-left: 1.5em;
+  padding-right: 2.2em;
+  padding-left: 1em;
 }
 
 .masthead .menu li.menu-item-has-children > a:after {
@@ -2551,7 +2552,7 @@ a:hover {
   content: "";
   top: 45%;
   top: calc( 50% - ( 0.4em / 2 ));
-  right: 1.5em;
+  right: 1em;
   left: auto;
   border-bottom-width: 0;
   border-top-color: currentColor;
@@ -2838,7 +2839,7 @@ main.full-width,
 }
 
 .pagination span {
-  padding: 0 0.375em;
+  padding: 0 0.25em;
   display: inline-block;
 }
 
@@ -3044,6 +3045,7 @@ a.thumbnail img {
   border: 12px solid transparent;
   content: "";
   right: -24px;
+  left: auto;
   top: 50%;
   margin-top: -12px;
   border-right-width: 0;
@@ -3062,6 +3064,7 @@ a.thumbnail img {
   border: 12px solid transparent;
   content: "";
   left: -24px;
+  right: auto;
   top: 50%;
   margin-top: -12px;
   border-left-width: 0;
@@ -3489,7 +3492,7 @@ a.thumbnail img {
 }
 
 /**!
- * ## - Print Styles
+ * ## - Generic Print Styles
  */
 @media print {
   .masthead .branding,
