@@ -9,7 +9,7 @@
  */
 
 /**
- * Add theme colours for wordpress.com custom functionality.
+ * Add theme colours for WordPress.com custom functionality.
  *
  * @global string $themecolors
  */
@@ -18,7 +18,7 @@ function granule_theme_colors() {
 	global $themecolors;
 
 	/**
-	 * Set a default theme color array for WP.com.
+	 * Set a default theme color array for WordPress.com.
 	 *
 	 * @global array $themecolors
 	 */
@@ -49,7 +49,7 @@ function granule_dequeue_fonts( $fonts ) {
 
 	if ( class_exists( 'TypekitData' ) && class_exists( 'CustomDesign' ) && CustomDesign::is_upgrade_active() ) {
 
-	    $custom_fonts = TypekitData::get( 'families' );
+		$custom_fonts = TypekitData::get( 'families' );
 
 		if ( $custom_fonts ) {
 
