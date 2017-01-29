@@ -23,6 +23,7 @@
 
 	@include arrow( $border-size );
 	left: -2 * $border-size;
+	right: auto;
 	top: 50%;
 	margin-top: -$border-size;
 	border-left-width: 0;
@@ -37,6 +38,7 @@
 
 	@include arrow( $border-size );
 	right: -2 * $border-size;
+	left: auto;
 	top: 50%;
 	margin-top: -$border-size;
 	border-right-width: 0;
