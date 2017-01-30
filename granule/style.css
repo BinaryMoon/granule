@@ -2289,7 +2289,7 @@ blockquote.alignleft, blockquote.alignright {
   opacity: 0.3;
 }
 
-.content-comments ol.comment-list ul.children {
+.content-comments ol.comment-list .children {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -2297,7 +2297,7 @@ blockquote.alignleft, blockquote.alignright {
   position: relative;
 }
 
-.content-comments ol.comment-list ul.children li:last-child {
+.content-comments ol.comment-list .children li:last-child {
   margin: 0;
 }
 
