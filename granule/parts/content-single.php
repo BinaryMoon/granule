@@ -46,7 +46,7 @@
 
 	if ( is_single() ) {
 
-		granule_contributor();
+		granule_author_bio();
 
 	}
 ?>
