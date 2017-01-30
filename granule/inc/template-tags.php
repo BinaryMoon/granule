@@ -329,14 +329,18 @@ function granule_contributor( $user_id = null, $post_count = null ) {
 	}
 
 ?>
-	<div class="contributor">
+
+	<div class="entry-author contributor">
+
 		<?php echo get_avatar( $user_id, 140 ); ?>
+
 		<h2>
 			<a href="<?php echo esc_url( get_author_posts_url( $user_id ) ); ?>" class="author vcard">
 				<?php the_author_meta( 'display_name', $user_id ); ?>
 				<small><?php esc_html_e( 'All Posts', 'granule' ); ?></small>
 			</a>
 		</h2>
+
 <?php
 	echo wpautop( esc_html( get_the_author_meta( 'description', $user_id ) ) ); // WPCS: XSS OK.
 
