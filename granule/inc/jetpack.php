@@ -59,26 +59,28 @@ function granule_jetpack_init() {
 	add_theme_support(
 		'jetpack-content-options',
 		array(
-			'blog-display' => 'excerpt',			// The default setting of the theme: 'content', 'excerpt' or array( 'content, 'excerpt', ).
-			'author-bio' => true,					// Display or not the author bio: true or false.
-			'masonry' => '#main-content',		// A CSS selector matching the elements that triggers a masonry refresh if the theme is using a masonry layout.
+			// The default setting of the theme: 'content', 'excerpt' or array( 'content, 'excerpt', ).
+			'blog-display' => 'excerpt',
+			'author-bio' => true,
+			'masonry' => '#main-content',
 			'post-details' => array(
-				'stylesheet' => 'granule-style',	// Name of the theme's stylesheet.
-				'date' => '.posted-on',		// A CSS selector matching the elements that display the post date.
-				'categories' => '.tax-categories',	// A CSS selector matching the elements that display the post categories.
-				'tags' => '.tax-tags',		// A CSS selector matching the elements that display the post tags.
-				'author' => '.byline',			// A CSS selector matching the elements that display the post author.
+				'stylesheet' => 'granule-style',
+				'date' => '.posted-on',
+				'categories' => '.tax-categories',
+				'tags' => '.tax-tags',
+				'author' => '.byline',
 			),
 			'featured-images' => array(
-				'archive' => true, // Enable or not the featured image check for archive pages: true or false
-				'post' => true, // Enable or not the featured image check for single posts: true or false
-				'page' => true, // Enable or not the featured image check for single pages: true or false
-				//'archive-default' => true, // The default setting of the featured image on archive pages, if it's enabled or not: true or false
-				//'post-default' => true, // The default setting of the featured image on single posts, if it's enabled or not: true or false
-				//'page-default' => true, // The default setting of the featured image on single pages, if it's enabled or not: true or false
+				'archive' => true,
+				'archive-default' => true,
+				'post' => true,
+				'post-default' => true,
+				'page' => true,
+				'page-default' => true,
 			),
 		)
 	);
+
 	/**
 	 * Add support for colour contrast checker.
 	 * add_theme_support( 'tonesque' );
@@ -398,5 +400,40 @@ function granule_image_tone( $image ) {
 	}
 
 	return $class;
+
+}
+
+
+/**
+ * The function to display Author Bio in a theme.
+ *
+ * @return null
+ */
+function granule_author_bio() {
+
+	$options = get_theme_support( 'jetpack-content-options' );
+	$author_bio = null;
+
+	if ( ! empty( $options[0]['author-bio'] ) ) {
+		$author_bio = $options[0]['author-bio'];
+	}
+
+	// If the theme doesn't support "jetpack-content-options['author-bio']", don't continue.
+	if ( true !== $author_bio ) {
+		return;
+	}
+
+	// If "jetpack_content_author_bio" is false and we aren't in the customizer, don't continue.
+	if ( ! get_option( 'jetpack_content_author_bio', 1 ) ) {
+		return;
+	}
+
+	// If we aren't on a single post, don't continue.
+	if ( ! is_single() ) {
+		return;
+	}
+
+	// Display the author bio.
+	granule_contributor();
 
 }
