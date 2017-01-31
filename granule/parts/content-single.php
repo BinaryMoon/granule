@@ -31,6 +31,7 @@
 <?php
 	the_content(
 		sprintf(
+			/* Translators: %s: Post title */
 			esc_html__( 'Read more %s', 'granule' ),
 			the_title( '<span class="screen-reader-text">', '</span>', false )
 		)

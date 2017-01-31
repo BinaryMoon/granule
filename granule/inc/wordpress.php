@@ -427,7 +427,9 @@ add_filter( 'body_class', 'granule_body_class' );
  */
 function granule_post_class( $classes ) {
 
-	if ( $image = get_the_post_thumbnail( get_the_ID() ) ) {
+	$image = get_the_post_thumbnail( get_the_ID() );
+
+	if ( $image ) {
 
 		$classes[] = 'post-has-thumbnail';
 
@@ -479,6 +481,7 @@ add_filter( 'post_class', 'granule_post_class' );
 function granule_excerpt_more() {
 
 	$link_text = sprintf(
+		/* Translators: %s: Post title */
 		esc_html_x( 'Continue Reading %s', 'Name of current post', 'granule' ),
 		'<span class="screen-reader-text">' . esc_html( get_the_title( get_the_ID() ) ) . '</span>'
 	);

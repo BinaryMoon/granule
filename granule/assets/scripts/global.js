@@ -345,15 +345,15 @@
 
 					$parent.toggleClass( 'menu-on' );
 
-					// Menu is shown.
 					if ( $parent.hasClass( 'menu-on' ) ) {
 
+						// Menu is shown.
 						$menu.attr( 'aria-expanded', 'true' );
 						$this.attr( 'aria-expanded', 'true' );
 
-					// Menu is hidden.
 					} else {
 
+						// Menu is hidden.
 						$menu.attr( 'aria-expanded', 'false' );
 						$this.attr( 'aria-expanded', 'false' );
 

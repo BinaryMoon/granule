@@ -335,7 +335,7 @@ function granule_video_wrapper( $html ) {
 
 		return jetpack_responsive_videos_embed_html( $html );
 
-	// If not they use this. It does enough that I we can style the videos with css.
+	// If not use this. It does enough that I we can style the videos with css.
 	} else {
 
 		return '<div class="jetpack-video-wrapper">' . $html . '</div>';

@@ -74,6 +74,7 @@ function granule_human_time_diff() {
 	 */
 	if ( $post_time > $time_now - ( 60 * 60 * 24 * 60 ) ) {
 
+		/* Translators: %s: Time since the post was published */
 		$human_time = sprintf( esc_html__( '%s ago', 'granule' ), human_time_diff( $post_time, current_time( 'timestamp' ) ) );
 
 	} else {
@@ -195,7 +196,8 @@ function granule_post_time() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted %s', 'post date', 'granule' ),
+		/* Translators: %s: Date blog post posted */
+		esc_html__( 'Posted %s', 'granule' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
@@ -214,7 +216,8 @@ function granule_post_author() {
 	}
 
 	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'granule' ),
+		/* Translators: %s: Author of post */
+		esc_html__( 'by %s', 'granule' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
@@ -241,10 +244,10 @@ function granule_comments_link() {
 
 		echo '<span class="comment-count meta">';
 
-		/* translators: %s: post title */
 		comments_popup_link(
 			sprintf(
 				wp_kses(
+					/* translators: %s: post title */
 					__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'granule' ),
 					array(
 						'span' => array( 'class' => array() ),
@@ -283,6 +286,7 @@ function granule_read_more_text() {
 
 	// Default text value.
 	printf(
+		/* translators: %s: post title */
 		esc_html__( 'Read more %s', 'granule' ),
 		the_title( '<span class="screen-reader-text">', '</span>', false )
 	);
@@ -348,7 +352,10 @@ function granule_contributor( $user_id = null, $post_count = null ) {
 ?>
 		<p>
 			<a class="contributor-posts-link" href="<?php echo esc_url( get_author_posts_url( $user_id ) ); ?>">
-				<?php printf( esc_html( _nx( '%d Article', '%d Articles', (int) $post_count, 'contributor article count', 'granule' ) ), (int) $post_count ); ?>
+<?php
+		/* Translators: %d: Nubmer of articles written by a particular author. */
+		printf( esc_html( __( '%d Article', '%d Articles', (int) $post_count, 'granule' ) ), (int) $post_count );
+?>
 			</a>
 		</p>
 <?php

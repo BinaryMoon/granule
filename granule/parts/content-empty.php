@@ -15,6 +15,7 @@
  */
 
 ?>
+
 <article class="page-404 main-content post-singular no-results not-found">
 
 	<h1 class="entry-title"><?php esc_html_e( 'Nothing Found', 'granule' ); ?></h1>
@@ -25,7 +26,15 @@
 	if ( is_home() && current_user_can( 'publish_posts' ) ) {
 ?>
 
-		<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'granule' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
+		<p><?php
+		printf(
+			wp_kses(
+				/* Translators: %1$s: admin url */
+				__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'granule' ),
+				array( 'a' => array( 'href' => array() ) )
+			),
+			esc_url( admin_url( 'post-new.php' ) )
+		); ?></p>
 
 <?php
 	} if ( is_search() ) {

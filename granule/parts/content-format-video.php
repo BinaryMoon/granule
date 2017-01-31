@@ -26,7 +26,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php echo granule_video_wrapper( $video[0] ); ?>
+	<?php echo granule_video_wrapper( $video[0] ); // WPCS: XSS OK. ?>
 
 	<section class="entry entry-archive">
 

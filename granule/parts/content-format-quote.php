@@ -36,7 +36,12 @@
 		<span class="permalink">
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 				<?php echo esc_html_x( '#', 'A symbol used to link to a blog post', 'granule' ); ?>
-				<span class="screen-reader-text"><?php printf( esc_html__( 'Permanent link to %s', 'granule' ), get_the_title() ); ?></span>
+				<span class="screen-reader-text">
+<?php
+	/* Translators: %s: Post title */
+	printf( esc_html__( 'Permanent link to %s', 'granule' ), get_the_title() );
+?>
+				</span>
 			</a>
 		</span>
 

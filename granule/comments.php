@@ -42,6 +42,7 @@
 			if ( 1 === $comment_count ) {
 
 				printf(
+					/* Translators: %1$s: Post title */
 					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'granule' ),
 					'<span>' . get_the_title() . '</span>'
 				);
@@ -49,7 +50,16 @@
 			} else {
 
 				printf( // WPCS: XSS OK.
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'granule' ) ),
+					esc_html(
+						/* Translators: %1$s: Comment count, %2$s: Post title */
+						_nx(
+							'%1$s thought on &ldquo;%2$s&rdquo;',
+							'%1$s thoughts on &ldquo;%2$s&rdquo;',
+							$comment_count,
+							'comments title',
+							'granule'
+						)
+					),
 					number_format_i18n( $comment_count ),
 					'<span>' . get_the_title() . '</span>'
 				);
@@ -119,4 +129,4 @@
 	</section>
 
 <?php
-	} // End if.
+	} // End if().

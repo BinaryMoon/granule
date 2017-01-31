@@ -20,13 +20,10 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
-	// if ( is_singular() ) {
-	// 	return;
-	// }
-
-	// if ( ! is_page_template( 'templates/full-width-page.php' ) ) {
-	// 	return;
-	// }
+	// Don't display on full width page.
+	if ( ! is_page_template( 'templates/full-width-page.php' ) ) {
+		return;
+	}
 
 	// Quit if sidebar has no content.
 	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
