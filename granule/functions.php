@@ -64,8 +64,14 @@ include( 'inc/jetpack.php' );
 // Wordpress.com specific functionality.
 include( 'inc/wpcom.php' );
 
-// Custom Custmomizer controls.
-include( 'inc/class-custom-controls.php' );
+// Custom Custmomizer control that adds a category dropdown select box.
+include( 'inc/class-granule-category-dropdown-custom-control.php' );
+
+// Custom Custmomizer control that adds a drag and drop system for rearranging content.
+include( 'inc/class-granule-dragdrop-list-control.php' );
+
+// Custom Custmomizer control that adds a custom dropdown select box.
+include( 'inc/class-granule-dropdown-custom-control.php' );
 
 // Customizer controls for setting theme properties.
 include( 'inc/customizer.php' );
