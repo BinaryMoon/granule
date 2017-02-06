@@ -382,7 +382,11 @@
 			);
 
 			// Mobile device detection.
-			$( 'body' ).addClass( is_touch_device() ? 'device-touch' : 'device-click' );
+			if ( is_touch_device() ) {
+				$( 'html' ).addClass( 'device-touch' );
+			} else {
+				$( 'html' ).addClass( 'device-click' );
+			}
 
 			// Pre-select password field on password protected post.
 			$( '.post-password-form input[type="password"]' ).focus();
