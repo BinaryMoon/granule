@@ -601,7 +601,15 @@ function granule_wrap_the_archive_title( $title ) {
 
 	// Glue it back together again.
 	if ( ! empty( $title_parts[1] ) ) {
-		$title = '<span>' . esc_html( $title_parts[0] ) . ': </span>' . wp_kses( $title_parts[1], array( 'span' => array( 'class' => array() ) ) );
+		$title = wp_kses(
+			$title_parts[1],
+			array(
+				'span' => array(
+					'class' => array(),
+				),
+			)
+		);
+		$title = '<span>' . esc_html( $title_parts[0] ) . ': </span>' . $title;
 	}
 
 	return $title;

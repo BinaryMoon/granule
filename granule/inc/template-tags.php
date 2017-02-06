@@ -250,7 +250,9 @@ function granule_comments_link() {
 					/* translators: %s: post title */
 					__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'granule' ),
 					array(
-						'span' => array( 'class' => array() ),
+						'span' => array(
+							'class' => array(),
+						),
 					)
 				),
 				get_the_title()

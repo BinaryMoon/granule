@@ -23,8 +23,16 @@
 
 			<h1 class="entry-title entry-archive-title">
 <?php
-		/* Translators: %s: Search query */
-		printf( wp_kses( __( '<span>Search results for:</span> %s', 'granule' ), array( 'span' => array() ) ), esc_html( get_search_query() ) );
+		printf(
+			wp_kses(
+				/* Translators: %s: Search query */
+				__( '<span>Search results for:</span> %s', 'granule' ),
+				array(
+					'span' => array(),
+				)
+			),
+			esc_html( get_search_query() )
+		);
 ?>
 			</h1>
 

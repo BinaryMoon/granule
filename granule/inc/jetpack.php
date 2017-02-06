@@ -330,14 +330,14 @@ add_filter( 'jetpack_implode_frontend_css', '__return_false' );
  */
 function granule_video_wrapper( $html ) {
 
-	// If Jetpack integrated function exists then uses that.
 	if ( function_exists( 'jetpack_responsive_videos_embed_html' ) ) {
 
+		// If Jetpack integrated function exists then uses that.
 		return jetpack_responsive_videos_embed_html( $html );
 
-	// If not use this. It does enough that I we can style the videos with css.
 	} else {
 
+		// If not use this. It does enough that I we can style the videos with css.
 		return '<div class="jetpack-video-wrapper">' . $html . '</div>';
 
 	}

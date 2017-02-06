@@ -10,7 +10,13 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
-	$image = get_the_post_thumbnail( get_the_ID(), 'granule-attachment', array( 'class' => 'avatar' ) );
+	$image = get_the_post_thumbnail(
+		get_the_ID(),
+		'granule-attachment',
+		array(
+			'class' => 'avatar',
+		)
+	);
 ?>
 
 <article id="post-<?php the_ID(); ?>" class="testimonial">

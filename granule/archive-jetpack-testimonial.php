@@ -37,7 +37,14 @@
 
 		<div class="header-image">
 
-			<?php echo wp_kses( $image, array( 'img' => $image_allowed_properties ) ); ?>
+<?php
+			echo wp_kses(
+				$image,
+				array(
+					'img' => $image_allowed_properties,
+				)
+			);
+?>
 
 		</div>
 
