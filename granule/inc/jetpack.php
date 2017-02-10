@@ -138,6 +138,7 @@ function granule_has_featured_posts( $minimum = 1 ) {
 	}
 
 	$minimum = absint( $minimum );
+
 	$featured_posts = apply_filters( 'granule_get_featured_posts', array() );
 
 	if ( ! is_array( $featured_posts ) ) {

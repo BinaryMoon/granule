@@ -68,11 +68,14 @@ function granule_human_time_diff() {
 	$time_now = date( 'U' );
 
 	/**
-	 * Use human time if less that 60 days ago, otherwise display the date
+	 * Use human time if less that 60 days ago, otherwise display the date.
+	 *
 	 * Uses the WordPress internal function human_time_diff
 	 * 60 seconds * 60 minutes * 24 hours * 60 days.
 	 */
-	if ( $post_time > $time_now - ( 60 * 60 * 24 * 60 ) ) {
+	$time_limit = apply_filters( 'granule_human_time_diff_range', 5184000 );
+
+	if ( $post_time > $time_now - $time_limit ) {
 
 		/* Translators: %s: Time since the post was published */
 		$human_time = sprintf( esc_html__( '%s ago', 'granule' ), human_time_diff( $post_time, current_time( 'timestamp' ) ) );
