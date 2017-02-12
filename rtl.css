@@ -40,59 +40,78 @@ input.radio {
 	margin-right: auto;
 }
 
-.form-select,
 input.settings-input,
 input.text,
+input[type=date],
+input[type=datetime-local],
 input[type=email],
+input[type=month],
+input[type=number],
 input[type=password],
 input[type=search],
+input[type=tel],
 input[type=text],
+input[type=time],
 input[type=url],
+input[type=week],
+select,
 textarea {
 	padding: 0.75rem 1.5rem;
 	border-radius: 0.2rem;
 }
 
-.device-click .form-select,
 .device-click input.settings-input,
 .device-click input.text,
+.device-click input[type=date],
+.device-click input[type=datetime-local],
 .device-click input[type=email],
+.device-click input[type=month],
+.device-click input[type=number],
 .device-click input[type=password],
 .device-click input[type=search],
+.device-click input[type=tel],
 .device-click input[type=text],
+.device-click input[type=time],
 .device-click input[type=url],
+.device-click input[type=week],
+.device-click select,
 .device-click textarea {
 	transition: all 0.15s ease-in-out;
 }
 
-.form-select:focus,
-.form-select:hover,
 input.settings-input:focus,
 input.settings-input:hover,
 input.text:focus,
 input.text:hover,
+input[type=date]:focus,
+input[type=date]:hover,
+input[type=datetime-local]:focus,
+input[type=datetime-local]:hover,
 input[type=email]:focus,
 input[type=email]:hover,
+input[type=month]:focus,
+input[type=month]:hover,
+input[type=number]:focus,
+input[type=number]:hover,
 input[type=password]:focus,
 input[type=password]:hover,
 input[type=search]:focus,
 input[type=search]:hover,
+input[type=tel]:focus,
+input[type=tel]:hover,
 input[type=text]:focus,
 input[type=text]:hover,
+input[type=time]:focus,
+input[type=time]:hover,
 input[type=url]:focus,
 input[type=url]:hover,
+input[type=week]:focus,
+input[type=week]:hover,
+select:focus,
+select:hover,
 textarea:focus,
 textarea:hover {
 	border-color: #b8960b;
-}
-
-.form-select select {
-	padding: 0.75rem 1.5rem;
-}
-
-.form-select:after {
-	left: 1rem;
-	right: auto;
 }
 
 a.button,
@@ -142,6 +161,161 @@ table th {
 	padding: 0.75rem 1.5rem;
 }
 
+img#wpstats {
+	right: -100px;
+}
+
+.jetpack-video-wrapper {
+	margin: 3rem 0;
+}
+
+.tiled-gallery,
+main #jp-post-flair,
+main div#jp-relatedposts,
+main div.pd-rating,
+main div.sharedaddy {
+	margin: 3rem 0;
+}
+
+main div#jp-relatedposts h3.jp-relatedposts-headline em,
+main div#jp-relatedposts h3.sd-title,
+main div.pd-rating h3.jp-relatedposts-headline em,
+main div.pd-rating h3.sd-title,
+main div.sharedaddy h3.jp-relatedposts-headline em,
+main div.sharedaddy h3.sd-title {
+	margin: 0 0 0.75rem;
+}
+
+#jp-relatedposts .jp-relatedposts-post-a img {
+	margin: 0 auto 0.75rem;
+}
+
+.infinite-scroll #infinite-handle button {
+	border-radius: 0;
+	padding: 1.5rem 3rem;
+}
+
+.infinite-scroll .infinite-loader {
+	padding: 1.5rem;
+}
+
+.infinite-scroll .infinite-loader .spinner {
+	margin: 0 auto;
+	right: 0 !important;
+}
+
+.infinite-scroll #infinite-footer {
+	right: 0;
+}
+
+.infinite-scroll #infinite-footer .container {
+	margin: 0 auto;
+	padding: 0 1rem;
+	box-shadow: 0 0 2px rgba(0,0,0,0.2);
+	border-radius: 0.2rem 0.2rem 0 0;
+}
+
+.infinite-scroll #infinite-footer .blog-info {
+	float: right;
+	text-align: right;
+}
+
+.infinite-scroll #infinite-footer .blog-credits {
+	float: left;
+	text-align: left;
+}
+
+div.jetpack-testimonial-shortcode .testimonial-entry {
+	padding: 1.5rem 3rem;
+}
+
+div.jetpack-testimonial-shortcode .testimonial-entry-content {
+	margin: 0 0 0.75rem;
+}
+
+div.jetpack-testimonial-shortcode .testimonial-featured-image {
+	float: right;
+}
+
+div.jetpack-testimonial-shortcode .testimonial-featured-image img {
+	margin-left: 1rem;
+}
+
+.entry-breadcrumbs a {
+	margin-left: 1em;
+}
+
+.entry-breadcrumbs a:after {
+	left: -0.8em;
+	right: auto;
+	border-left-width: 0;
+	border-right-width: 0.4em;
+	border-left-color: transparent;
+	border-right-color: #666;
+}
+
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+	border-radius: 0.2rem;
+	padding: 0.75rem 1.5rem;
+}
+
+.device-click .woocommerce #respond input#submit,
+.device-click .woocommerce a.button,
+.device-click .woocommerce button.button,
+.device-click .woocommerce input.button {
+	transition: all 0.15s ease-in-out;
+}
+
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+	border-radius: 0.2rem;
+	padding: 0.75rem 1.5rem;
+}
+
+.device-click .woocommerce #respond input#submit.alt,
+.device-click .woocommerce a.button.alt,
+.device-click .woocommerce button.button.alt,
+.device-click .woocommerce input.button.alt {
+	transition: all 0.15s ease-in-out;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+	border-radius: 0.2rem 0.2rem 0 0;
+}
+
+.woocommerce #reviews #comments ol.commentlist li .comment-text {
+	margin-right: 4.5rem;
+	margin-left: 0;
+}
+
+.woocommerce-cart {
+	float: left;
+}
+
+.wp-post-series-box {
+	padding: 1.5rem 1.5rem 0;
+	margin: 0 0 3rem;
+}
+
+.wp-post-series-box .wp-post-series-description p {
+	margin: 0 0 1.5rem;
+}
+
+.landing-page {
+	padding: 3rem;
+	left: 0;
+	right: 0;
+}
+
+.landing-page main {
+	margin: 0 auto;
+}
+
 .wp-caption {
 	margin: 0 0 3rem;
 }
@@ -189,99 +363,9 @@ table th {
 	right: 6px;
 }
 
-img#wpstats {
-	right: -100px;
-}
-
-.jetpack-video-wrapper {
-	margin: 3rem 0;
-}
-
-.tiled-gallery,
-main #jp-post-flair,
-main div#jp-relatedposts,
-main div.sharedaddy {
-	margin: 3rem 0;
-}
-
-main div#jp-relatedposts h3.jp-relatedposts-headline em,
-main div#jp-relatedposts h3.sd-title,
-main div.pd-rating h3.jp-relatedposts-headline em,
-main div.pd-rating h3.sd-title,
-main div.sharedaddy h3.jp-relatedposts-headline em,
-main div.sharedaddy h3.sd-title {
-	margin: 0 0 0.75rem;
-}
-
-.infinite-scroll #infinite-handle button {
-	border-radius: 0;
-	padding: 1.5rem 3rem;
-}
-
-.infinite-scroll .infinite-loader {
-	padding: 1.5rem;
-}
-
-.infinite-scroll .infinite-loader .spinner {
-	margin: 0 auto;
-}
-
-.infinite-scroll #infinite-footer {
-	right: 0;
-}
-
-.infinite-scroll #infinite-footer .container {
-	margin: 0 auto;
-	padding: 0 1rem;
-	box-shadow: 0 0 2px rgba(0,0,0,0.2);
-	border-radius: 0.2rem 0.2rem 0 0;
-}
-
-.infinite-scroll #infinite-footer .blog-info {
-	float: right;
-	text-align: right;
-}
-
-.infinite-scroll #infinite-footer .blog-credits {
-	float: left;
-	text-align: left;
-}
-
-div.jetpack-testimonial-shortcode .testimonial-entry {
-	padding: 1.5rem 3rem;
-}
-
-div.jetpack-testimonial-shortcode .testimonial-entry-content {
-	margin: 0 0 0.75rem;
-}
-
-div.jetpack-testimonial-shortcode .testimonial-featured-image {
-	float: right;
-}
-
-div.jetpack-testimonial-shortcode .testimonial-featured-image img {
-	margin-left: 1rem;
-}
-
-.entry-breadcrumbs a {
-	margin-left: 1.5em;
-}
-
-.entry-breadcrumbs a:after {
-	left: -0.8em;
-	border-left-width: 0;
-	border-right-width: 0.4em;
-	border-right-color: #666;
-}
-
 .mejs-container,
 .wp-playlist {
 	margin: 3rem 0;
-}
-
-.widget {
-	float: right;
-	padding: 0 4.16667%;
 }
 
 .widget ul ul {
@@ -353,16 +437,6 @@ div.jetpack-testimonial-shortcode .testimonial-featured-image img {
 #wp-calendar td,
 #wp-calendar th {
 	padding: 0.375rem 0;
-}
-
-a.post-edit-link {
-	border-radius: 0.2rem;
-	padding: 0.75rem 1.5rem;
-	margin: 3rem 0;
-}
-
-.device-click a.post-edit-link {
-	transition: all 0.15s ease-in-out;
 }
 
 .post-password-required form {
@@ -481,49 +555,6 @@ object {
 	margin: 3rem auto !important;
 }
 
-.woocommerce #respond input#submit,
-.woocommerce a.button,
-.woocommerce button.button,
-.woocommerce input.button {
-	border-radius: 0.2rem;
-	padding: 0.75rem 1.5rem;
-}
-
-.device-click .woocommerce #respond input#submit,
-.device-click .woocommerce a.button,
-.device-click .woocommerce button.button,
-.device-click .woocommerce input.button {
-	transition: all 0.15s ease-in-out;
-}
-
-.woocommerce #respond input#submit.alt,
-.woocommerce a.button.alt,
-.woocommerce button.button.alt,
-.woocommerce input.button.alt {
-	border-radius: 0.2rem;
-	padding: 0.75rem 1.5rem;
-}
-
-.device-click .woocommerce #respond input#submit.alt,
-.device-click .woocommerce a.button.alt,
-.device-click .woocommerce button.button.alt,
-.device-click .woocommerce input.button.alt {
-	transition: all 0.15s ease-in-out;
-}
-
-.woocommerce div.product .woocommerce-tabs ul.tabs li {
-	border-radius: 0.2rem 0.2rem 0 0;
-}
-
-.woocommerce #reviews #comments ol.commentlist li .comment-text {
-	margin-right: 4.5rem;
-	margin-left: 0;
-}
-
-.woocommerce-cart {
-	float: left;
-}
-
 .device-click a {
 	transition: all 0.3s ease-in-out;
 }
@@ -545,16 +576,16 @@ object {
 }
 
 .masthead .menu li a {
-	padding: 0.75rem 1.5em;
+	padding: 0.75rem 1em;
 }
 
 .masthead .menu li.menu-item-has-children > a {
-	padding-left: 2.7em;
-	padding-right: 1.5em;
+	padding-left: 2.2em;
+	padding-right: 1em;
 }
 
 .masthead .menu li.menu-item-has-children > a:after {
-	left: 1.5em;
+	left: 1em;
 	right: auto;
 }
 
@@ -562,16 +593,14 @@ object {
 	right: -999em;
 }
 
-.masthead .menu li ul:before {
-	right: 1.5em;
-}
-
 .masthead .menu li ul:after {
 	right: -2rem;
+	left: auto;
 }
 
 .masthead .menu li ul ul {
 	right: -999em;
+	left: auto;
 }
 
 .masthead .menu li ul li.menu-item-has-children > a:after {
@@ -582,15 +611,17 @@ object {
 .masthead .menu li.focus > ul,
 .masthead .menu li:hover > ul {
 	right: auto;
+	left: auto;
 }
 
 .masthead .menu ul ul li.focus > ul,
 .masthead .menu ul ul li:hover > ul {
-	right: 16rem;
+	right: 100%;
+	left: auto;
 }
 
 .masthead .menu .menu-toggle:before {
-	margin-left: 10px;
+	margin-left: 0.5em;
 }
 
 .masthead .menu {
@@ -614,7 +645,7 @@ main.full-width {
 }
 
 .pagination span {
-	padding: 0 0.375em;
+	padding: 0 0.25em;
 }
 
 .contributor {
@@ -676,8 +707,10 @@ main.full-width {
 
 .showcase .arrow.arrow-next:before {
 	left: -24px;
+	right: auto;
 	border-left-width: 0;
 	border-right-width: 12px;
+	border-left-color: transparent;
 	border-right-color: #fff;
 	margin-left: 29px;
 }
@@ -688,8 +721,10 @@ main.full-width {
 
 .showcase .arrow.arrow-prev:before {
 	right: -24px;
+	left: auto;
 	border-right-width: 0;
 	border-left-width: 12px;
+	border-right-color: transparent;
 	border-left-color: #fff;
 	margin-right: 29px;
 }
@@ -722,6 +757,10 @@ main.full-width {
 
 #footer {
 	padding: 1.5rem 0;
+}
+
+#footer .footer-widgets .widget {
+	float: right;
 }
 
 #footer .footer-wrap .sep {
