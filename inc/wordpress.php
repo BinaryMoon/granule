@@ -181,19 +181,35 @@ add_filter( 'wp_resource_hints', 'granule_resource_hints', 10, 2 );
  */
 function granule_after_setup_theme() {
 
-	// Set theme translations directory.
+
+	/**
+	 * Setup theme translations.
+	 *
+	 * Translations can be found in the wp-content/themes/granule/languages/
+	 * directory.
+	 */
 	load_theme_textdomain( 'granule', get_template_directory() . '/languages' );
 
 	// Set default content width.
 	$GLOBALS['content_width'] = 900;
 
-	// Title Tag.
+	/**
+	 * Let WordPress manage the document title.
+	 *
+	 * By adding theme support, we declare that this theme does not use a
+	 * hard-coded <title> tag in the document head, and expect WordPress to
+	 * provide it for us.
+	 */
 	add_theme_support( 'title-tag' );
 
 	// Feed me.
 	add_theme_support( 'automatic-feed-links' );
 
-	// Post thumbnails.
+	/**
+	 * Add support for post thumbnails.
+	 *
+	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+	 */
 	add_theme_support( 'post-thumbnails' );
 
 	// Attachment (image.php) page links.
@@ -234,7 +250,11 @@ function granule_after_setup_theme() {
 		)
 	);
 
-	// Post Formats.
+	/**
+	 * Post Formats.
+	 *
+	 * @link https://developer.wordpress.org/themes/functionality/post-formats/
+	 */
 	add_theme_support(
 		'post-formats',
 		array(
