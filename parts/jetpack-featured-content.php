@@ -22,29 +22,8 @@
 
 			setup_postdata( $post );
 
-			$styles = array();
-			$image = granule_archive_image_url( get_the_ID(), 'granule-archive' );
+			get_template_part( 'parts/content', 'slider' );
 
-			if ( $image ) {
-
-				$styles = array(
-					'background-image: url(' . esc_url( $image ) . ');'
-				);
-
-			}
-?>
-
-		<article <?php post_class(); ?> style="<?php echo esc_attr( implode( ' ', $styles ) ); ?>">
-
-			<a href="<?php the_permalink(); ?>" class="entry" rel="bookmark">
-				<h2 class="entry-title"><?php the_title(); ?></h2>
-			</a>
-
-			<?php get_template_part( 'parts/edit-post' ); ?>
-
-		</article>
-
-<?php
 		}
 ?>
 
