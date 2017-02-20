@@ -1,7 +1,7 @@
 /**
  * Super simple javascript slider.
  *
- * Filename: jquery.slider.js v1.5.1
+ * Filename: jquery.slider.js v1.5.2
  *
  * Created by Ben Gillbanks <https://www.binarymoon.co.uk/>
  * Available under GPL2 license
@@ -139,7 +139,7 @@
 
 			// Create slide navigation if it doesn't exist.
 			// The navigation is the dots that you can use to select a slide to jump to.
-			if ( nav.length === 0 ) {
+			if ( 0 === nav.length ) {
 
 				nav = $( '<nav></nav>' );
 				nav.attr( 'aria-label', granule_site_settings.i18n.slide_controls_label );
@@ -148,55 +148,68 @@
 			}
 
 			// Loop through articles and create buttons for the nav.
-			articles.each( function() {
+			articles.each(
+				function() {
 
-				slide_count ++;
-				$( this ).attr( 'id', 'slide_' + slide_count );
-				var tab = $( '<button type="button" data-slide="' + slide_count + '" class="tab"><span class="screen-reader-text">' + granule_site_settings.i18n.slide_number.replace( '#', slide_count ) + '</span></button>' );
-				nav.append( tab );
+					slide_count ++;
+					$( this ).attr( 'id', 'slide_' + slide_count );
+					var tab = $( '<button type="button" data-slide="' + slide_count + '" class="tab"><span class="screen-reader-text">' + granule_site_settings.i18n.slide_number.replace( '#', slide_count ) + '</span></button>' );
+					nav.append( tab );
 
-			} );
+				}
+			);
 
 			// Click navigation items.
-			nav.find( 'button' ).on( 'click', function( e ) {
+			nav.find( 'button' ).on(
+				'click',
+				function( e ) {
 
-				e.preventDefault();
+					e.preventDefault();
 
-				var $this = $( this );
+					var $this = $( this );
 
-				show_slide( get_slide_id( $this ) );
-				nav.find( 'button' ).removeClass( 'selected' );
-				$this.addClass( 'selected' );
+					show_slide( get_slide_id( $this ) );
+					nav.find( 'button' ).removeClass( 'selected' );
+					$this.addClass( 'selected' );
 
-				start_timer();
+					start_timer();
 
-			} );
+				}
+			);
 
 			// Stop the animation when links on each slide are focused.
-			articles.find( 'a' ).on( 'focus', function() {
+			articles.find( 'a' ).on(
+				'focus',
+				function() {
 
-				stop_timer();
+					stop_timer();
 
-			} );
+				}
+			);
 
 			// Restart the animation when links on each slide lose focus.
-			articles.find( 'a' ).on( 'blur', function() {
+			articles.find( 'a' ).on(
+				'blur',
+				function() {
 
-				start_timer();
+					start_timer();
 
-			} );
+				}
+			);
 
 			// Stop the animation when the mouse hovers the content (hover
 			// implies the user is reading the content).
-			$this[($.fn.hoverIntent) ? 'hoverIntent' : 'hover']( function() {
+			$this[($.fn.hoverIntent) ? 'hoverIntent' : 'hover'](
+				function() {
 
-				stop_timer();
+					stop_timer();
 
-			}, function(){
+				}, function(){
 
-				start_timer();
+					start_timer();
 
-			} );
+				}
+			);
 
 			// Add next and previous links to the slider nav.
 			if ( options.nav_arrows ) {
@@ -204,25 +217,31 @@
 				var arrow_next = $( '<button type="button" class="arrow arrow-next"><span class="screen-reader-text">' + granule_site_settings.i18n.slide_next + '</span></button>' );
 				var arrow_prev = $( '<button type="button" class="arrow arrow-prev"><span class="screen-reader-text">' + granule_site_settings.i18n.slide_prev + '</span></a>' );
 
-				arrow_next.on( 'click', function( e ) {
+				arrow_next.on(
+					'click',
+					function( e ) {
 
-					e.preventDefault();
+						e.preventDefault();
 
-					next();
+						next();
 
-					start_timer();
+						start_timer();
 
-				} );
+					}
+				);
 
-				arrow_prev.on( 'click', function( e ) {
+				arrow_prev.on(
+					'click',
+					function( e ) {
 
-					e.preventDefault();
+						e.preventDefault();
 
-					previous();
+						previous();
 
-					start_timer();
+						start_timer();
 
-				} );
+					}
+				);
 
 				nav.append( arrow_next );
 				nav.prepend( arrow_prev );
