@@ -100,8 +100,15 @@ function granule_infinite_scroll_render() {
 
 		the_post();
 
-		get_template_part( 'parts/content', 'format-' . get_post_format() );
+		if ( is_post_type_archive( 'jetpack-testimonial' ) ) {
 
+			get_template_part( 'parts/content', 'testimonial' );
+
+		} else {
+
+			get_template_part( 'parts/content', 'format-' . get_post_format() );
+
+		}
 	}
 
 }
