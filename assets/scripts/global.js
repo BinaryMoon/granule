@@ -203,7 +203,18 @@
 			'post-load',
 			function() {
 
+				// Make sure we are viewing a page that uses Masonry.
+				if ( 'undefined' == typeof( $grid ) || 0 === $grid.length ) {
+					return;
+				}
+
 				var $new_articles = $( '#main-content.content-masonry' ).children().not( '.post-loaded, .infinite-loader' ).addClass( 'post-loaded' );
+
+				// Make sure there are some new articles to append.
+				if ( 0 === $new_articles.length ) {
+					return;
+				}
+
 				$grid.masonry( 'appended', $new_articles );
 				$grid.masonry( 'reloadItems' );
 				$grid.masonry( 'layout' );
