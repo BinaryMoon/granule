@@ -363,11 +363,6 @@ div.jetpack-testimonial-shortcode .testimonial-featured-image img {
 	right: 6px;
 }
 
-.mejs-container,
-.wp-playlist {
-	margin: 3rem 0;
-}
-
 .widget ul ul {
 	margin-right: 1.5rem;
 	margin-left: auto;
@@ -553,6 +548,11 @@ iframe[src*="viddler.com"] {
 iframe.instagram-media,
 object {
 	margin: 3rem auto !important;
+}
+
+.mejs-container,
+.wp-playlist {
+	margin: 3rem 0;
 }
 
 .device-click a {
@@ -797,38 +797,38 @@ main.full-width {
 	.content-comments ol.comment-list li.comment.depth-8 article,
 	.content-comments ol.comment-list li.comment.depth-9 article,
 	.content-comments ol.comment-list li.comment.depth-10 article {
-		padding-right: 0;
-		padding-left: 0;
+	padding-right: 0;
+	padding-left: 0;
 	}
 	#jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
-		margin: 0 0 1.5rem;
+	margin: 0 0 1.5rem;
 	}
 }
 
 @media only screen and (max-width:782px) {
 	.masthead .menu {
-		padding: 0.75rem 1.5rem;
+	padding: 0.75rem 1.5rem;
 	}
 	.masthead .menu .menu-toggle svg.icon {
-		margin-left: 0.5em;
+	margin-left: 0.5em;
 	}
 	.masthead .menu ul ul li.focus > ul,
 	.masthead .menu ul ul li:hover > ul {
-		right: auto;
+	right: auto;
 	}
 	.masthead .menu li a,
 	.masthead .menu li li a,
 	.masthead .menu li ul li a {
-		padding: 0.375rem 0;
+	padding: 0.375rem 0;
 	}
 	.masthead .menu li ul,
 	.masthead .menu li ul ul {
-		right: auto;
-		box-shadow: none;
-		padding-right: 1.5rem;
+	right: auto;
+	box-shadow: none;
+	padding-right: 1.5rem;
 	}
 	.masthead .menu li ul li,
 	.masthead .menu li ul ul li {
-		right: auto;
+	right: auto;
 	}
 }
