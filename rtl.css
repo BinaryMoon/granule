@@ -242,7 +242,7 @@ div.jetpack-testimonial-shortcode .testimonial-featured-image img {
 }
 
 .entry-breadcrumbs a {
-	margin-left: 1em;
+	margin-left: 1.5em;
 }
 
 .entry-breadcrumbs a:after {
@@ -576,16 +576,16 @@ object {
 }
 
 .masthead .menu li a {
-	padding: 0.75rem 1em;
+	padding: 0.75rem 1.5em;
 }
 
 .masthead .menu li.menu-item-has-children > a {
-	padding-left: 2.2em;
-	padding-right: 1em;
+	padding-left: 2.7em;
+	padding-right: 1.5em;
 }
 
 .masthead .menu li.menu-item-has-children > a:after {
-	left: 1em;
+	left: 1.5em;
 	right: auto;
 }
 
@@ -645,7 +645,7 @@ main.full-width {
 }
 
 .pagination span {
-	padding: 0 0.25em;
+	padding: 0 0.375em;
 }
 
 .contributor {
@@ -753,6 +753,7 @@ main.full-width {
 
 .infinite-scroll #infinite-handle button .icon {
 	margin-left: 0.5em;
+	margin-right: 0;
 }
 
 #footer {
