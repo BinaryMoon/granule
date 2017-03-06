@@ -181,7 +181,6 @@ add_filter( 'wp_resource_hints', 'granule_resource_hints', 10, 2 );
  */
 function granule_after_setup_theme() {
 
-
 	/**
 	 * Setup theme translations.
 	 *
