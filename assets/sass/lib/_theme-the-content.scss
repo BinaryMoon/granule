@@ -8,7 +8,7 @@
 .the-content {
 
 	@include clear;
-	margin-bottom: $grid-line-height;
+	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
 
 	// Remove margin on first child
 	> * {
