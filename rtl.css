@@ -247,11 +247,12 @@ div.jetpack-testimonial-shortcode .testimonial-featured-image img {
 
 .entry-breadcrumbs a:after {
 	left: -0.8em;
-	right: auto;
 	border-left-width: 0;
 	border-right-width: 0.4em;
 	border-left-color: transparent;
 	border-right-color: #666;
+	left: -0.75em;
+	right: auto;
 }
 
 .woocommerce #respond input#submit,
