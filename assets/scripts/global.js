@@ -208,7 +208,7 @@
 					return;
 				}
 
-				var $new_articles = $( '#main-content.content-masonry' ).children().not( '.post-loaded, .infinite-loader' ).addClass( 'post-loaded' );
+				var $new_articles = $grid.children().not( '.post-loaded, .infinite-loader' ).addClass( 'post-loaded' );
 
 				$grid.masonry( 'appended', $new_articles );
 				$grid.masonry( 'reloadItems' );
@@ -327,18 +327,6 @@
 				);
 
 			}
-
-			// Fade in infinite scroll posts.
-			$( '#main-content.content-masonry' ).find( 'article' ).addClass( 'post-static' );
-
-			$( 'body' ).on(
-				'post-load',
-				function() {
-
-					$( '#main-content.content-masonry' ).find( 'article' ).not( '.post-loaded, .post-static' ).addClass( 'post-loaded' );
-
-				}
-			);
 
 			// Menu toggle.
 			$( '.menu-toggle' ).on(
