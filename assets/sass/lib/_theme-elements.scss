@@ -12,9 +12,8 @@
 
 	.taxonomy {
 
-		@include modular-scale( eta );
+		@include post-meta-data;
 		margin: 0;
-		color: $canvas-grey-40;
 
 	}
 
