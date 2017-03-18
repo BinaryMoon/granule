@@ -45,14 +45,14 @@
 	if ( $child_pages->have_posts() ) {
 ?>
 
-		<section class="entry-children">
+		<section class="entry-children content-posts content-masonry">
 
 <?php
 		while ( $child_pages->have_posts() ) {
 
 			$child_pages->the_post();
 
-			get_template_part( 'parts/content-child-page' );
+			get_template_part( 'parts/content' );
 
 		}
 ?>
