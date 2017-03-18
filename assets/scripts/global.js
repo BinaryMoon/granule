@@ -175,10 +175,10 @@
 	var masonry_setup = function() {
 
 		// Masonry grid sizer.
-		$( '#main-content.content-masonry, .sidebar-footer' ).prepend( '<div class="grid-sizer"></div>' );
+		$( '.content-masonry, .sidebar-footer' ).prepend( '<div class="grid-sizer"></div>' );
 
 		// Blog post content.
-		var $grid = $( '#main-content.content-masonry' ).masonry(
+		var $grid = $( '.content-masonry' ).masonry(
 			{
 				itemSelector: 'article',
 				columnWidth: '.grid-sizer',
@@ -272,21 +272,6 @@
 					);
 
 				}
-
-			}
-		);
-
-		// Testimonials.
-		$( 'body.archive .testimonials' ).imagesLoaded(
-			function() {
-
-				$( 'body.archive .testimonials' ).masonry(
-					{
-						itemSelector: '.testimonial',
-						gutter: 0,
-						isOriginLeft: ! $( 'body' ).is( '.rtl' )
-					}
-				);
 
 			}
 		);
