@@ -1,6 +1,6 @@
 <?php
 /**
- * Actions and Filters That Customize WordPress
+ * Actions and Filters That Customize WordPress functionality
  *
  * Set up the theme and provide helper functions. These functions are attached
  * to action and filter hooks in WordPress to change core functionality.
@@ -603,6 +603,9 @@ add_filter( 'the_content', 'granule_wrapper_content', 9 );
 /**
  * Add a span around the title prefix so that the prefix can be hidden with CSS
  * if desired.
+ *
+ * This is being worked on for core here: https://core.trac.wordpress.org/ticket/38545
+ * Hopefully it will one day make it in so I can remove this!
  *
  * @param string $title Archive title.
  * @return string Archive title with inserted span around prefix.
