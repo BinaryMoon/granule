@@ -645,7 +645,7 @@ main.full-width {
 	padding: 3rem 0;
 }
 
-.pagination span {
+.pagination > * {
 	padding: 0 0.375em;
 }
 

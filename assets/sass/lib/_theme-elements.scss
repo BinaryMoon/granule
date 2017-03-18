@@ -25,11 +25,11 @@
 .pagination {
 
 	@include modular-scale( epsilon );
-	text-align:center;
-	margin-bottom:$grid-line-height;
-	clear:both;
+	text-align: center;
+	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+	clear: both;
 
-	span {
+	> * {
 
 		padding: 0 ( $menu-link-padding / 4 );
 		display: inline-block;
