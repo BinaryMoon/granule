@@ -17,6 +17,7 @@
  * @link https://jetpack.com/support/custom-content-types/
  * @link https://jetpack.com/support/responsive-videos/
  * @link https://jetpack.com/support/social-menu/
+ * @link https://jetpack.com/support/content-options/
  */
 function granule_jetpack_init() {
 
@@ -55,7 +56,7 @@ function granule_jetpack_init() {
 	// Add support for Social Menu.
 	add_theme_support( 'jetpack-social-menu' );
 
-	// Add support for wordpress.com content options.
+	// Add support for Jetpack content options.
 	add_theme_support(
 		'jetpack-content-options',
 		array(
@@ -414,8 +415,6 @@ function granule_image_tone( $image ) {
 
 /**
  * The function to display Author Bio in a theme.
- *
- * @return null
  */
 function granule_author_bio() {
 
