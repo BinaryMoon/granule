@@ -21,7 +21,7 @@
  */
 
 	// Don't display on full width page.
-	if ( ! is_page_template( 'templates/full-width-page.php' ) ) {
+	if ( is_page_template( 'templates/full-width-page.php' ) ) {
 		return;
 	}
 
