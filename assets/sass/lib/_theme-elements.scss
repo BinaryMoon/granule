@@ -54,6 +54,7 @@
 	margin: 0 0 ( $grid-line-height * 3 ) 0;
 	min-height: $grid-gutter * 2;
 	position: relative;
+	clear: both;
 
 	h2 {
 
@@ -444,6 +445,22 @@ form.search-form {
 				color: $canvas-grey-100;
 
 			}
+
+		}
+
+	}
+
+}
+
+.category-description {
+
+	margin-bottom: 0;
+
+	p {
+
+		&:last-child {
+
+			margin-bottom: 0;
 
 		}
 
