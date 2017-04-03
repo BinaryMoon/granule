@@ -215,7 +215,7 @@
 				$grid.masonry( 'layout' );
 
 				$grid.imagesLoaded(
-					function () {
+					function() {
 						$grid.masonry( 'layout' );
 					}
 				);
