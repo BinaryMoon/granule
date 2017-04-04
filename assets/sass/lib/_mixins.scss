@@ -103,8 +103,7 @@
 		font-family: $font-family-serif;
 		font-weight: bold;
 		margin: 0 0.05em 0 -0.2em;
-		@include modular-scale( alpha );
-		line-height: 0.75;
+		@include modular-scale( giga, 0.8 );
 
 	}
 

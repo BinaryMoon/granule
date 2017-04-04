@@ -162,10 +162,9 @@ body#tinymce.wp-editor .drop-cap {
   font-family: "Merriweather", serif;
   font-weight: bold;
   margin: 0 0.05em 0 -0.2em;
-  font-size: 64px;
-  font-size: 4rem;
-  line-height: 1.25;
-  line-height: 0.75;
+  font-size: 100px;
+  font-size: 6.25rem;
+  line-height: 0.8;
 }
 
 body#tinymce.wp-editor .highlight {
