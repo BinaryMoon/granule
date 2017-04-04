@@ -193,7 +193,6 @@
 			function() {
 
 				$grid.masonry( 'layout' );
-				$grid.children().addClass( 'post-loaded' );
 
 			}
 		);
@@ -208,15 +207,18 @@
 					return;
 				}
 
-				var $new_articles = $grid.children().not( '.post-loaded, .infinite-loader' ).addClass( 'post-loaded' );
-
-				$grid.masonry( 'appended', $new_articles );
-				$grid.masonry( 'reloadItems' );
-				$grid.masonry( 'layout' );
+				var $new_articles = $( '.infinite-wrap' ).find( 'article' ).hide();
+				$grid.append( $new_articles );
+				$( '.infinite-wrap, .infinite-loader' ).remove();
 
 				$grid.imagesLoaded(
 					function() {
-						$grid.masonry( 'layout' );
+
+						$grid
+							.masonry( 'appended', $new_articles )
+							.masonry( 'reloadItems' )
+							.masonry( 'layout' );
+
 					}
 				);
 
