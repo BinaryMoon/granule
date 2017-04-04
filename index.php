@@ -17,7 +17,7 @@
 
 ?>
 
-	<main role="main">
+	<main role="main" id="main">
 
 <?php
 	if ( have_posts() ) {

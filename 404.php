@@ -17,7 +17,7 @@
 	get_header();
 ?>
 
-	<main role="main">
+	<main role="main" id="main">
 
 		<div class="header-404">
 			<?php granule_svg( '404' ); ?>
