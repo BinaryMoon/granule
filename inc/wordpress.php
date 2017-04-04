@@ -426,6 +426,10 @@ function granule_body_class( $classes ) {
 		$classes[] = 'has-custom-header';
 	}
 
+	if ( is_home() || is_archive() || is_search() ) {
+		$classes[] = 'multi-posts';
+	}
+
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
 	}
