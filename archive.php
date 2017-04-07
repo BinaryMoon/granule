@@ -36,7 +36,9 @@
 
 		</header>
 
-		<div id="main-content" class="main-content content-posts content-masonry">
+		<div id="infinite-scroll" class="content-masonry-wrapper">
+
+			<div id="main-content" class="main-content content-posts content-masonry">
 
 <?php
 		while ( have_posts() ) {
@@ -44,6 +46,9 @@
 			get_template_part( 'parts/content', 'format-' . get_post_format() );
 		}
 ?>
+
+
+			</div>
 
 		</div>
 

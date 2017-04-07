@@ -42,7 +42,9 @@
 			<?php get_search_form(); ?>
 		</div>
 
-		<div id="main-content" class="main-content content-posts content-masonry">
+		<div id="infinite-scroll" class="content-masonry-wrapper">
+
+			<div id="main-content" class="main-content content-posts content-masonry">
 
 <?php
 		while ( have_posts() ) {
@@ -52,6 +54,8 @@
 
 		}
 ?>
+
+			</div>
 
 		</div>
 

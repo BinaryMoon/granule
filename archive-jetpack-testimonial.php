@@ -59,7 +59,10 @@
 
 		</header>
 
-		<div id="main-content" class="main-content testimonials content-testimonials content-masonry">
+		<div id="infinite-scroll" class="content-masonry-wrapper">
+
+			<div id="main-content" class="main-content testimonials content-testimonials content-masonry">
+
 <?php
 		while ( have_posts() ) {
 
@@ -68,6 +71,9 @@
 
 		}
 ?>
+
+			</div>
+
 		</div>
 
 <?php

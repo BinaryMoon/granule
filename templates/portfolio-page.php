@@ -52,7 +52,9 @@
 	if ( $query->have_posts() ) {
 ?>
 
-		<div id="main-content" class="main-content content-posts content-masonry">
+		<div id="infinite-scroll" class="content-masonry-wrapper">
+
+			<div id="main-content" class="main-content content-posts content-masonry">
 
 <?php
 		while ( $query->have_posts() ) {
@@ -63,6 +65,8 @@
 
 		}
 ?>
+
+			</div>
 
 		</div>
 

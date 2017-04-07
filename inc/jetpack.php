@@ -25,7 +25,7 @@ function granule_jetpack_init() {
 	add_theme_support(
 		'infinite-scroll',
 		array(
-			'container' => 'main',
+			'container' => 'infinite-scroll',
 			'footer_widgets' => 'sidebar-2',
 			'footer' => 'footer-widgets',
 			'posts_per_page' => 16,

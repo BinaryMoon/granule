@@ -45,7 +45,9 @@
 	if ( $child_pages->have_posts() ) {
 ?>
 
-		<section class="entry-children content-posts content-masonry">
+		<div id="infinite-scroll" class="content-masonry-wrapper">
+
+			<div class="entry-children content-posts content-masonry">
 
 <?php
 		while ( $child_pages->have_posts() ) {
@@ -57,7 +59,9 @@
 		}
 ?>
 
-		</section>
+			</div>
+
+		</div>
 
 <?php
 	}
