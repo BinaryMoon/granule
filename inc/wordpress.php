@@ -40,7 +40,7 @@ function granule_enqueue() {
 		wp_enqueue_script( 'masonry' );
 	}
 
-	wp_enqueue_script( 'granule-script-main', get_theme_file_uri( '/assets/scripts/global.js' ), array( 'jquery' ), '1.0', false );
+	wp_enqueue_script( 'granule-script-global', get_theme_file_uri( '/assets/scripts/global.js' ), array( 'jquery' ), '1.0', false );
 
 	if ( granule_has_featured_posts() ) {
 		wp_enqueue_script( 'granule-script-slider', get_theme_file_uri( '/assets/scripts/jquery.slider.js' ), array( 'jquery' ), '1.5.2', false );
@@ -48,7 +48,7 @@ function granule_enqueue() {
 
 	// Localized Javascript strings and provide access to common properties.
 	wp_localize_script(
-		'granule-script-main',
+		'granule-script-global',
 		'granule_site_settings',
 		array(
 			// Translation strings.
@@ -426,10 +426,6 @@ function granule_body_class( $classes ) {
 		$classes[] = 'has-custom-header';
 	}
 
-	if ( is_home() || is_archive() || is_search() ) {
-		$classes[] = 'multi-posts';
-	}
-
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
 	}
@@ -779,3 +775,27 @@ function granule_pingback_header() {
 }
 
 add_action( 'wp_head', 'granule_pingback_header' );
+
+
+/**
+ * Make last space in a sentence a non breaking space to prevent typographic widows.
+ *
+ * @param string $str String to apply fix to.
+ * @return string
+ */
+function granule_widont( $str = '' ) {
+
+	// Strip spaces.
+	$str = trim( $str );
+	// Find the last space.
+	$space = strrpos( $str, ' ' );
+
+	// If there's a space then replace the last on with a non breaking space.
+	if ( false !== $space ) {
+		$str = substr( $str, 0, $space ) . '&nbsp;' . substr( $str, $space + 1 );
+	}
+
+	// Return the string.
+	return $str;
+
+}
