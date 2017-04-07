@@ -15,6 +15,13 @@
  */
 
 /**
+ * DESIGN CHECKLIST
+ * ---
+ * test for possible text widows (titles, descriptions etc)
+ * check letter-spacing - especially on large and small text
+ */
+
+/**
  * TODO BEFORE SUBMISSION
  * ---
  * test theme with and without jetpack
