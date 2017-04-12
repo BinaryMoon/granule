@@ -45,7 +45,7 @@
 		)
 	);
 
-	if ( is_single() ) {
+	if ( is_singular( array( 'post' ) ) ) {
 
 		granule_author_bio();
 
