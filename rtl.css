@@ -226,7 +226,7 @@ main div.sharedaddy h3.sd-title {
 }
 
 div.jetpack-testimonial-shortcode .testimonial-entry {
-	padding: 1.5rem 3rem;
+	padding: 1.5rem;
 }
 
 div.jetpack-testimonial-shortcode .testimonial-entry-content {
@@ -327,6 +327,14 @@ div.jetpack-testimonial-shortcode .testimonial-featured-image img {
 
 .wp-smiley {
 	margin: 0 !important;
+}
+
+@media only screen and (max-width:600px) {
+	blockquote.alignleft,
+	blockquote.alignright {
+	margin-right: 0;
+	margin-left: 0;
+	}
 }
 
 .alignleft {
