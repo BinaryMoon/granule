@@ -426,7 +426,7 @@ function granule_body_class( $classes ) {
 		$classes[] = 'has-custom-header';
 	}
 
-	if ( ! is_singular() ) {
+	if ( ! is_singular() && ! is_404() ) {
 		$classes[] = 'hfeed';
 	}
 
