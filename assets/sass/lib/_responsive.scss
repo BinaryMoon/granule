@@ -24,7 +24,7 @@
 
 @media only screen and ( max-width: $wp-responsive-width-2 ) {
 
-	.masthead {
+	.site-header {
 
 		@include display-menu-responsive();
 

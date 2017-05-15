@@ -35,7 +35,7 @@
 
 	<a href="#site-content" class="screen-reader-shortcut"><?php esc_html_e( 'Skip to content', 'granule' ); ?></a>
 
-	<header class="masthead" id="header" role="banner">
+	<header class="site-header" id="header" role="banner">
 
 		<?php the_custom_logo(); ?>
 
