@@ -41,15 +41,21 @@
 	 * If custom credits are set then the filter should output the credits and
 	 * return a non false value. This will hide the default footer credits.
 	 */
-	if ( false === apply_filters( 'granule-credits', false ) ) {
+	if ( false === apply_filters( 'granule_credits', false ) ) {
 
 ?>
 
 		<section id="colophon" class="site-footer" role="contentinfo">
 			<div class="site-info">
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'granule' ) ); ?>" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'granule' ); ?>" rel="generator"><?php printf( esc_html__( 'Proudly powered by %s', 'granule' ), 'WordPress' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'granule' ) ); ?>" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'granule' ); ?>" rel="generator"><?php
+				/* Translators: %s = WordPress */
+				printf( esc_html__( 'Proudly powered by %s', 'granule' ), 'WordPress' );
+?></a>
 				<span class="sep"> | </span>
-				<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'granule' ), 'Granule', '<a href="https://prothemedesign.com/">Pro Theme Design</a>' ); ?>
+<?php
+		/* Translators: %1$s = theme name, %2$s = theme author website */
+		printf( esc_html__( 'Theme: %1$s by %2$s.', 'granule' ), 'Granule', '<a href="https://prothemedesign.com/">Pro Theme Design</a>' );
+?>
 			</div>
 		</section>
 
