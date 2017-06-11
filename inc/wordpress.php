@@ -551,7 +551,7 @@ function granule_post_terms( $content = '' ) {
 	}
 
 	/* translators: used between list items, there is a space after the comma */
-	$tags_list = get_the_tag_list( '', esc_html__( ', ', 'granule' ) );
+	$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'granule' ) );
 	if ( $tags_list ) {
 
 		/* translators: %1$s will be replaced with a list of tags */
