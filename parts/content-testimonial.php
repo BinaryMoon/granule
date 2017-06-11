@@ -47,4 +47,4 @@
 
 	</div>
 
-</article>
+</article><!-- #post-<?php the_ID(); ?> -->

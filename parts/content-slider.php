@@ -22,7 +22,7 @@
 	}
 ?>
 
-	<article <?php post_class(); ?> style="<?php echo esc_attr( implode( ' ', $styles ) ); ?>">
+<article <?php post_class(); ?> style="<?php echo esc_attr( implode( ' ', $styles ) ); ?>">
 
 <?php
 	the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
@@ -30,4 +30,4 @@
 	get_template_part( 'parts/edit-post' );
 ?>
 
-	</article>
+</article><!-- #post-<?php the_ID(); ?> -->

@@ -54,7 +54,7 @@
 
 	</section>
 
-</article>
+</article><!-- #post-<?php the_ID(); ?> -->
 
 <?php
 	the_post_navigation(

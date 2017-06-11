@@ -41,4 +41,4 @@
 
 	</section>
 
-</article>
+</article><!-- #post-<?php the_ID(); ?> -->
