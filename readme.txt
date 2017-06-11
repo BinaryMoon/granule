@@ -1,8 +1,8 @@
 === Granule ===
 
 Contributors: binarymoon
-Requires at least: 4.7
-Tested up to: 4.7
+Requires at least: 4.8
+Tested up to: 4.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: Black, Blue, Brown, Gray, Green, Orange, Pink, Purple, Red, Silver, Tan, White, Yellow, Dark, Light, Fixed Layout, Fluid Layout, Responsive Layout, One Column, Two Columns, Three Columns, Four Columns, Left Sidebar, Right Sidebar, Accessibility Ready, Blavatar, BuddyPress, Custom Background, Custom Colors, Custom Header, Custom Menu, Editor Style, Featured Image Header, Featured Images, Flexible Header, Front Page Posting, Full Width Template, Microformats, Post Formats, RTL Language Support, Sticky Post, Theme Options, Threaded Comments, Translation Ready, Holiday, Photoblogging, Seasonal
@@ -37,3 +37,4 @@ Granule includes support for most features in [Jetpack](https://wordpress.org/pl
 
 * [Open Sans](https://fonts.google.com/specimen/Open+Sans) Font from Google Fonts, licensed under [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
 * [Oswald](https://fonts.google.com/specimen/Oswald) Font from Google Fonts, licensed under [SIL Open Font License, 1.1](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+* Based on Granule https://github.com/BinaryMoon/granule, (C) 2016-2017 Binary Moon, [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
