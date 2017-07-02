@@ -18,7 +18,7 @@
 	get_template_part( 'parts/featured-content' );
 ?>
 
-	<main role="main" id="main">
+	<main id="main">
 
 		<div class="main-content content-single">
 

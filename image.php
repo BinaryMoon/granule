@@ -19,7 +19,7 @@
 
 ?>
 
-	<main class="main-content content-single" role="main">
+	<main class="main-content content-single">
 
 <?php
 		while ( have_posts() ) {

@@ -17,7 +17,7 @@
 	get_header();
 ?>
 
-	<main role="main" class="full-width guestbook">
+	<main class="full-width guestbook">
 
 		<div class="main-content content-single">
 

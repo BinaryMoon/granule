@@ -17,7 +17,7 @@
 	get_header();
 ?>
 
-	<main role="main" class="full-width">
+	<main class="full-width">
 
 		<div class="main-content content-single">
 

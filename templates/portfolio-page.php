@@ -17,7 +17,7 @@
 
 ?>
 
-	<main role="main" id="main">
+	<main id="main">
 
 		<div class="main-content content-single">
 
