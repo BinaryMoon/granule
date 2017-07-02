@@ -484,7 +484,7 @@ function granule_svg( $name, $echo = true ) {
 
 		// Generate svg 'use' tag to display the svg.
 		// Ensure svg can be found in assets/svg/svg.svg or it will not display.
-		$svg = '<svg class="icon icon-' . esc_attr( $name ) . '" aria-hidden="true" role="img">';
+		$svg = '<svg class="icon icon-' . esc_attr( $name ) . '" aria-hidden="true">';
 		$svg .= '<use xlink:href="#' . esc_attr( $name ) . '"></use>';
 		$svg .= '</svg>';
 
