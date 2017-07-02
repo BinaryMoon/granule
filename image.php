@@ -61,7 +61,7 @@
 			if ( $post->post_parent ) {
 ?>
 
-				<nav id="image-navigation" class="navigation image-navigation" role="navigation">
+				<nav id="image-navigation" class="navigation image-navigation">
 					<div class="nav-links">
 						<span class="nav-parent">
 							<a href="<?php echo esc_url( get_permalink( $post->post_parent ) ); ?>" rev="attachment" class="attachment-parent"><?php esc_html_e( '&lsaquo; Return to post', 'granule' ); ?></a>

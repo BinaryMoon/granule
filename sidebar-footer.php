@@ -26,7 +26,7 @@
 
 <!-- Sidebar Footer (2) -->
 
-<aside class="footer-widgets sidebar-footer sidebar" role="complementary">
+<aside class="footer-widgets sidebar-footer sidebar">
 
 <?php
 	dynamic_sidebar( 'sidebar-2' );

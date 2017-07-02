@@ -35,7 +35,7 @@
 
 	<a href="#site-content" class="screen-reader-shortcut"><?php esc_html_e( 'Skip to content', 'granule' ); ?></a>
 
-	<header class="site-header" id="header" role="banner">
+	<header class="site-header" id="header">
 
 		<?php the_custom_logo(); ?>
 
@@ -70,7 +70,7 @@
 
 		</div>
 
-		<nav class="menu menu-primary" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'granule' ); ?>">
+		<nav class="menu menu-primary" aria-label="<?php esc_attr_e( 'Primary Menu', 'granule' ); ?>">
 
 			<button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false">
 <?php

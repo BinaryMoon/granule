@@ -14,7 +14,7 @@
  */
 
 ?>
-<form method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
+<form method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 
 	<label>
 		<span class="screen-reader-text"><?php esc_html_e( 'Search', 'granule' ); ?></span>

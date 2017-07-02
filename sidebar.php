@@ -33,7 +33,7 @@
 
 <!-- Sidebar Main (1) -->
 
-<aside class="sidebar sidebar-main" role="complementary">
+<aside class="sidebar sidebar-main">
 
 <?php
 	do_action( 'before_sidebar' );
