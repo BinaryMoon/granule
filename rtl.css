@@ -1,4 +1,5 @@
 fieldset {
+	margin: 0 0 1.5rem;
 	padding: 1.5rem;
 }
 
@@ -294,7 +295,7 @@ div.jetpack-testimonial-shortcode .testimonial-featured-image img {
 	margin-left: 0;
 }
 
-.woocommerce-cart {
+.woocommerce-cart-button {
 	float: left;
 }
 
@@ -576,64 +577,64 @@ object {
 	margin: 0 auto;
 }
 
-.masthead .menu {
+.site-header .menu {
 	text-align: right;
 }
 
-.masthead .menu li {
+.site-header .menu li {
 	text-align: right;
 }
 
-.masthead .menu li a {
+.site-header .menu li a {
 	padding: 0.75rem 1.5em;
 }
 
-.masthead .menu li.menu-item-has-children > a {
+.site-header .menu li.menu-item-has-children > a {
 	padding-left: 2.7em;
 	padding-right: 1.5em;
 }
 
-.masthead .menu li.menu-item-has-children > a:after {
+.site-header .menu li.menu-item-has-children > a:after {
 	left: 1.5em;
 	right: auto;
 }
 
-.masthead .menu li ul {
+.site-header .menu li ul {
 	right: -999em;
 }
 
-.masthead .menu li ul:after {
+.site-header .menu li ul:after {
 	right: -2rem;
 	left: auto;
 }
 
-.masthead .menu li ul ul {
+.site-header .menu li ul ul {
 	right: -999em;
 	left: auto;
 }
 
-.masthead .menu li ul li.menu-item-has-children > a:after {
+.site-header .menu li ul li.menu-item-has-children > a:after {
 	border-right-color: currentColor;
 	border-left-width: 0;
 }
 
-.masthead .menu li.focus > ul,
-.masthead .menu li:hover > ul {
+.site-header .menu li.focus > ul,
+.site-header .menu li:hover > ul {
 	right: auto;
 	left: auto;
 }
 
-.masthead .menu ul ul li.focus > ul,
-.masthead .menu ul ul li:hover > ul {
+.site-header .menu ul ul li.focus > ul,
+.site-header .menu ul ul li:hover > ul {
 	right: 100%;
 	left: auto;
 }
 
-.masthead .menu .menu-toggle:before {
+.site-header .menu .menu-toggle:before {
 	margin-left: 0.5em;
 }
 
-.masthead .menu {
+.site-header .menu {
 	padding: 0.75rem 1.5rem;
 }
 
@@ -773,7 +774,7 @@ main.full-width {
 	float: right;
 }
 
-#footer .footer-wrap .sep {
+.site-footer .sep {
 	margin: 0 0.5em;
 }
 
@@ -816,29 +817,29 @@ main.full-width {
 }
 
 @media only screen and (max-width:782px) {
-	.masthead .menu {
+	.site-header .menu {
 	padding: 0.75rem 1.5rem;
 	}
-	.masthead .menu .menu-toggle svg.icon {
+	.site-header .menu .menu-toggle svg.icon {
 	margin-left: 0.5em;
 	}
-	.masthead .menu ul ul li.focus > ul,
-	.masthead .menu ul ul li:hover > ul {
+	.site-header .menu ul ul li.focus > ul,
+	.site-header .menu ul ul li:hover > ul {
 	right: auto;
 	}
-	.masthead .menu li a,
-	.masthead .menu li li a,
-	.masthead .menu li ul li a {
+	.site-header .menu li a,
+	.site-header .menu li li a,
+	.site-header .menu li ul li a {
 	padding: 0.375rem 0;
 	}
-	.masthead .menu li ul,
-	.masthead .menu li ul ul {
+	.site-header .menu li ul,
+	.site-header .menu li ul ul {
 	right: auto;
 	box-shadow: none;
 	padding-right: 1.5rem;
 	}
-	.masthead .menu li ul li,
-	.masthead .menu li ul ul li {
+	.site-header .menu li ul li,
+	.site-header .menu li ul ul li {
 	right: auto;
 	}
 }
