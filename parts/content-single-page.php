@@ -29,7 +29,7 @@
 
 	}
 
-	get_template_part( 'parts/post-meta' );
+	get_template_part( 'parts/entry-meta' );
 ?>
 
 	</header>

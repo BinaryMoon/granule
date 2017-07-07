@@ -10,7 +10,7 @@
 
 ?>
 
-	<div class="post-meta-data">
+	<div class="post-meta-data entry-meta">
 
 <?php
 	granule_post_time();
