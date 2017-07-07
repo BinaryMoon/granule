@@ -560,7 +560,7 @@ function granule_post_terms( $content = '' ) {
 	}
 
 	// Output everything.
-	$content .= '<div class="taxonomies">' . $terms . '</div>';
+	$content .= '<div class="entry-terms taxonomies">' . $terms . '</div>';
 
 	return $content;
 
