@@ -65,11 +65,10 @@ include( 'inc/custom-header.php' );
 // Reusable Template Functions.
 include( 'inc/template-tags.php' );
 
-// Jetpack specific functionality.
-include( 'inc/jetpack.php' );
-
-// Wordpress.com specific functionality.
-include( 'inc/wpcom.php' );
+// Jetpack specific functionality (if Jetpack is enabled).
+if ( defined( 'JETPACK__VERSION' ) ) {
+	include( 'inc/jetpack.php' );
+}
 
 // Custom Custmomizer control that adds a category dropdown select box.
 include( 'inc/class-granule-category-dropdown-custom-control.php' );
