@@ -267,9 +267,16 @@ add_action( 'after_switch_theme', 'granule_flush_rewrite_rules' );
  * Add breadcrumbs to a page.
  *
  * Breadcrumbs will not display on blog posts, but may display on other custom
- * post types.
+ * post types such as pages and other custom post types.
  */
 function granule_breadcrumbs() {
+
+	// Don't need breadcrumbs on the homepage so lets leave.
+	if ( is_home() || is_front_page() ) {
+
+		return;
+
+	}
 
 	// Check Jetpack Breadcrumbs are available before outputting them.
 	if ( function_exists( 'jetpack_breadcrumbs' ) ) {
