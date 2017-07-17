@@ -214,8 +214,8 @@
 			// Add next and previous links to the slider nav.
 			if ( options.nav_arrows ) {
 
-				var arrow_next = $( '<button type="button" class="arrow arrow-next"><span class="screen-reader-text">' + granule_site_settings.i18n.slide_next + '</span></button>' );
-				var arrow_prev = $( '<button type="button" class="arrow arrow-prev"><span class="screen-reader-text">' + granule_site_settings.i18n.slide_prev + '</span></a>' );
+				var arrow_next = $( '<button type="button" class="arrow arrow-next">' + granule_site_settings.i18n.slide_next + '</button>' );
+				var arrow_prev = $( '<button type="button" class="arrow arrow-prev">' + granule_site_settings.i18n.slide_prev + '</button>' );
 
 				arrow_next.on(
 					'click',

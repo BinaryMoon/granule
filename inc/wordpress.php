@@ -53,8 +53,8 @@ function granule_enqueue() {
 		array(
 			// Translation strings.
 			'i18n' => array(
-				'slide_next' => esc_html__( 'Next Slide', 'granule' ),
-				'slide_prev' => esc_html__( 'Previous Slide', 'granule' ),
+				'slide_next' => '<span class="screen-reader-text">' . esc_html__( 'Next Slide', 'granule' ) . '</span>',
+				'slide_prev' => '<span class="screen-reader-text">' . esc_html__( 'Previous Slide', 'granule' ) . '</span>',
 				/* translators: # is the slide number, it will be replaced with 1/ 2/ 3 etc */
 				'slide_number' => esc_html__( 'Slide #', 'granule' ),
 				'slide_controls_label' => esc_html__( 'Slider Buttons', 'granule' ),
