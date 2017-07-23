@@ -54,6 +54,7 @@
  * check sidebar names and that sidebar display conditions match the sidebars they display
  * test print styles
  * go through required accessibility items - https://make.wordpress.org/themes/handbook/review/accessibility/required/
+ * Test css on http://cssstats.com/ and make sure things look sensible.
  */
 
 // WordPress specific functionality (actions and filters).
