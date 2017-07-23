@@ -169,6 +169,23 @@
 
 	};
 
+
+	// Trigger window resize event to fix video size issues.
+	// Don't use jqueries trigger event since that only triggers methods hooked
+	// to events, and not the events themselves.
+	var resize_window = function() {
+
+		if ( typeof( Event ) === 'function' ) {
+			window.dispatchEvent( new Event( 'resize' ) );
+		} else {
+			var event = window.document.createEvent( 'UIEvents' );
+			event.initUIEvent( 'resize', true, false, window, 0 );
+			window.dispatchEvent( event );
+		}
+
+	}
+
+
 	/**
 	 * Setup Masonry layouts.
 	 */
@@ -207,17 +224,23 @@
 					return;
 				}
 
+				// Grab infinite scroll items and move them to the content area.
 				var $new_articles = $( '.infinite-wrap' ).find( 'article' ).hide();
 				$grid.append( $new_articles );
 				$( '.infinite-wrap, .infinite-loader' ).remove();
 
+				// When images are loaded appended infinite scroll items to Masonry.
 				$grid.imagesLoaded(
-					function() {
+					function () {
 
 						$grid
 							.masonry( 'appended', $new_articles )
 							.masonry( 'reloadItems' )
 							.masonry( 'layout' );
+
+						// Make sure elements that resize based on container
+						// size have the correct dimensions.
+						resize_window();
 
 					}
 				);
