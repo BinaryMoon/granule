@@ -267,6 +267,12 @@ video {
 	display: inline-block;
 }
 
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
 button:focus,
 a:focus {
 	outline: thin dotted;
@@ -295,8 +301,9 @@ samp {
 }
 
 q {
-	background: #f2f2f2;
+	background: rgba(128, 128, 128, 0.5);
 	quotes: "\201C" "\201D" "\2018" "\2019";
+	padding: 0 0.25em;
 }
 
 small {
@@ -413,6 +420,7 @@ address {
 acronym,
 abbr {
 	border-bottom: thin dotted;
+	cursor: help;
 }
 
 .svg-defs {
@@ -1641,6 +1649,8 @@ form.contact-form div.clear-form {
 .wp-smiley {
 	margin: 0 !important;
 	max-height: 1em;
+	border: none;
+	padding: 0;
 }
 
 .alignleft,
@@ -2046,7 +2056,7 @@ blockquote.alignleft, blockquote.alignright {
 	text-align: center;
 	margin: 0 0 1.5rem 0;
 	vertical-align: top;
-	padding: 0 1.5rem;
+	padding: 0 0.75rem;
 }
 
 .gallery .gallery-item .gallery-icon {
@@ -2059,7 +2069,7 @@ blockquote.alignleft, blockquote.alignright {
 }
 
 .gallery .gallery-item .gallery-caption {
-	padding: 0 0.75rem;
+	padding: 0;
 	margin: 0;
 	font-size: 12px;
 	font-size: 0.75rem;
