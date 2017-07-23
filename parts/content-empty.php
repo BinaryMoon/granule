@@ -26,7 +26,8 @@
 	if ( is_home() && current_user_can( 'publish_posts' ) ) {
 ?>
 
-		<p><?php
+		<p>
+<?php
 		printf(
 			wp_kses(
 				/* Translators: %1$s: admin url */
@@ -38,7 +39,9 @@
 				)
 			),
 			esc_url( admin_url( 'post-new.php' ) )
-		); ?></p>
+		);
+?>
+		</p>
 
 <?php
 	} if ( is_search() ) {
