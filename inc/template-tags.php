@@ -92,7 +92,7 @@ function granule_human_time_diff() {
 
 
 /**
- * Get post thumbnail url.
+ * Get post thumbnail source url.
  *
  * If a thumbnail doesn't exist then use the first attachment. This reduces user
  * confusion since they don't always understand or set a featured image.
@@ -105,7 +105,7 @@ function granule_human_time_diff() {
  *                      this will probably be css classes.
  * @return boolean
  */
-function granule_archive_image_url( $post_id = null, $thumbnail_size = 'granule-archive', $attr = array() ) {
+function granule_featured_image_src( $post_id = null, $thumbnail_size = 'granule-archive', $attr = array() ) {
 
 	// Ensure the post id is set.
 	if ( ! $post_id ) {
@@ -164,6 +164,13 @@ function granule_archive_image_url( $post_id = null, $thumbnail_size = 'granule-
  */
 function granule_post_thumbnail_html( $html, $post_id, $thumbnail_id, $size = '', $attr = array() ) {
 
+	if ( function_exists( 'jetpack_featured_images_fallback_get_image' ) ) {
+
+		return $html;
+
+	}
+
+	// If there's no html for the thumbnail then let's check for post attachments.
 	if ( empty( $html ) ) {
 
 		$images = get_attached_media( 'image', $post_id );
@@ -459,6 +466,12 @@ function granule_project_terms() {
 
 /**
  * Display an SVG in the theme.
+ *
+ * Where possible SVG's are included inline. This allows the most flexibility
+ * when designing, and removes the need to embed all icons on every page since
+ * they are only loaded when needed.
+ *
+ * @see https://css-tricks.com/pretty-good-svg-icon-system/
  *
  * @param string  $name Icon name.
  * @param boolean $echo Should the svg be printed or returned. If true the SVG

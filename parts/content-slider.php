@@ -11,12 +11,12 @@
  */
 
 	$styles = array();
-	$image = granule_archive_image_url( get_the_ID(), 'granule-archive' );
+	$image = granule_get_attachment_image_src( get_the_ID(), 'granule-archive' );
 
 	if ( $image ) {
 
 		$styles = array(
-			'background-image: url(' . esc_url( $image ) . ');'
+			'background-image: url(' . esc_url( $image ) . ');',
 		);
 
 	}

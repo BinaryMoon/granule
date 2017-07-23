@@ -77,6 +77,7 @@ function granule_jetpack_init() {
 				'post-default' => true,
 				'page' => true,
 				'page-default' => true,
+				'fallback' => true,
 			),
 		)
 	);
@@ -448,5 +449,95 @@ function granule_author_bio() {
 
 	// Display the author bio.
 	granule_contributor();
+
+}
+
+
+/**
+ * Custom function to check for a post thumbnail;
+ * If Jetpack is not available, fall back to has_post_thumbnail()
+ *
+ * @param object|int $post Post object or Post id for post you want to check.
+ */
+function granule_has_post_thumbnail( $post = null ) {
+
+	if ( function_exists( 'jetpack_has_featured_image' ) ) {
+
+		return jetpack_has_featured_image( $post );
+
+	} else {
+
+		return has_post_thumbnail( $post );
+
+	}
+
+}
+
+
+/**
+ * Custom function to get the URL of a post thumbnail;
+ * If Jetpack is not available, fall back to wp_get_attachment_image_src()
+ *
+ * @param  int    $post_id           Post ID.
+ * @param  string $size              Post Thumbnail image size.
+ * @return string
+ */
+function granule_get_attachment_image_src( $post_id, $size ) {
+
+	if ( function_exists( 'jetpack_featured_images_fallback_get_image_src' ) ) {
+
+		return jetpack_featured_images_fallback_get_image_src( $post_id, get_post_thumbnail_id( $post_id ), $size );
+
+	} else {
+
+		return granule_featured_image_src( $post_id, $size )[0];
+
+	}
+
+}
+
+
+/**
+ * Show/ Hide Featured Image outside of the loop.
+ *
+ * Seems strange that Jetpack doesn't include this function for us but there you
+ * go.
+ */
+function granule_jetpack_featured_image_display() {
+
+	if ( ! function_exists( 'jetpack_featured_images_remove_post_thumbnail' ) ) {
+
+		return true;
+
+	} else {
+
+		$options = get_theme_support( 'jetpack-content-options' );
+		$featured_images = null;
+
+		if ( ! empty( $options[0]['featured-images'] ) ) {
+			$featured_images = $options[0]['featured-images'];
+		}
+
+		$settings = array(
+			'post-default' => ( isset( $featured_images['post-default'] ) && false === $featured_images['post-default'] ) ? '' : 1,
+			'page-default' => ( isset( $featured_images['page-default'] ) && false === $featured_images['page-default'] ) ? '' : 1,
+		);
+
+		$settings = array_merge(
+			$settings,
+			array(
+				'post-option' => get_option( 'jetpack_content_featured_images_post', $settings['post-default'] ),
+				'page-option' => get_option( 'jetpack_content_featured_images_page', $settings['page-default'] ),
+			)
+		);
+
+		if ( ( ! $settings['post-option'] && is_single() )
+			|| ( ! $settings['page-option'] && is_singular() && is_page() ) ) {
+			return false;
+		} else {
+			return true;
+		}
+
+	}
 
 }
