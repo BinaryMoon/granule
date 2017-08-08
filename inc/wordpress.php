@@ -62,7 +62,7 @@ function granule_enqueue() {
 			),
 			// Slider settings.
 			'slider' => array(
-				'autoplay' => ( get_theme_mod( 'granule_autoplay_slider', true ) ) ? 1 : 0,
+				'autoplay' => ( get_theme_mod( 'granule_autoplay_slider', false ) ) ? 1 : 0,
 			),
 			// Properties that are usable through javascript.
 			'is' => array(
