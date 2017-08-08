@@ -1,7 +1,7 @@
 /**
  * Super simple javascript slider.
  *
- * Filename: jquery.slider.js v1.5.3
+ * Filename: jquery.slider.js v1.5.4
  *
  * Created by Ben Gillbanks <https://www.binarymoon.co.uk/>
  * Available under GPL2 license
@@ -65,9 +65,6 @@
 
 				articles.fadeOut( 500 ).removeClass( 'current' );
 				$slide.fadeIn( 500 ).addClass( 'current' );
-
-				articles.attr( 'aria-hidden', 'true' );
-				$slide.attr( 'aria-hidden', 'false' );
 
 			};
 
