@@ -681,7 +681,7 @@ function granule_change_menu( $menu_html = '' ) {
 
 }
 
-add_filter( 'wp_page_menu','granule_change_menu' );
+add_filter( 'wp_page_menu', 'granule_change_menu' );
 
 
 /**
