@@ -59,8 +59,19 @@ class Granule_DragDrop_List_Control extends WP_Customize_Control {
 	 */
 	public function render_content() {
 
-		// Displays checkbox heading.
-		echo '<span class="customize-control-title">' . esc_html( $this->label ) . '</span>';
+		// Display label.
+		if ( ! empty( $this->label ) ) {
+?>
+		<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+<?php
+		}
+
+		// Display description.
+		if ( ! empty( $this->description ) ) {
+?>
+		<span class="description customize-control-description"><?php echo esc_html( $this->description ); ?></span>
+<?php
+		}
 
 		// Get the list of selected categories from the string and convert them to an array.
 		$values = array_map( 'intval', explode( ',', $this->value() ) );
@@ -97,8 +108,8 @@ class Granule_DragDrop_List_Control extends WP_Customize_Control {
 	public function enqueue_scripts() {
 
 		wp_enqueue_script( 'jquery-ui-sortable' );
-		wp_enqueue_style( 'granule-theme-customizer', get_theme_file_uri( '/styles/css/customizer.css' ) );
-		wp_enqueue_script( 'granule-theme-customizer', get_theme_file_uri( '/scripts/customize-controls.js' ), array( 'jquery' ), '1.0', true );
+		wp_enqueue_style( 'granule-theme-customizer', get_theme_file_uri( '/assets/css/customizer.css' ) );
+		wp_enqueue_script( 'granule-theme-customizer', get_theme_file_uri( '/assets/scripts/customize-controls.js' ), array( 'jquery' ), '1.0', true );
 
 	}
 
