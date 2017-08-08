@@ -365,7 +365,7 @@ function granule_contributor( $user_id = null, $post_count = null ) {
 		<p>
 			<a class="contributor-posts-link" href="<?php echo esc_url( get_author_posts_url( $user_id ) ); ?>">
 <?php
-		/* Translators: %d: Nubmer of articles written by a particular author. */
+		/* Translators: %d: Number of articles written by a particular author. */
 		printf( esc_html( _n( '%d Article', '%d Articles', (int) $post_count, 'granule' ) ), (int) $post_count );
 ?>
 			</a>
