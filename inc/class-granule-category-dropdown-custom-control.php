@@ -33,6 +33,7 @@ class Granule_Category_Dropdown_Custom_Control extends WP_Customize_Control {
 	public function render_content() {
 
 		$value = $this->value();
+
 		if ( empty( $value ) ) {
 			$value = -2;
 		}
