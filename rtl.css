@@ -377,6 +377,13 @@ div.jetpack-testimonial-shortcode .testimonial-featured-image img {
 	right: 6px;
 }
 
+.content-comments #comment-form-share-text-padder,
+.content-comments #comment-form-share-text-padder.active,
+.content-comments #respond #comment-form-comment,
+.content-comments #respond #comment-form-comment.active {
+	box-shadow: none;
+}
+
 .widget ul ul {
 	margin-right: 1.5rem;
 	margin-left: auto;
@@ -420,6 +427,10 @@ div.jetpack-testimonial-shortcode .testimonial-featured-image img {
 .widget.widget_authors ul ul {
 	margin: 0 0 1.5rem;
 	padding: 0 1.5rem 0 0;
+}
+
+.widget.widget_blog_subscription input[type=text] {
+	padding: 0.75rem 1.5rem !important;
 }
 
 .widget.widget_wpcom_social_media_icons_widget li {
