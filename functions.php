@@ -34,6 +34,7 @@
  * screenshot.png (880 x 660)
  * check custom header size
  * check sticky styles
+ * Add some subtle animations for added delight. 
  * test custom header, with and without
  * responsive styles
  * set content_width (in granule_content_width and granule_after_setup_theme)
