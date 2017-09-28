@@ -376,6 +376,17 @@
 				}
 			);
 
+			// Add href to links without so that dropdowns work properly on
+			// touch devices.
+			$( '.menu' ).find( 'a:not([href])' ).on(
+				'click',
+				function( e ) {
+
+					e.preventDefault();
+
+				}
+			).attr( 'href', '#' ).addClass( 'menu-no-href' );
+
 			// Smooth scroll to element.
 			$( '.scroll-to' ).click(
 				function() {
