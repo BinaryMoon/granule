@@ -183,7 +183,7 @@
 			window.dispatchEvent( event );
 		}
 
-	}
+	};
 
 
 	/**
