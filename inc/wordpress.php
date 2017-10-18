@@ -800,3 +800,24 @@ function granule_widont( $str = '' ) {
 	return $str;
 
 }
+
+
+/**
+ * Modifies tag cloud widget arguments to display all tags in the same font size
+ * and use list format for better accessibility.
+ *
+ * @param array $args Arguments for tag cloud widget.
+ * @return array The filtered arguments for tag cloud widget.
+ */
+function granule_widget_tag_cloud_args( $args ) {
+
+	$args['largest'] = 1;
+	$args['smallest'] = 1;
+	$args['unit'] = 'em';
+	$args['format'] = 'list';
+
+	return $args;
+
+}
+
+add_filter( 'widget_tag_cloud_args', 'granule_widget_tag_cloud_args' );
