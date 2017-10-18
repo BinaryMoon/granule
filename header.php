@@ -88,6 +88,7 @@
 			'menu_class' => 'menu-wrap',
 			'container' => false,
 			'item_spacing' => 'discard',
+			'fallback_cb' => false,
 		)
 	);
 ?>
