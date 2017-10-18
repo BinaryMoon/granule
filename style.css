@@ -302,7 +302,6 @@ samp {
 
 q {
 	background: rgba(128, 128, 128, 0.5);
-	quotes: "\201C" "\201D" "\2018" "\2019";
 	padding: 0 0.25em;
 }
 
@@ -1343,6 +1342,11 @@ div.jetpack-testimonial-shortcode.column-4 .testimonial-entry:nth-of-type(4n + 1
 	margin-bottom: 0.75rem;
 }
 
+.entry-breadcrumbs > a,
+.entry-breadcrumbs > span {
+	display: inline-block;
+}
+
 .entry-breadcrumbs a {
 	font-weight: bold;
 	margin-right: 1.5em;
@@ -1878,6 +1882,14 @@ blockquote.alignleft, blockquote.alignright {
 
 .widget.jetpack_subscription_widget #subscribe-email input {
 	width: 100%;
+}
+
+.widget.tagcloud ul {
+	list-style-type: none;
+}
+
+.widget.tagcloud ul li {
+	display: inline-block;
 }
 
 .widget.widget_recent_comments table.recentcommentsavatar {
