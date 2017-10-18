@@ -238,7 +238,7 @@ function granule_testimonials_image() {
 	$jetpack_options = get_theme_mod( 'jetpack_testimonials' );
 	$image = '';
 
-	if ( '' !== $jetpack_options['featured-image'] ) {
+	if ( isset( $jetpack_options['featured-image'] ) && '' !== $jetpack_options['featured-image'] ) {
 
 		$image = wp_get_attachment_image( (int) $jetpack_options['featured-image'], 'granule-header' );
 
