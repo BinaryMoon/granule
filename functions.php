@@ -34,7 +34,7 @@
  * screenshot.png (880 x 660)
  * check custom header size
  * check sticky styles
- * Add some subtle animations for added delight. 
+ * Add some subtle animations for added delight.
  * test custom header, with and without
  * responsive styles
  * set content_width (in granule_content_width and granule_after_setup_theme)
@@ -59,27 +59,34 @@
  */
 
 // WordPress specific functionality (actions and filters).
-include( 'inc/wordpress.php' );
+require 'inc/wordpress.php';
 
 // Custom header.
-include( 'inc/custom-header.php' );
+require 'inc/custom-header.php';
 
 // Reusable Template Functions.
-include( 'inc/template-tags.php' );
+require 'inc/template-tags.php';
 
 // Jetpack specific functionality (if Jetpack is enabled).
 if ( defined( 'JETPACK__VERSION' ) ) {
-	include( 'inc/jetpack.php' );
+	require 'inc/jetpack.php';
 }
 
 // Custom Custmomizer control that adds a category dropdown select box.
-include( 'inc/class-granule-category-dropdown-custom-control.php' );
+require 'inc/class-granule-category-dropdown-custom-control.php';
 
 // Custom Custmomizer control that adds a drag and drop system for rearranging content.
-include( 'inc/class-granule-dragdrop-list-control.php' );
+require 'inc/class-granule-dragdrop-list-control.php';
 
 // Custom Custmomizer control that adds a custom dropdown select box.
-include( 'inc/class-granule-dropdown-custom-control.php' );
+require 'inc/class-granule-dropdown-custom-control.php';
 
 // Customizer controls for setting theme properties.
-include( 'inc/customizer.php' );
+require 'inc/customizer.php';
+
+/**
+ * Load WooCommerce compatibility file.
+ */
+if ( class_exists( 'WooCommerce' ) ) {
+	require '/inc/woocommerce.php';
+}
