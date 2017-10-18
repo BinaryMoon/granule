@@ -37,7 +37,8 @@
 		<h2 id="comments" class="comments-title">
 
 <?php
-			$comment_count = get_comments_number();
+
+			$comment_count = (int) get_comments_number();
 
 			if ( 1 === $comment_count ) {
 
