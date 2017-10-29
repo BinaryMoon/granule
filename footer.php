@@ -45,19 +45,17 @@
 
 ?>
 
-		<section id="colophon" class="site-footer">
-			<div class="site-info">
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'granule' ) ); ?>" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'granule' ); ?>" rel="generator"><?php
+		<div class="site-info">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'granule' ) ); ?>" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'granule' ); ?>" rel="generator"><?php
 				/* Translators: %s = WordPress (cms name) */
-				printf( esc_html__( 'Proudly powered by %s', 'granule' ), 'WordPress' );
+			printf( esc_html__( 'Proudly powered by %s', 'granule' ), 'WordPress' );
 ?></a>
-				<span class="sep"> | </span>
+			<span class="sep"> | </span>
 <?php
-		/* Translators: %1$s = theme name, %2$s = theme author website */
-		printf( esc_html__( 'Theme: %1$s by %2$s.', 'granule' ), 'Granule', '<a href="https://prothemedesign.com/">Pro Theme Design</a>' );
+			/* Translators: %1$s = theme name, %2$s = theme author website */
+			printf( esc_html__( 'Theme: %1$s by %2$s.', 'granule' ), 'Granule', '<a href="https://prothemedesign.com/">Pro Theme Design</a>' );
 ?>
-			</div>
-		</section>
+		</div>
 
 <?php
 
