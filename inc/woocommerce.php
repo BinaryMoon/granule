@@ -19,33 +19,6 @@ add_action( 'after_setup_theme', 'granule_wc_support' );
 
 
 /**
- * Cart Link
- * Displayed a link to the cart including the number of items present and the cart total
- *
- * @return string Cart link html.
- */
-function granule_wc_cart_link() {
-
-	// Capture the theme cart button.
-	ob_start();
-
-?>
-	<li class="woocommerce-cart-button">
-
-		<a class="cart-contents" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'granule' ); ?>">
-			<span class="amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span class="count"><?php echo wp_kses_data( sprintf( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'granule' ), WC()->cart->get_cart_contents_count() ) );?></span>
-		</a>
-
-	</li>
-
-<?php
-
-	return ob_get_clean();
-
-}
-
-
-/**
  * Remove Jetpack related posts from WooCommerce products
  *
  * @param  array $options Related posts options.
