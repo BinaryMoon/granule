@@ -754,7 +754,7 @@ function granule_include_svg_icons() {
 		// The '.svg-defs' class is hidden so that the reusable svgs are not
 		// visible.
 		echo '<span class="svg-defs">';
-		require_once( $svg_icons );
+		require_once $svg_icons;
 		echo '</span>';
 
 	}

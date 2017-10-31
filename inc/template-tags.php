@@ -491,7 +491,7 @@ function granule_svg( $name, $echo = true ) {
 		}
 
 		// Output existing svg file.
-		include( $path );
+		require $path;
 
 	} else {
 

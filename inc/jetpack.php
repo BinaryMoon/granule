@@ -537,7 +537,6 @@ function granule_jetpack_featured_image_display() {
 		} else {
 			return true;
 		}
-
 	}
 
 }

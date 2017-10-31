@@ -46,10 +46,12 @@
 ?>
 
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'granule' ) ); ?>" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'granule' ); ?>" rel="generator"><?php
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'granule' ) ); ?>" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'granule' ); ?>" rel="generator">
+<?php
 				/* Translators: %s = WordPress (cms name) */
 			printf( esc_html__( 'Proudly powered by %s', 'granule' ), 'WordPress' );
-?></a>
+?>
+			</a>
 			<span class="sep"> | </span>
 <?php
 			/* Translators: %1$s = theme name, %2$s = theme author website */
