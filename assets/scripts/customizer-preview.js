@@ -11,11 +11,12 @@
  * @package Granule
  */
 
-/* global jQuery, document, wp */
+/* global jQuery, wp */
 
-;( function( $, document ) {
+;( function( $ ) {
 
-	$( document ).ready(
+	wp.customize.bind(
+		'preview-ready',
 		function() {
 
 			// Site title.
@@ -83,4 +84,4 @@
 		}
 	);
 
-} )( jQuery, document );
+} )( jQuery );
