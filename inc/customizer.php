@@ -87,7 +87,7 @@ function granule_customizer_settings( WP_Customize_Manager $wp_customize ) {
 		array(
 			'default' => '',
 			'capability' => 'edit_theme_options',
-			'sanitize_callback' => 'granule_sanitize_category',
+			'sanitize_callback' => 'granule_sanitize_int',
 		)
 	);
 
