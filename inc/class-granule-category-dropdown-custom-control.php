@@ -37,6 +37,9 @@ class Granule_Category_Dropdown_Custom_Control extends WP_Customize_Control {
 		if ( empty( $value ) ) {
 			$value = -2;
 		}
+
+		$cats = get_categories();
+
 ?>
 	<label>
 		<span class="customize-category-select-control customize-control-title"><?php echo esc_html( $this->label ); ?></span>
@@ -44,8 +47,6 @@ class Granule_Category_Dropdown_Custom_Control extends WP_Customize_Control {
 			<option value="-2" <?php echo selected( $value, -2, false ); ?>><?php echo esc_html__( 'No Categories (Hide)', 'granule' ); ?></option>
 			<option value="-1" <?php echo selected( $value, -1, false ); ?>><?php echo esc_html__( 'All Categories', 'granule' ); ?></option>
 <?php
-		$args = array();
-		$cats = get_categories( $args );
 		foreach ( $cats as $cat ) {
 			echo '<option value="' . absint( $cat->term_id ) . '"' . selected( $value, $cat->term_id, false ) . '>' . esc_html( $cat->name ) . '</option>';
 		}
