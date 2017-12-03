@@ -88,5 +88,5 @@ require 'inc/customizer.php';
  * Load WooCommerce compatibility file.
  */
 if ( class_exists( 'WooCommerce' ) ) {
-	require '/inc/woocommerce.php';
+	require 'inc/woocommerce.php';
 }
