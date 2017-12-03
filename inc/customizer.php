@@ -45,7 +45,7 @@ function granule_customizer_settings( WP_Customize_Manager $wp_customize ) {
 		array(
 			'default' => true,
 			'capability' => 'edit_theme_options',
-			'sanitize_callback' => 'granule_sanitize_checkboxes',
+			'sanitize_callback' => 'granule_sanitize_checkbox',
 		)
 	);
 
@@ -66,7 +66,7 @@ function granule_customizer_settings( WP_Customize_Manager $wp_customize ) {
 		array(
 			'default' => true,
 			'capability' => 'edit_theme_options',
-			'sanitize_callback' => 'granule_sanitize_checkboxes',
+			'sanitize_callback' => 'granule_sanitize_checkbox',
 		)
 	);
 
@@ -143,7 +143,7 @@ function granule_customizer_settings( WP_Customize_Manager $wp_customize ) {
 		array(
 			'default' => false,
 			'capability' => 'edit_theme_options',
-			'sanitize_callback' => 'granule_sanitize_checkboxes',
+			'sanitize_callback' => 'granule_sanitize_checkbox',
 		)
 	);
 
@@ -227,7 +227,7 @@ add_action( 'customize_preview_init', 'granule_customize_preview_js' );
  * @param boolean $setting Value to check and sanitize.
  * @return boolean
  */
-function granule_sanitize_checkboxes( $setting ) {
+function granule_sanitize_checkbox( $setting ) {
 
 	return (bool) $setting;
 
