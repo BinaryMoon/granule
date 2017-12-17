@@ -32,7 +32,7 @@
 }
 
 // Reusable button style.
-@mixin button( $color: $canvas-color ) {
+@mixin button( $color: $canvas-color, $font-size: zeta ) {
 
 	background: $color;
 	color: contrast( $color );
@@ -45,6 +45,7 @@
 	letter-spacing: $font-uppercase-spacing;
 	text-align: center;
 	@include transition;
+	@include modular-scale( $font-size );
 
 	&:focus,
 	&:hover {
