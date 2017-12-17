@@ -13,6 +13,10 @@ function granule_wc_support() {
 
 	add_theme_support( 'woocommerce' );
 
+	add_theme_support( 'wc-product-gallery-zoom' );
+	add_theme_support( 'wc-product-gallery-lightbox' );
+	add_theme_support( 'wc-product-gallery-slider' );
+
 }
 
 add_action( 'after_setup_theme', 'granule_wc_support' );
@@ -67,6 +71,37 @@ function granule_is_woocommerce() {
 	return false;
 
 }
+
+
+/**
+ * Disable sidebar on WooCommerce pages
+ *
+ * @param  boolean $is_active_sidebar Current value of sidebar visibility.
+ * @param  boolean $index             Sidebar to test.
+ * @return boolean                    Whether to display the sidebar or not.
+ */
+function granule_wc_is_sidebar_active( $is_active_sidebar, $index ) {
+
+	if ( ! class_exists( 'WooCommerce' ) ) {
+		return $is_active_sidebar;
+	}
+
+	if ( 'sidebar-1' === $index ) {
+
+		// Not WooCommerce so return default.
+		if ( ! carmack_is_woocommerce() ) {
+			return $is_active_sidebar;
+		}
+
+		return false;
+
+	}
+
+	return $is_active_sidebar;
+
+}
+
+add_filter( 'is_active_sidebar', 'granule_wc_is_sidebar_active', 10, 2 );
 
 
 /**
