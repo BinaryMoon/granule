@@ -89,7 +89,7 @@ function granule_wc_is_sidebar_active( $is_active_sidebar, $index ) {
 	if ( 'sidebar-1' === $index ) {
 
 		// Not WooCommerce so return default.
-		if ( ! carmack_is_woocommerce() ) {
+		if ( ! granule_is_woocommerce() ) {
 			return $is_active_sidebar;
 		}
 
