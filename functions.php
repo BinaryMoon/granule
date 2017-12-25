@@ -72,10 +72,14 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require 'inc/jetpack.php';
 }
 
+// Support for the Gutenberg content editor.
+require 'inc/gutenberg.php';
+
 // Custom Custmomizer control that adds a category dropdown select box.
 require 'inc/class-granule-category-dropdown-custom-control.php';
 
-// Custom Custmomizer control that adds a drag and drop system for rearranging content.
+// Custom Custmomizer control that adds a drag and drop system for rearranging
+// content.
 require 'inc/class-granule-dragdrop-list-control.php';
 
 // Custom Custmomizer control that adds a custom dropdown select box.
