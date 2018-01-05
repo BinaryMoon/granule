@@ -19,19 +19,18 @@ function granule_gutenberg_init() {
 	 *
 	 * @link https://wordpress.org/gutenberg/handbook/reference/theme-support/
 	 */
+
+	// Custom colours for use in the editor. A nice way to provide consistancy
+	// in user editable content.
 	add_theme_support(
-		'gutenberg',
+		'editor-color-palette',
 		array(
-			// Custom colours for use in the editor. A nice way to provide
-			// consistancy in user editable content.
-			'colors' => array(
-				'#ffffff',
-				'#ffffff',
-				'#ffffff',
-				'#ffffff',
-				'#ffffff',
-				'#ffffff',
-			),
+			'#ffffff',
+			'#ffffff',
+			'#ffffff',
+			'#ffffff',
+			'#ffffff',
+			'#ffffff',
 		)
 	);
 
