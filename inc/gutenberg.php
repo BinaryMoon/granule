@@ -22,11 +22,6 @@ function granule_gutenberg_init() {
 	add_theme_support(
 		'gutenberg',
 		array(
-			// Full width images and other content such as videos.
-			// Remove this if the theme does not support a
-			// full width layout.
-			'wide-images' => true,
-
 			// Custom colours for use in the editor. A nice way to provide
 			// consistancy in user editable content.
 			'colors' => array(
@@ -39,6 +34,10 @@ function granule_gutenberg_init() {
 			),
 		)
 	);
+
+	// Add support for full width images and other content such as videos.
+	// Remove this if the theme does not support a full width layout.
+	add_theme_support( 'align-wide' );
 
 }
 
