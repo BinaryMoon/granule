@@ -45,6 +45,11 @@ input.radio {
 	margin-right: auto;
 }
 
+.woocommerce #coupon_code,
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
 input.settings-input,
 input.text,
 input[type=date],
@@ -65,6 +70,11 @@ textarea {
 	border-radius: 0.2rem;
 }
 
+.device-click .woocommerce #coupon_code,
+.device-click .woocommerce #respond input#submit,
+.device-click .woocommerce a.button,
+.device-click .woocommerce button.button,
+.device-click .woocommerce input.button,
 .device-click input.settings-input,
 .device-click input.text,
 .device-click input[type=date],
@@ -80,10 +90,25 @@ textarea {
 .device-click input[type=url],
 .device-click input[type=week],
 .device-click select,
-.device-click textarea {
+.device-click textarea,
+.woocommerce #respond .device-click input#submit,
+.woocommerce .device-click #coupon_code,
+.woocommerce .device-click a.button,
+.woocommerce .device-click button.button,
+.woocommerce .device-click input.button {
 	transition: all 0.15s ease-in-out;
 }
 
+.woocommerce #coupon_code:focus,
+.woocommerce #coupon_code:hover,
+.woocommerce #respond input#submit:focus,
+.woocommerce #respond input#submit:hover,
+.woocommerce a.button:focus,
+.woocommerce a.button:hover,
+.woocommerce button.button:focus,
+.woocommerce button.button:hover,
+.woocommerce input.button:focus,
+.woocommerce input.button:hover,
 input.settings-input:focus,
 input.settings-input:hover,
 input.text:focus,
@@ -290,6 +315,21 @@ div.jetpack-testimonial-shortcode .testimonial-featured-image img {
 	transition: all 0.15s ease-in-out;
 }
 
+.woocommerce #respond input#submit.disabled,
+.woocommerce #respond input#submit:disabled,
+.woocommerce #respond input#submit:disabled[disabled],
+.woocommerce a.button.disabled,
+.woocommerce a.button:disabled,
+.woocommerce a.button:disabled[disabled],
+.woocommerce button.button.disabled,
+.woocommerce button.button:disabled,
+.woocommerce button.button:disabled[disabled],
+.woocommerce input.button.disabled,
+.woocommerce input.button:disabled,
+.woocommerce input.button:disabled[disabled] {
+	padding: 0.75rem 1.5rem;
+}
+
 .woocommerce div.product .woocommerce-tabs ul.tabs li {
 	border-radius: 0.2rem 0.2rem 0 0;
 }
@@ -299,8 +339,21 @@ div.jetpack-testimonial-shortcode .testimonial-featured-image img {
 	margin-left: 0;
 }
 
-.woocommerce-cart-button {
-	float: left;
+li.woocommerce-cart-button li div.widget_shopping_cart {
+	padding: 0.75rem 1.5rem;
+}
+
+li.woocommerce-cart-button li div.widget_shopping_cart ul {
+	right: auto;
+	left: auto;
+}
+
+li.woocommerce-cart-button li div.widget_shopping_cart p.buttons a {
+	margin: 0 0 0.75rem;
+}
+
+li.woocommerce-cart-button li div.widget_shopping_cart .total {
+	padding: 0.75rem 0 0;
 }
 
 .wp-post-series-box {
@@ -360,6 +413,10 @@ div.jetpack-testimonial-shortcode .testimonial-featured-image img {
 .alignleft .alignleft,
 .alignright .alignright {
 	padding: 0 0.5em;
+}
+
+.screen-reader-text {
+	margin: -1px;
 }
 
 .screen-reader-text:focus {
@@ -838,9 +895,9 @@ main.full-width {
 	.site-header .menu ul ul li:hover > ul {
 	right: auto;
 	}
-	.site-header .menu li a,
-	.site-header .menu li li a,
-	.site-header .menu li ul li a {
+	.site-header .menu li a:not(.button),
+	.site-header .menu li li a:not(.button),
+	.site-header .menu li ul li a:not(.button) {
 	padding: 0.375rem 0;
 	}
 	.site-header .menu li ul,
