@@ -25,6 +25,8 @@ function granule_gutenberg_init() {
 	add_theme_support(
 		'editor-color-palette',
 		array(
+			// I've used white for everything. Must change to be relevant to
+			// theme styles.
 			'#ffffff',
 			'#ffffff',
 			'#ffffff',
