@@ -54,3 +54,39 @@ function granule_gutenberg_styles() {
 }
 
 add_action( 'enqueue_block_editor_assets', 'granule_gutenberg_styles' );
+
+
+/**
+ * Modify post type arguments to add default post type templates.
+ *
+ * @param  array $args       The default post type arguments.
+ * @param  string $post_type The post type for the current request.
+ * @return array             Modified arguments including the new template properties.
+ */
+function granule_post_type_arguments( $args, $post_type ) {
+
+	// Only apply changes to the specified post type.
+	if ( 'post' === $post_type ) {
+
+		/**
+		 * Adds a template property to the specified post type arguments.
+		 * @var array
+		 */
+		$args['template'] = array(
+			array( 'core/image' ),
+			array(
+				'core/paragraph',
+				array(
+					'placeholder' => __( 'Start writing', 'granule' ),
+				)
+			),
+			array( 'core/quote' ),
+		);
+
+	}
+
+	return $args;
+
+}
+
+add_filter( 'register_post_type_args', 'granule_post_type_arguments', 20, 2 );
