@@ -72,6 +72,13 @@ function granule_post_type_arguments( $args, $post_type ) {
 
 		/**
 		 * Adds a template property to the specified post type arguments.
+		 *
+		 * You can get a list of available blocks by entering the following js
+		 * command in the console window in your brownser.
+		 * wp.blocks.getBlockTypes()
+		 *
+		 * The output of this command also shows the available attributes for setting defaults.
+		 *
 		 * @var array
 		 */
 		$args['template'] = array(
