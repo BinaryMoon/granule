@@ -187,7 +187,7 @@ function granule_after_setup_theme() {
 	 * Translations can be found in the wp-content/themes/granule/languages/
 	 * directory.
 	 */
-	load_theme_textdomain( 'granule', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'granule', get_parent_theme_file_path( '/languages' ) );
 
 	// Set default content width.
 	$GLOBALS['content_width'] = 900;

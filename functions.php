@@ -59,38 +59,38 @@
  */
 
 // WordPress specific functionality (actions and filters).
-require 'inc/wordpress.php';
+require get_parent_theme_file_path( 'inc/wordpress.php' );
 
 // Custom header.
-require 'inc/custom-header.php';
+require get_parent_theme_file_path( 'inc/custom-header.php' );
 
 // Reusable Template Functions.
-require 'inc/template-tags.php';
+require get_parent_theme_file_path( 'inc/template-tags.php' );
 
 // Jetpack specific functionality (if Jetpack is enabled).
 if ( defined( 'JETPACK__VERSION' ) ) {
-	require 'inc/jetpack.php';
+	require get_parent_theme_file_path( 'inc/jetpack.php' );
 }
 
 // Support for the Gutenberg content editor.
-require 'inc/gutenberg.php';
+require get_parent_theme_file_path( 'inc/gutenberg.php' );
 
 // Custom Custmomizer control that adds a category dropdown select box.
-require 'inc/class-granule-category-dropdown-custom-control.php';
+require get_parent_theme_file_path( 'inc/class-granule-category-dropdown-custom-control.php' );
 
 // Custom Custmomizer control that adds a drag and drop system for rearranging
 // content.
-require 'inc/class-granule-dragdrop-list-control.php';
+require get_parent_theme_file_path( 'inc/class-granule-dragdrop-list-control.php' );
 
 // Custom Custmomizer control that adds a custom dropdown select box.
-require 'inc/class-granule-dropdown-custom-control.php';
+require get_parent_theme_file_path( 'inc/class-granule-dropdown-custom-control.php' );
 
 // Customizer controls for setting theme properties.
-require 'inc/customizer.php';
+require get_parent_theme_file_path( 'inc/customizer.php' );
 
 /**
  * Load WooCommerce compatibility file.
  */
 if ( class_exists( 'WooCommerce' ) ) {
-	require 'inc/woocommerce.php';
+	require get_parent_theme_file_path( 'inc/woocommerce.php' );
 }
