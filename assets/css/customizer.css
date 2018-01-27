@@ -1,41 +1,35 @@
 .granule-sortable {
-  margin-bottom: 15px;
+	margin-bottom: 15px;
 }
-
 .granule-sortable li {
-  border: 1px solid #ddd;
-  padding: 5px 10px;
-  background: #fff;
-  margin-bottom: 0;
-  border-bottom: none;
-  cursor: ns-resize;
-  position: relative;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  color: #333;
+	border: 1px solid #dddddd;
+	padding: 5px 10px;
+	background: #ffffff;
+	margin-bottom: 0;
+	border-bottom: none;
+	cursor: ns-resize;
+	position: relative;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+	color: #333333;
 }
-
 .granule-sortable li:hover {
-  background: #f3f3f5;
-  color: #0073aa;
+	background: #f3f3f5;
+	color: #0073aa;
 }
-
 .granule-sortable li.ui-sortable-helper {
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 2px 2px rgba(0,0,0,0.2);
 }
-
 .granule-sortable li:last-child {
-  border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid #dddddd;
 }
-
 .granule-sortable li.granule-highlight {
-  height: 18px;
-  background: #f3f3f5;
+	height: 18px;
+	background: #f3f3f5;
 }
-
 .granule-close {
-  padding: 0 10px;
-  color: #900;
-  position: absolute;
-  right: 0;
-  font-weight: bold;
+	padding: 0 10px;
+	color: #990000;
+	position: absolute;
+	right: 0;
+	font-weight: bold;
 }
