@@ -821,3 +821,14 @@ function granule_widget_tag_cloud_args( $args ) {
 }
 
 add_filter( 'widget_tag_cloud_args', 'granule_widget_tag_cloud_args' );
+
+
+/**
+ * Add auto formatting to the author bio.
+ *
+ * @link https://make.wordpress.org/core/2018/01/17/auto-formatting-of-author-bios-reverted-in-4-9-2/
+ */
+add_filter( 'get_the_author_description', 'wptexturize' );
+add_filter( 'get_the_author_description', 'convert_chars' );
+add_filter( 'get_the_author_description', 'wpautop' );
+add_filter( 'get_the_author_description', 'shortcode_unautop' );
