@@ -4,14 +4,15 @@
  *
  * @link https://developer.wordpress.org/themes/advanced-topics/customizer-api/
  *
- * @package Granule
+ * @package    Granule
  * @subpackage ThemeCustomizerCustomControls
- * @author Ben Gillbanks <ben@prothemedesign.com>
- * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
+ * @author     Ben Gillbanks <ben@prothemedesign.com>
+ * @license    http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
 /**
- * Leave this file if the WP_Customize_Control class does not exist since it will create php errors.
+ * Leave this file if the WP_Customize_Control class does not exist since it
+ * will create php errors.
  */
 if ( ! class_exists( 'WP_Customize_Control' ) ) {
 
