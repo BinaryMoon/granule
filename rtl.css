@@ -195,10 +195,7 @@ img#wpstats {
 	right: -100px;
 }
 
-.jetpack-video-wrapper {
-	margin: 3rem 0;
-}
-
+.jetpack-video-wrapper,
 .tiled-gallery,
 main #jp-post-flair,
 main div#jp-relatedposts,
@@ -516,10 +513,7 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 	padding: 1.5rem 3rem;
 }
 
-.content-comments ol.comment-list {
-	margin: 0 0 3rem 0;
-}
-
+.content-comments ol.comment-list,
 .content-comments ol.comment-list li.comment #respond {
 	margin: 0 0 3rem 0;
 }
@@ -602,10 +596,7 @@ form.search-form button.search-submit {
 	padding: 0 0.5em;
 }
 
-.device-click form.search-form button.search-submit {
-	transition: all 0.15s ease-in-out;
-}
-
+.device-click form.search-form button.search-submit,
 .device-click form.search-form button.search-submit:focus,
 .device-click form.search-form button.search-submit:hover {
 	transition: all 0.15s ease-in-out;
@@ -633,10 +624,7 @@ object {
 	margin: 3rem 0;
 }
 
-.device-click a {
-	transition: all 0.3s ease-in-out;
-}
-
+.device-click a,
 .device-click a:hover {
 	transition: all 0.3s ease-in-out;
 }
@@ -645,10 +633,7 @@ object {
 	margin: 0 auto;
 }
 
-.site-header .menu {
-	text-align: right;
-}
-
+.site-header .menu,
 .site-header .menu li {
 	text-align: right;
 }
@@ -879,7 +864,7 @@ main.full-width {
 		padding-right: 0;
 		padding-left: 0;
 	}
-	 #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
+	#jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
 		margin: 0 0 1.5rem 0;
 	}
 }
@@ -888,25 +873,25 @@ main.full-width {
 	.site-header .menu {
 		padding: 0.75rem 1.5rem;
 	}
-	 .site-header .menu .menu-toggle svg.icon {
+	.site-header .menu .menu-toggle svg.icon {
 		margin-left: 0.5em;
 	}
-	 .site-header .menu ul ul li.focus > ul,
+	.site-header .menu ul ul li.focus > ul,
 	.site-header .menu ul ul li:hover > ul {
 		right: auto;
 	}
-	 .site-header .menu li a:not(.button),
+	.site-header .menu li a:not(.button),
 	.site-header .menu li li a:not(.button),
 	.site-header .menu li ul li a:not(.button) {
 		padding: 0.375rem 0;
 	}
-	 .site-header .menu li ul,
+	.site-header .menu li ul,
 	.site-header .menu li ul ul {
 		right: auto;
 		box-shadow: none;
 		padding-right: 1.5rem;
 	}
-	 .site-header .menu li ul li,
+	.site-header .menu li ul li,
 	.site-header .menu li ul ul li {
 		right: auto;
 	}
