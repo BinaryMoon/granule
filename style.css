@@ -1,4 +1,4 @@
-/*
+/*!
 Theme Name: Granule
 Theme URI: https://wordpress.com/theme/granule/
 Description:
@@ -157,9 +157,7 @@ Tags:
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
-
-
-/**
+/*!
  *  ___        _____ _                  ___         _
  * | _ \_ _ __|_   _| |_  ___ _ __  ___|   \ ___ __(_)__ _ _ _
  * |  _/ '_/ _ \| | | ' \/ -_) '  \/ -_) |) / -_|_-< / _` | ' |
@@ -167,9 +165,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *                                                   |___/
  * WordPress Themes: https://prothemedesign.com/themes/
  */
-
-
-/**
+/*!
  * Table of Contents
  *
  * 1.0 - CSS Library
@@ -207,14 +203,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *    5.1 - Responsive Styles
  *    5.2 - Generic Print Styles
  */
-
-
-/**
+/*!
  * 1.0 - CSS Library
  */
-
-
-/**
+/*!
  * 1.1 - CSS Reset
  * Set HTML styles to sensible defaults
  * loosely based on normalize.css, with a number of customisations
@@ -342,8 +334,8 @@ img {
 }
 
 fieldset {
-	margin: 0 0 1.5rem;
-	padding: 1.5rem;
+	margin: 0 0 1.5rem 0;
+	padding: 1.5rem 1.5rem;
 }
 
 legend {
@@ -449,8 +441,7 @@ svg path {
 	width: device-width;
 }
 
-
-/**!
+/*!
  * 1.2 - Typography
  */
 body,
@@ -466,7 +457,6 @@ html {
 	        font-feature-settings: "kern" 1,"liga" 1,"clig" 1;
 	-webkit-font-variant-ligatures: no-discretionary-ligatures;
 	        font-variant-ligatures: no-discretionary-ligatures;
-	/*@replace: embed*/
 	unicode-bidi: normal;
 }
 
@@ -479,7 +469,7 @@ h6 {
 	color: #000000;
 	font-family: "Merriweather Sans",sans-serif;
 	font-weight: normal;
-	margin: 0 0 1.2rem;
+	margin: 0 0 1.2rem 0;
 }
 h1 a,
 h2 a,
@@ -563,7 +553,7 @@ hr {
 }
 
 p {
-	margin: 0 0 1.2rem;
+	margin: 0 0 1.2rem 0;
 }
 p:empty {
 	display: none;
@@ -573,7 +563,7 @@ pre {
 	margin: 3rem 0;
 	background: #1a1a1a;
 	color: #2ecc71;
-	padding: 1.5rem;
+	padding: 1.5rem 1.5rem;
 	overflow: auto;
 	display: block;
 	word-wrap: normal;
@@ -586,8 +576,7 @@ pre.compress {
 	max-height: 22.5rem;
 }
 
-
-/**!
+/*!
  * 1.3 - Forms
  */
 input.radio {
@@ -826,7 +815,7 @@ input[type=search]::-webkit-search-decoration {
 }
 
 select {
-	height: 3.4rem;
+	height: calc(3rem + 0.4rem);
 }
 select:hover {
 	cursor: pointer;
@@ -904,11 +893,9 @@ fieldset ul.radio {
 	margin: 0;
 }
 
-
-/**!
+/*!
  * 1.4 - HTML Elements
  */
-/* lists */
 ol,
 ul {
 	margin: 0 0 1.5rem 1.5rem;
@@ -938,10 +925,8 @@ dl dt {
 }
 
 dl dd {
-	margin: 0 1.5rem 1.5rem;
+	margin: 0 1.5rem 1.5rem 1.5rem;
 }
-
-/* blockquotes */
 blockquote {
 	padding: 0 1.5rem;
 	margin: 3rem 0;
@@ -967,11 +952,9 @@ blockquote small:before {
 }
 blockquote blockquote {
 	margin: 1.5rem 0;
-	padding: 1.5rem;
+	padding: 1.5rem 1.5rem;
 	border: 1px solid rgba(0,0,0,0.05);
 }
-
-/* tables */
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -1004,13 +987,10 @@ table tr:last-child td {
 	border: none;
 }
 
-
-/**!
+/*!
  * 1.5 - Animations
- * Use with:
- * @include animation( animationName duration );
- * eg:
- * @include animation( faded-in 0.3s );
+ * Use with: @include animation( animationName duration );
+ * eg: @include animation( faded-in 0.3s );
  */
 @-webkit-keyframes a {
 	0% {
@@ -1030,13 +1010,10 @@ table tr:last-child td {
 	}
 }
 
-
-/**
+/*!
  * 2.0 - Plugins
  */
-
-
-/**!
+/*!
  * 2.1 - Jetpack
  */
 img#wpstats {
@@ -1078,7 +1055,7 @@ main div.sharedaddy h3.sd-title {
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 	font-family: "Merriweather Sans",sans-serif;
-	margin: 0 0 0.75rem;
+	margin: 0 0 0.75rem 0;
 	display: block;
 	font-weight: bold;
 	font-style: normal;
@@ -1111,7 +1088,7 @@ main div.sharedaddy h3.sd-title:before {
 }
 #jp-relatedposts .jp-relatedposts-post-a img {
 	display: block;
-	margin: 0 auto 0.75rem;
+	margin: 0 auto 0.75rem auto;
 }
 
 #jp-relatedposts .jp-relatedposts-post-title {
@@ -1242,10 +1219,10 @@ div.jetpack-testimonial-shortcode:after {
 }
 div.jetpack-testimonial-shortcode .testimonial-entry {
 	margin: 0;
-	padding: 1.5rem;
+	padding: 1.5rem 1.5rem;
 }
 div.jetpack-testimonial-shortcode .testimonial-entry-content {
-	margin: 0 0 0.75rem;
+	margin: 0 0 0.75rem 0;
 }
 div.jetpack-testimonial-shortcode .testimonial-entry-title {
 	display: inline-block;
@@ -1276,7 +1253,7 @@ div.jetpack-testimonial-shortcode.column-4 .testimonial-entry {
 div.jetpack-testimonial-shortcode.column-4 .testimonial-entry:nth-of-type(4n+1) {
 	clear: both;
 }
-@media only screen and (max-width:600px) {
+@media only screen and (max-width: 600px) {
 	div.jetpack-testimonial-shortcode.column-2 .testimonial-entry,
 	div.jetpack-testimonial-shortcode.column-3 .testimonial-entry,
 	div.jetpack-testimonial-shortcode.column-4 .testimonial-entry {
@@ -1332,8 +1309,7 @@ form.contact-form div.clear-form {
 	display: none;
 }
 
-
-/**!
+/*!
  * 2.2 - WooCommerce
  */
 .woocommerce h1 {
@@ -1576,14 +1552,14 @@ li.woocommerce-cart-button li div.widget_shopping_cart p.buttons {
 	margin: 0;
 }
 li.woocommerce-cart-button li div.widget_shopping_cart p.buttons a {
-	margin: 0 0 0.75rem;
+	margin: 0 0 0.75rem 0;
 	font-size: 12px;
 	font-size: 0.75rem;
 	line-height: 1.75;
 }
 li.woocommerce-cart-button li div.widget_shopping_cart .total {
 	border-top: 0.2rem solid hsla(0,0%,100%,0.5);
-	padding: 0.75rem 0 0;
+	padding: 0.75rem 0 0 0;
 	text-align: center;
 }
 li.woocommerce-cart-button li div.widget_shopping_cart .remove {
@@ -1603,14 +1579,13 @@ p.demo_store a {
 	color: #ffffff;
 }
 
-
-/**!
+/*!
  * 2.3 - WP Post Series
  */
 .wp-post-series-box {
 	border: 0.2rem solid rgba(0,0,0,0.3);
-	padding: 1.5rem 1.5rem 0;
-	margin: 0 0 3rem;
+	padding: 1.5rem 1.5rem 0 1.5rem;
+	margin: 0 0 3rem 0;
 }
 .wp-post-series-box .wp-post-series-name {
 	font-weight: bold;
@@ -1620,20 +1595,19 @@ p.demo_store a {
 	margin: 0;
 }
 .wp-post-series-box .wp-post-series-description p {
-	margin: 0 0 1.5rem;
+	margin: 0 0 1.5rem 0;
 }
 .wp-post-series-box .wp-post-series-nav ol {
 	list-style-type: decimal;
 }
 
-
-/**!
+/*!
  * 2.4 - Landing Page
  */
 .landing-page {
 	background: transparent 50% no-repeat;
 	background-size: cover;
-	padding: 3rem;
+	padding: 3rem 3rem;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -1652,13 +1626,10 @@ p.demo_store a {
 	width: 100%;
 }
 
-
-/**
+/*!
  * 3.0 - WordPress
  */
-
-
-/**!
+/*!
  * 3.1 - Required Elements
  * Uses the defaults listed on the Codex (https://codex.wordpress.org/CSS)
  */
@@ -1667,7 +1638,7 @@ p.demo_store a {
 	padding: 0;
 	text-align: center;
 	max-width: 100%;
-	margin: 0 0 3rem;
+	margin: 0 0 3rem 0;
 	clear: both;
 }
 .wp-caption .wp-caption-text {
@@ -1681,7 +1652,7 @@ p.demo_store a {
 .wp-caption img {
 	float: none;
 	display: block;
-	margin: 0 auto 0.375rem;
+	margin: 0 auto 0.375rem auto;
 }
 
 .wp-smiley {
@@ -1701,7 +1672,7 @@ blockquote.alignleft,
 blockquote.alignright {
 	max-width: 40%;
 }
-@media only screen and (max-width:600px) {
+@media only screen and (max-width: 600px) {
 	blockquote.alignleft,
 	blockquote.alignright {
 		max-width: 100%;
@@ -1709,27 +1680,19 @@ blockquote.alignright {
 		margin-right: 0;
 	}
 }
-
-/*@noflip*/
 .alignleft {
 	float: left;
 	margin: 0 1.5rem 1.5rem 0;
 }
-
-/*@noflip*/
 .alignright {
 	float: right;
 	margin: 0 0 1.5rem 1.5rem;
 }
-
-/*@noflip*/
 .aligncenter {
 	clear: both;
 	display: block;
 	margin: 3rem auto;
 }
-
-/*@noflip*/
 .aligncenter .aligncenter,
 .alignleft .alignleft,
 .alignright .alignright {
@@ -1741,11 +1704,9 @@ blockquote.alignright {
 	box-sizing: border-box;
 }
 
-
-/**!
+/*!
  * 3.2 - Accessibility
  */
-/* Text meant only for screen readers. */
 .screen-reader-text {
 	border: 0;
 	clip: rect(1px,1px,1px,1px);
@@ -1793,14 +1754,11 @@ blockquote.alignright {
 	left: 6px;
 	z-index: 4;
 }
-
-/* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
 	outline: 0;
 }
 
-
-/**!
+/*!
  * 3.3 - WordPress.com Specific Styles
  */
 .PDS_Poll,
@@ -1834,8 +1792,7 @@ blockquote.alignright {
 	background: #ffffff;
 }
 
-
-/**!
+/*!
  * 3.4 - Widgets
  */
 .widget {
@@ -1980,11 +1937,11 @@ blockquote.alignright {
 	margin-bottom: 0;
 }
 .widget.widget_authors img {
-	margin: 0 auto 0.75rem;
+	margin: 0 auto 0.75rem auto;
 }
 .widget.widget_authors ul {
 	list-style-type: none;
-	margin: 0 0 1.5rem;
+	margin: 0 0 1.5rem 0;
 	padding: 0;
 }
 .widget.widget_authors ul strong {
@@ -1998,7 +1955,7 @@ blockquote.alignright {
 }
 .widget.widget_authors ul ul {
 	list-style-type: disc;
-	margin: 0 0 1.5rem;
+	margin: 0 0 1.5rem 0;
 	padding: 0 0 0 1.5rem;
 	clear: both;
 }
@@ -2054,8 +2011,7 @@ blockquote.alignright {
 	font-size: 32px;
 }
 
-
-/**!
+/*!
  * 3.5 - Gallery
  * Default styles for the [gallery] shortcode
  */
@@ -2071,7 +2027,7 @@ blockquote.alignright {
 .gallery .gallery-item {
 	display: inline-block;
 	text-align: center;
-	margin: 0 0 1.5rem;
+	margin: 0 0 1.5rem 0;
 	vertical-align: top;
 	padding: 0 0.75rem;
 }
@@ -2145,8 +2101,7 @@ blockquote.alignright {
 	display: none;
 }
 
-
-/**!
+/*!
  * 3.6 - Calendar
  */
 #wp-calendar {
@@ -2166,8 +2121,7 @@ blockquote.alignright {
 	font-weight: bold;
 }
 
-
-/**!
+/*!
  * 3.7 - Password Required Form
  */
 .post-password-required form {
@@ -2185,13 +2139,12 @@ blockquote.alignright {
 	margin-bottom: 0;
 }
 
-
-/**!
+/*!
  * 3.8 - Comments
  */
 .content-comments ol.comment-list {
 	list-style-type: none;
-	margin: 0 0 3rem;
+	margin: 0 0 3rem 0;
 	padding: 0;
 }
 .content-comments ol.comment-list li.comment .comment-body,
@@ -2213,7 +2166,7 @@ blockquote.alignright {
 }
 .content-comments ol.comment-list li.comment #respond {
 	position: relative;
-	margin: 0 0 3rem;
+	margin: 0 0 3rem 0;
 }
 .content-comments ol.comment-list li.comment #respond #cancel-comment-reply-link {
 	float: right;
@@ -2396,8 +2349,7 @@ blockquote.alignright {
 	font-weight: bold;
 }
 
-
-/**!
+/*!
  * 3.9 - Search Form
  */
 form.search-form {
@@ -2438,8 +2390,7 @@ form.search-form button.search-submit:hover {
 	        transition: all 0.15s ease-in-out;
 }
 
-
-/**!
+/*!
  * 3.10 - Embeds
  */
 iframe.twitter-follow-button,
@@ -2473,23 +2424,12 @@ p > object:only-child {
 	margin-bottom: 0;
 }
 
-
-/**!
+/*!
  * 3.11 - Sticky Posts
  */
 .sticky .post-meta-data .posted-on {
 	display: none;
 }
-
-
-/**
- * 4.0 - Theme Layout
- */
-
-
-/**
- * 4.1 - General Properties
- */
 a {
 	color: #b8960b;
 	text-decoration: none;
@@ -2516,11 +2456,6 @@ a:hover {
 	display: block;
 	clear: both;
 }
-
-
-/**
- * 4.2 - Header
- */
 .site-header .custom-logo-link img {
 	max-height: 3rem;
 	width: auto;
@@ -2578,7 +2513,7 @@ a:hover {
 	border: 0.4em solid transparent;
 	content: "";
 	top: 45%;
-	top: calc(50% - 0.2em);
+	top: calc(50% - (0.4em / 2));
 	right: 1.5em;
 	left: auto;
 	border-bottom-width: 0;
@@ -2676,20 +2611,14 @@ a:hover {
 .site-header .menu {
 	padding: 0.75rem 1.5rem;
 }
-a.header-image,
-a.header-image img {
+
+a.header-image {
 	display: block;
 }
 a.header-image img {
+	display: block;
 	margin: 0 auto;
 }
-
-
-/**
- * 4.3 - Body
- * Site content, blog posts etc
- */
-/* layout */
 main {
 	width: 66.66667%;
 }
@@ -2737,8 +2666,6 @@ main.full-width {
 	display: block;
 	clear: both;
 }
-
-/* archive & excerpted posts */
 .content-posts.content-masonry {
 	position: relative;
 }
@@ -2767,16 +2694,12 @@ main.full-width {
 	-webkit-animation: a 0.5s;
 	        animation: a 0.5s;
 }
-
-/* single post and page */
 .content-single article .entry-title {
 	font-size: 52px;
 	font-size: 3.25rem;
 	line-height: 1.25;
 	font-weight: bold;
 }
-
-/* comments layout */
 .content-comments {
 	padding: 3rem 0;
 	clear: both;
@@ -2814,13 +2737,6 @@ main.full-width {
 .attachment .attachment-caption {
 	font-style: italic;
 }
-
-
-/**
- * 4.4 - Elements
- * Search form, author meta box, and other generic, reusable, elements.
- */
-/* taxonomies - categories and tags on single posts */
 .taxonomies {
 	clear: both;
 	margin-bottom: 3rem;
@@ -2833,8 +2749,6 @@ main.full-width {
 	letter-spacing: 0.1em;
 	margin: 0;
 }
-
-/* pagination */
 .pagination {
 	font-size: 20px;
 	font-size: 1.25rem;
@@ -2851,11 +2765,9 @@ main.full-width {
 	background: #b8960b;
 	color: #ffffff;
 }
-
-/* blog post contributor/ author */
 .contributor {
 	padding: 0 0 0 7.5rem;
-	margin: 0 0 4.5rem;
+	margin: 0 0 4.5rem 0;
 	min-height: 6rem;
 	position: relative;
 	clear: both;
@@ -2876,8 +2788,6 @@ main.full-width {
 	top: 0;
 	left: 0;
 }
-
-/* child pages (on child page template) */
 .child-page {
 	width: 50%;
 	float: left;
@@ -2897,13 +2807,9 @@ main.full-width {
 	clear: both;
 	padding-left: 0;
 }
-
-/* avatar */
 .avatar {
 	border-radius: 10rem;
 }
-
-/* testimonials */
 .content-testimonials {
 	display: block;
 }
@@ -2958,16 +2864,12 @@ main.full-width {
 	display: block;
 	max-height: 4.5rem;
 	width: auto;
-	margin: 0 auto 0.75rem;
+	margin: 0 auto 0.75rem auto;
 }
-
-/* post thumbnails generic styles */
 a.thumbnail,
 a.thumbnail img {
 	display: block;
 }
-
-/* breadcrumbs */
 .entry-breadcrumbs {
 	font-size: 12px;
 	font-size: 0.75rem;
@@ -2975,8 +2877,6 @@ a.thumbnail img {
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 }
-
-/* featured content */
 .showcase {
 	position: relative;
 	height: 0;
@@ -3094,8 +2994,6 @@ a.thumbnail img {
 .post-gallery .item:nth-child(2n+2) {
 	padding-right: 0;
 }
-
-/* widgets generic styles */
 .widget .widget-title {
 	font-size: 16px;
 	font-size: 1rem;
@@ -3156,11 +3054,6 @@ a.thumbnail img {
 .category-description p:last-child {
 	margin-bottom: 0;
 }
-
-
-/**
- * 4.5 - Footer
- */
 #footer {
 	padding: 1.5rem 0;
 }
@@ -3187,13 +3080,6 @@ a.thumbnail img {
 	margin: 0 0.5em;
 	opacity: 0.3;
 }
-
-
-/**
- * 4.6 - The Content
- * Styles for blog post content
- * Includes special styles such as drop caps, and intro text
- */
 .the-content {
 	margin-bottom: 3rem;
 }
@@ -3264,12 +3150,6 @@ a.thumbnail img {
 .the-content .small-caps {
 	font-variant: small-caps;
 }
-
-
-/**
- * 4.7 - Misc
- * Other random styles that don't fit anywhere else
- */
 .header-404 .icon {
 	width: 100%;
 	height: 15rem;
@@ -3279,17 +3159,10 @@ a.thumbnail img {
 .user-icon-container {
 	display: none;
 }
-
-
-/**
- * 5.0 - Media Queries
- */
-
-
-/**!
+/*!
  * 5.1 - Responsive Styles
  */
-@media only screen and (max-width:600px) {
+@media only screen and (max-width: 600px) {
 	.content-comments ol.comment-list li.comment.depth-1 article,
 	.content-comments ol.comment-list li.comment.depth-2 article,
 	.content-comments ol.comment-list li.comment.depth-3 article,
@@ -3316,26 +3189,26 @@ a.thumbnail img {
 	}
 	#jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
 		width: 100%;
-		margin: 0 0 1.5rem;
+		margin: 0 0 1.5rem 0;
 	}
 	.gallery .gallery-item {
 		width: 50% !important;
 	}
 }
 
-@media only screen and (max-width:1200px) {
+@media only screen and (max-width: 1200px) {
 	html {
 		font-size: 100%;
 	}
 }
 
-@media only screen and (max-width:899px) {
+@media only screen and (max-width: 899px) {
 	html {
 		font-size: 95%;
 	}
 }
 
-@media only screen and (max-width:782px) {
+@media only screen and (max-width: 782px) {
 	.site-header .menu {
 		background: #000000;
 		width: 100%;
@@ -3421,7 +3294,7 @@ a.thumbnail img {
 	}
 }
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width: 600px) {
 	html {
 		font-size: 85%;
 	}
@@ -3430,8 +3303,7 @@ a.thumbnail img {
 	}
 }
 
-
-/**!
+/*!
  * 5.2 - Generic Print Styles
  */
 @media print {

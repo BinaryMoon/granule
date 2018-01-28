@@ -1,6 +1,7 @@
 .granule-sortable {
 	margin-bottom: 15px;
 }
+
 .granule-sortable li {
 	border: 1px solid #dddddd;
 	padding: 5px 10px;
@@ -12,20 +13,25 @@
 	box-shadow: 0 1px 1px rgba(0,0,0,0.05);
 	color: #333333;
 }
+
 .granule-sortable li:hover {
 	background: #f3f3f5;
 	color: #0073aa;
 }
+
 .granule-sortable li.ui-sortable-helper {
 	box-shadow: 0 2px 2px rgba(0,0,0,0.2);
 }
+
 .granule-sortable li:last-child {
 	border-bottom: 1px solid #dddddd;
 }
+
 .granule-sortable li.granule-highlight {
 	height: 18px;
 	background: #f3f3f5;
 }
+
 .granule-close {
 	padding: 0 10px;
 	color: #990000;
