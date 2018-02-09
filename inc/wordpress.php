@@ -241,11 +241,14 @@ function granule_after_setup_theme() {
 	// HTML5 FTW.
 	add_theme_support(
 		'html5',
-		array(
-			'comment-list',
-			'comment-form',
-			'gallery',
-			'caption',
+		apply_filters(
+			'granule_html5_args',
+			array(
+				'comment-list',
+				'comment-form',
+				'gallery',
+				'caption',
+			)
 		)
 	);
 
@@ -256,23 +259,29 @@ function granule_after_setup_theme() {
 	 */
 	add_theme_support(
 		'post-formats',
-		array(
-			'quote',
-			'video',
-			'image',
-			'gallery',
-			'audio',
+		apply_filters(
+			'granule_post_formats_args',
+			array(
+				'quote',
+				'video',
+				'image',
+				'gallery',
+				'audio',
+			)
 		)
 	);
 
 	// Custom Logo.
 	add_theme_support(
 		'custom-logo',
-		array(
-			'height' => 500,
-			'width' => 500,
-			'flex-height' => true,
-			'flex-width' => true,
+		apply_filters(
+			'granule_custom_logo_args',
+			array(
+				'height' => 500,
+				'width' => 500,
+				'flex-height' => true,
+				'flex-width' => true,
+			)
 		)
 	);
 
