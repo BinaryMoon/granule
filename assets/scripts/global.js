@@ -214,6 +214,31 @@
 			}
 		);
 
+
+		// Add masonry reposition event after 600 milliseconds.
+		// This accounts for Jetpacks responsive videos resizing 500 ms
+		// after a resize event.
+
+		var resize_orient = null;
+
+		$( window ).on(
+			'orientationchange resize',
+			function() {
+
+				clearTimeout( resize_orient );
+
+				resize_orient = setTimeout(
+					function() {
+
+						$grid.masonry( 'layout' );
+
+					},
+					600
+				);
+
+			}
+		);
+
 		// Update on infinite scroll load.
 		$( 'body' ).on(
 			'post-load',
