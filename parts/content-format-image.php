@@ -27,7 +27,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<a href="<?php the_permalink(); ?>" class="thumbnail">
+	<a href="<?php the_permalink(); ?>" class="thumbnail" aria-hidden="true" tabindex="-1">
 		<?php echo $image; // WPCS: XSS OK. ?>
 	</a>
 
