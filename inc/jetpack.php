@@ -24,22 +24,28 @@ function granule_jetpack_init() {
 	// Add support for Infinite scroll.
 	add_theme_support(
 		'infinite-scroll',
-		array(
-			'container' => 'infinite-scroll',
-			'footer_widgets' => 'sidebar-2',
-			'footer' => 'footer-widgets',
-			'posts_per_page' => 16,
-			'render' => 'granule_infinite_scroll_render',
+		apply_filters(
+			'granule_infinite_scroll',
+			array(
+				'container' => 'infinite-scroll',
+				'footer_widgets' => 'sidebar-2',
+				'footer' => 'footer-widgets',
+				'posts_per_page' => 16,
+				'render' => 'granule_infinite_scroll_render',
+			)
 		)
 	);
 
 	// Add support for Featured Content.
 	add_theme_support(
 		'featured-content',
-		array(
-			'featured_content_filter' => 'granule_get_featured_posts',
-			'max_posts' => 4,
-			'post_types' => array( 'post', 'page', 'jetpack-portfolio' ),
+		apply_filters(
+			'granule_featured_content',
+			array(
+				'featured_content_filter' => 'granule_get_featured_posts',
+				'max_posts' => 4,
+				'post_types' => array( 'post', 'page', 'jetpack-portfolio' ),
+			)
 		)
 	);
 
@@ -58,27 +64,30 @@ function granule_jetpack_init() {
 	// Add support for Jetpack content options.
 	add_theme_support(
 		'jetpack-content-options',
-		array(
-			// The default setting of the theme: 'content', 'excerpt' or array( 'content, 'excerpt', ).
-			'blog-display' => 'excerpt',
-			'author-bio' => true,
-			'masonry' => '#main-content',
-			'post-details' => array(
-				'stylesheet' => 'granule-style',
-				'date' => '.posted-on',
-				'categories' => '.tax-categories',
-				'tags' => '.tax-tags',
-				'author' => '.byline',
-			),
-			'featured-images' => array(
-				'archive' => true,
-				'archive-default' => true,
-				'post' => true,
-				'post-default' => true,
-				'page' => true,
-				'page-default' => true,
-				'fallback' => true,
-			),
+		apply_filters(
+			'granule_content_options',
+			array(
+				// The default setting of the theme: 'content', 'excerpt' or array( 'content, 'excerpt', ).
+				'blog-display' => 'excerpt',
+				'author-bio' => true,
+				'masonry' => '#main-content',
+				'post-details' => array(
+					'stylesheet' => 'granule-style',
+					'date' => '.posted-on',
+					'categories' => '.tax-categories',
+					'tags' => '.tax-tags',
+					'author' => '.byline',
+				),
+				'featured-images' => array(
+					'archive' => true,
+					'archive-default' => true,
+					'post' => true,
+					'post-default' => true,
+					'page' => true,
+					'page-default' => true,
+					'fallback' => true,
+				),
+			)
 		)
 	);
 
