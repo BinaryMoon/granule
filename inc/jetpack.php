@@ -212,7 +212,7 @@ function granule_testimonials_description( $before = '', $after = '' ) {
 	if ( ! empty( $jetpack_options['page-content'] ) ) {
 		$content = $jetpack_options['page-content'];
 		$content = addslashes( $content );
-		$content = wp_filter_post_kses( $content );
+		$content = wp_kses_post( $content );
 		$content = stripslashes( $content );
 		$content = wptexturize( $content );
 		$content = convert_smilies( $content );
