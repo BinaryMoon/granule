@@ -24,12 +24,9 @@
 
 <?php
 	if ( is_home() && current_user_can( 'publish_posts' ) ) {
-?>
 
-		<p>
-<?php
 		printf(
-			wp_kses(
+			'<p>' . wp_kses(
 				/* Translators: %1$s: admin url */
 				__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'granule' ),
 				array(
@@ -37,13 +34,10 @@
 						'href' => array(),
 					),
 				)
-			),
+			) . '</p>',
 			esc_url( admin_url( 'post-new.php' ) )
 		);
-?>
-		</p>
 
-<?php
 	} if ( is_search() ) {
 ?>
 
