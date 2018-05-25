@@ -201,7 +201,7 @@ function granule_post_time() {
 
 	$time_string = sprintf(
 		'<time class="entry-date published updated" datetime="%1$s">%2$s</time>',
-		esc_attr( get_the_date( 'c' ) ),
+		esc_attr( get_the_date( 'DATE_W3C' ) ),
 		granule_human_time_diff()
 	);
 
