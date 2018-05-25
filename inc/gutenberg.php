@@ -25,14 +25,18 @@ function granule_gutenberg_init() {
 	add_theme_support(
 		'editor-color-palette',
 		array(
-			// I've used white for everything. Must change to be relevant to
-			// theme styles.
-			'#ffffff',
-			'#ffffff',
-			'#ffffff',
-			'#ffffff',
-			'#ffffff',
-			'#ffffff',
+			array(
+				'name' => esc_html__( 'White', 'granule' ),
+				'color' => '#ffffff',
+			),
+			array(
+				'name' => esc_html__( 'Light Gray', 'granule' ),
+				'color' => '#f5f5f5',
+			),
+			array(
+				'name' => esc_html__( 'Black', 'granule' ),
+				'color' => '#000000',
+			),
 		)
 	);
 
@@ -61,7 +65,7 @@ add_action( 'enqueue_block_editor_assets', 'granule_gutenberg_styles' );
 /**
  * Modify post type arguments to add default post type templates.
  *
- * @param  array $args       The default post type arguments.
+ * @param  array  $args      The default post type arguments.
  * @param  string $post_type The post type for the current request.
  * @return array             Modified arguments including the new template properties.
  */
@@ -87,7 +91,7 @@ function granule_post_type_arguments( $args, $post_type ) {
 				'core/paragraph',
 				array(
 					'placeholder' => __( 'Start writing', 'granule' ),
-				)
+				),
 			),
 			array( 'core/quote' ),
 		);
