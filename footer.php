@@ -46,13 +46,19 @@
 ?>
 
 		<div class="site-info">
+<?php
+			if ( function_exists( 'the_privacy_policy_link' ) ) {
+				the_privacy_policy_link( '', '<span role="separator" aria-hidden="true" class="sep"></span>' );
+			}
+?>
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'granule' ) ); ?>" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'granule' ); ?>" rel="generator">
 <?php
 				/* Translators: %s = WordPress (cms name) */
 			printf( esc_html__( 'Proudly powered by %s', 'granule' ), 'WordPress' );
 ?>
 			</a>
-			<span class="sep"> | </span>
+
+			<span role="separator" aria-hidden="true" class="sep"></span>
 <?php
 			/* Translators: %1$s = theme name, %2$s = theme author website */
 			printf( esc_html__( 'Theme: %1$s by %2$s.', 'granule' ), 'Granule', '<a href="https://prothemedesign.com/">Pro Theme Design</a>' );
