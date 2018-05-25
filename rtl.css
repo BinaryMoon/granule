@@ -12,6 +12,12 @@ fieldset {
 	transition: opacity 0.5s ease 0.5s;
 }
 
+@media (prefers-reduced-motion: reduce) {
+	* {
+		transition: none !important;
+	}
+}
+
 body,
 html {
 	direction: rtl;
