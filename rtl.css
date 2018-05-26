@@ -288,6 +288,21 @@ div.jetpack-testimonial-shortcode .testimonial-featured-image img {
 	right: auto;
 }
 
+body #eu-cookie-law {
+	padding: 0.75rem 1.5rem;
+}
+
+body #eu-cookie-law.negative input,
+body #eu-cookie-law.positive input {
+	border-radius: 0.2rem;
+	padding: 0.75rem 1.5rem;
+}
+
+.device-click body #eu-cookie-law.negative input,
+.device-click body #eu-cookie-law.positive input {
+	transition: all 0.15s ease-in-out;
+}
+
 .woocommerce #respond input#submit,
 .woocommerce a.button,
 .woocommerce button.button,
@@ -588,6 +603,7 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 	margin-left: 0.5em;
 }
 
+#respond p.comment-form-cookies-consent input,
 #respond p.comment-subscription-form input,
 #respond p.post-subscription-form input {
 	margin-left: 0.5em;
@@ -735,7 +751,7 @@ main.full-width {
 	padding-left: 0;
 }
 
-.child-page:nth-child(2n+1) {
+.child-page:nth-child(odd) {
 	padding-right: 0;
 }
 
@@ -808,7 +824,7 @@ main.full-width {
 	padding: 1em;
 }
 
-.post-gallery .item:nth-child(2n+1) {
+.post-gallery .item:nth-child(odd) {
 	padding-right: 0;
 }
 
