@@ -25,18 +25,16 @@ function granule_gutenberg_init() {
 	add_theme_support(
 		'editor-color-palette',
 		array(
-			array(
-				'name' => esc_html__( 'White', 'granule' ),
-				'color' => '#ffffff',
-			),
-			array(
-				'name' => esc_html__( 'Light Gray', 'granule' ),
-				'color' => '#f5f5f5',
-			),
-			array(
-				'name' => esc_html__( 'Black', 'granule' ),
-				'color' => '#000000',
-			),
+			'name' => esc_html__( 'White', 'granule' ),
+			'color' => '#ffffff',
+		),
+		array(
+			'name' => esc_html__( 'Light Gray', 'granule' ),
+			'color' => '#f5f5f5',
+		),
+		array(
+			'name' => esc_html__( 'Black', 'granule' ),
+			'color' => '#000000',
 		)
 	);
 
