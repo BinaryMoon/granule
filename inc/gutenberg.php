@@ -88,7 +88,7 @@ function granule_post_type_arguments( $args, $post_type ) {
 			array(
 				'core/paragraph',
 				array(
-					'placeholder' => __( 'Start writing', 'granule' ),
+					'placeholder' => esc_attr__( 'Start writing', 'granule' ),
 				),
 			),
 			array( 'core/quote' ),
