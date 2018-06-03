@@ -24,6 +24,10 @@ html {
 	unicode-bidi: embed;
 }
 
+pre {
+	padding: 1.5rem 1.5rem;
+}
+
 h1,
 h2,
 h3,
@@ -43,7 +47,6 @@ p {
 
 pre {
 	margin: 3rem 0;
-	padding: 1.5rem 1.5rem;
 }
 
 input.radio {

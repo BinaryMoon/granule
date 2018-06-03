@@ -28,7 +28,6 @@ body#tinymce.wp-editor h6 {
 	color: #000000;
 	font-family: "Merriweather Sans",sans-serif;
 	font-weight: normal;
-	margin: 0 0 1.2rem 0;
 }
 
 body#tinymce.wp-editor h1 a,
@@ -97,13 +96,8 @@ body#tinymce.wp-editor h6 {
 }
 
 body#tinymce.wp-editor hr {
-	margin: 3rem auto;
 	border: none;
 	border-bottom: 0.2rem solid rgba(0,0,0,0.3);
-}
-
-body#tinymce.wp-editor p {
-	margin: 0 0 1.2rem 0;
 }
 
 body#tinymce.wp-editor p:empty {
@@ -111,7 +105,6 @@ body#tinymce.wp-editor p:empty {
 }
 
 body#tinymce.wp-editor pre {
-	margin: 3rem 0;
 	background: #1a1a1a;
 	color: #2ecc71;
 	padding: 1.5rem 1.5rem;
