@@ -19,6 +19,7 @@
 <?php
 	granule_breadcrumbs();
 
+	// If page is set as static homepage.
 	if ( is_front_page() ) {
 
 		the_title( '<h2 class="entry-title">', '</h2>' );
