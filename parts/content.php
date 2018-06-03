@@ -33,7 +33,7 @@
 	if ( $image ) {
 ?>
 
-	<a href="<?php echo esc_url( get_permalink() ); ?>" class="thumbnail" aria-hidden="true" tabindex="-1">
+	<a href="<?php the_permalink(); ?>" class="thumbnail" aria-hidden="true" tabindex="-1">
 		<?php echo $image; // WPCS: XSS OK. ?>
 	</a>
 
