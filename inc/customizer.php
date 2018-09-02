@@ -214,7 +214,13 @@ add_action( 'customize_register', 'granule_register_customize_refresh' );
  */
 function granule_customize_preview_js() {
 
-	wp_enqueue_script( 'granule-customize-preview', get_theme_file_uri( '/assets/scripts/customizer-preview.js' ), array( 'customize-preview' ), '1.0', true );
+	wp_enqueue_script(
+		'granule-customize-preview',
+		get_theme_file_uri( '/assets/scripts/customizer-preview.js' ),
+		array( 'customize-preview' ),
+		'1.0',
+		true
+	);
 
 }
 

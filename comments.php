@@ -95,7 +95,7 @@
 
 			the_comments_navigation();
 
-		} // End if().
+		}
 
 		if ( comments_open() ) {
 
@@ -130,4 +130,4 @@
 	</section>
 
 <?php
-	} // End if().
+	}

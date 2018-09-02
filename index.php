@@ -61,7 +61,7 @@
 		</div>
 
 <?php
-	} // End if().
+	}
 ?>
 
 	</main>

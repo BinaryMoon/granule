@@ -85,12 +85,12 @@
 <?php
 			get_template_part( 'parts/comments' );
 
-		} // End while().
+		}
 ?>
 
 	</main>
 
 <?php
-	} // End if().
+	}
 
 	get_footer();
