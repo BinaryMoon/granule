@@ -7,8 +7,8 @@ fieldset {
 	padding: 1.5rem 1.5rem;
 }
 
-.device-click input.searchfield:focus::-webkit-input-placeholder,
-.device-click input[type=search]:focus::-webkit-input-placeholder {
+.device-click .searchfield:focus::-webkit-input-placeholder,
+.device-click [type=search]:focus::-webkit-input-placeholder {
 	transition: opacity 0.5s ease 0.5s;
 }
 
@@ -172,7 +172,8 @@ legend {
 
 ol,
 ul {
-	margin: 0 1.5rem 1.5rem 0;
+	margin: 0 0 1.5rem 0;
+	padding: 0 1.5rem 0 0;
 }
 
 dl dd {
@@ -455,6 +456,27 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 	right: 6px;
 }
 
+.wp-block-pullquote,
+.wp-block-quote,
+.wp-block-quote.is-large {
+	padding: 3rem 3rem;
+}
+
+.wp-block-columns .wp-block-column {
+	padding-right: 0.75rem;
+	padding-left: 0.75rem;
+}
+
+.wp-block-columns .wp-block-column:first-child {
+	padding-right: 0;
+	padding-left: 0.75rem;
+}
+
+.wp-block-columns .wp-block-column:last-child {
+	padding-left: 0;
+	padding-right: 0.75rem;
+}
+
 .content-comments #comment-form-share-text-padder,
 .content-comments #comment-form-share-text-padder.active,
 .content-comments #respond #comment-form-comment,
@@ -635,7 +657,8 @@ iframe[src*="dailymotion.com"],
 iframe[src*="itchi.io"],
 iframe[src*="slideshare.net"],
 iframe[src*="soundcloud.com"],
-iframe[src*="viddler.com"] {
+iframe[src*="viddler.com"],
+iframe[src*="videopress.com"] {
 	margin: 3rem auto;
 }
 

@@ -67,6 +67,36 @@
 
 }
 
+// Quote styles.
+@mixin blockquote {
+
+	padding: ( $grid-line-height * $grid-line-height-multiplier ) ( $grid-gutter );
+	position: relative;
+	background: rgba( $canvas-grey-100, 0.05 );
+
+	p {
+
+		&:last-child {
+
+			margin-bottom: 0;
+
+		}
+
+	}
+
+}
+
+// Blockquote cite.
+@mixin post-cite {
+
+	@include modular-scale( zeta );
+	font-weight: normal;
+	letter-spacing: 0.05em;
+	font-style: normal;
+
+}
+
+
 // The post content layout.
 @mixin the-content {
 
