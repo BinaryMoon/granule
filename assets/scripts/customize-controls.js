@@ -79,7 +79,7 @@
 
 	var list_close_button = function( element ) {
 
-		var close = $( '<a href="" class="granule-close">x</a>' );
+		var close = $( '<a href="" class="granule-close">&times;</a>' );
 
 		$( element ).append( close );
 
