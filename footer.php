@@ -53,7 +53,7 @@
 ?>
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'granule' ) ); ?>" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'granule' ); ?>" rel="generator">
 <?php
-				/* Translators: %s = WordPress (cms name) */
+			/* Translators: %s = WordPress (cms name) */
 			printf( esc_html__( 'Proudly powered by %s', 'granule' ), 'WordPress' );
 ?>
 			</a>
