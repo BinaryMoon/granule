@@ -97,7 +97,7 @@ class Granule_DragDrop_List_Control extends WP_Customize_Control {
 
 		// Hidden input field that stores the saved category list.
 ?>
-		<input type="hidden" id="<?php echo absint( $this->id ); ?>" class="granule-hidden-categories" <?php $this->link(); ?> value="<?php echo esc_html( $this->value() ); ?>">
+		<input type="hidden" id="<?php echo esc_attr( $this->id ); ?>" class="granule-hidden-categories" <?php $this->link(); ?> value="<?php echo esc_html( $this->value() ); ?>">
 <?php
 	}
 
