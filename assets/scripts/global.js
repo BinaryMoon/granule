@@ -222,7 +222,7 @@
 		var resize_orient = null;
 
 		$( window ).on(
-			'orientationchange resize',
+			'orientationchange resize jetpack-lazy-loaded-image',
 			function() {
 
 				clearTimeout( resize_orient );
@@ -241,7 +241,7 @@
 
 		// Update on infinite scroll load.
 		$( 'body' ).on(
-			'post-load',
+			'post-load jetpack-lazy-loaded-image',
 			function() {
 
 				// Make sure we are viewing a page that uses Masonry.
