@@ -12,7 +12,7 @@
 
 	$image = get_the_post_thumbnail(
 		get_the_ID(),
-		'granule-attachment',
+		'granule-archive',
 		array(
 			'class' => 'avatar',
 		)

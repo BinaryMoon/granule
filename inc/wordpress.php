@@ -211,9 +211,6 @@ function granule_after_setup_theme() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	// Attachment (image.php) page links.
-	add_image_size( 'granule-attachment', 250, 250, true );
-
 	// Ideal header image size.
 	add_image_size( 'granule-header', 1500, 500, true );
 
@@ -224,7 +221,7 @@ function granule_after_setup_theme() {
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
 	// Attachment page size.
-	add_image_size( 'granule-attachment-fullsize', 1200, 9999 );
+	add_image_size( 'granule-attachment', 1200, 9999 );
 
 	// Custom background.
 	add_theme_support(

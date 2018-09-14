@@ -41,7 +41,7 @@
 			<section class="entry">
 
 				<div class="attachment-image">
-					<?php echo wp_get_attachment_link( get_the_ID(), 'granule-attachment-fullsize' ); ?>
+					<?php echo wp_get_attachment_link( get_the_ID(), 'granule-attachment' ); ?>
 				</div>
 
 				<div class="attachment-description">
