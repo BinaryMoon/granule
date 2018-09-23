@@ -18,7 +18,7 @@
 
 	<label>
 		<span class="screen-reader-text"><?php esc_html_e( 'Search', 'granule' ); ?></span>
-		<input type="search" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" class="search-field text" placeholder="<?php echo esc_attr_x( 'Search...', 'search input placeholder text', 'granule' ); ?>" />
+		<input type="search" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" class="search-field text" />
 	</label>
 
 	<button class="search-submit"><?php granule_svg( 'search' ); ?><span class="screen-reader-text"><?php echo esc_html__( 'Search', 'granule' ); ?></span></button>
