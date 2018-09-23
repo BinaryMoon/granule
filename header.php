@@ -2,14 +2,7 @@
 /**
  * Header Template
  *
- * Display the site header content (logo, site title, description). Also houses
- * the site head.
- *
- * The head is kept as small as is reasonably possible. Any head content
- * should be hooked into the wp_head filter.
- *
- * Styles and scripts and enqueued through the {@se granule_enqueue} function found
- * in inc/wordpress.php
+ * Display the site header content (logo, site title, description).
  *
  * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#header-php
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
@@ -20,16 +13,13 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
-?>
-<!doctype html>
-<html <?php language_attributes(); ?>>
+	/**
+	 * Split the document head into a separate file so that it can more easily be included in different templates.
+	 * For example templates that don't include the default site header layout.
+	 */
+	get_template_part( 'parts/head' );
 
-<head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<?php wp_head(); ?>
-</head>
+?>
 
 <body <?php body_class(); ?>>
 
