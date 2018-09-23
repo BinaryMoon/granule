@@ -47,6 +47,9 @@ add_action( 'after_setup_theme', 'granule_custom_header_support' );
  */
 function granule_colour_styles() {
 
+	/**
+	 * Take care of header text color and visibility.
+	 */
 	$header_text_color = get_header_textcolor();
 
 	/**
@@ -58,29 +61,27 @@ function granule_colour_styles() {
 		return;
 	}
 
-?>
-<style>
-<?php
 	if ( ! display_header_text() ) {
 ?>
+<style>
 	.masthead .site-title,
 	.masthead .site-description {
 		clip: rect( 1px, 1px, 1px, 1px );
 		position: absolute;
 	}
+</style>
 <?php
 	} else {
 ?>
+<style>
 	.masthead .site-title,
 	.masthead .site-title a,
 	.masthead .site-title a:hover,
 	.masthead p.site-description {
 		color: #<?php echo esc_attr( $header_text_color ); ?>;
 	}
-<?php
-	}
-?>
 </style>
 <?php
+	}
 
 }
