@@ -17,11 +17,11 @@
 
 	$content = get_the_content();
 
-	preg_match( '/<blockquote>(.*?)<\/blockquote>/s', $content, $matches );
+	preg_match( '/<blockquote.*>(.*)<\/blockquote>/siU', $content, $quotes );
 
-	if ( ! empty( $matches[1] ) ) {
+	if ( ! empty( $quotes[1] ) ) {
 
-		$content = $matches[1];
+		$content = $quotes[1];
 
 	}
 
