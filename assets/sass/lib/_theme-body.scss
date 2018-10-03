@@ -105,8 +105,19 @@ main {
 
 		}
 
+		&.format-image {
+
+			.thumbnail {
+
+				margin-bottom: $grid-line-height / 2;
+
+			}
+
+		}
+
 		&.format-gallery {
 
+			.post-gallery,
 			.tiled-gallery {
 
 				margin-bottom: $grid-line-height / 2;
