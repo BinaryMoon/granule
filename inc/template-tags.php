@@ -334,7 +334,7 @@ function granule_child_pages() {
  * page template.
  *
  * @param integer $user_id ID of current contributor.
- * @param integer $post_count Optional post could for current contributor. If
+ * @param integer $post_count Optional post count for current contributor. If
  *                            set then also display a list of recent blog posts.
  */
 function granule_contributor( $user_id = null, $post_count = null ) {
@@ -346,16 +346,17 @@ function granule_contributor( $user_id = null, $post_count = null ) {
 
 ?>
 
-	<div class="entry-author contributor">
+	<section class="entry-author contributor">
 
-		<?php echo get_avatar( $user_id, 140 ); ?>
+		<?php echo get_avatar( $user_id, 250 ); ?>
 
-		<h2>
-			<a href="<?php echo esc_url( get_author_posts_url( $user_id ) ); ?>" class="author vcard">
-				<?php the_author_meta( 'display_name', $user_id ); ?>
-				<small><?php esc_html_e( 'All Posts', 'granule' ); ?></small>
-			</a>
-		</h2>
+		<div class="entry">
+
+			<h2>
+				<a href="<?php echo esc_url( get_author_posts_url( $user_id ) ); ?>" class="author vcard">
+					<?php the_author_meta( 'display_name', $user_id ); ?>
+				</a>
+			</h2>
 
 <?php
 	the_author_meta( 'description' );
@@ -366,14 +367,18 @@ function granule_contributor( $user_id = null, $post_count = null ) {
 			<a class="contributor-posts-link" href="<?php echo esc_url( get_author_posts_url( $user_id ) ); ?>">
 <?php
 		/* Translators: %d: Number of articles written by a particular author. */
-		printf( esc_html( _n( '%d Article', '%d Articles', (int) $post_count, 'granule' ) ), (int) $post_count );
+		printf( esc_html( _n( '%d Article', '%d Articles', (int) $post_count, 'johannes' ) ), (int) $post_count );
 ?>
 			</a>
 		</p>
 <?php
 	}
 ?>
-	</div>
+
+		</div>
+
+	</section>
+
 <?php
 
 }

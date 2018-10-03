@@ -52,9 +52,9 @@
 
 	padding: 0 0 0 ( $grid-gutter * 2.5 );
 	margin: 0 0 ( $grid-line-height * 3 ) 0;
-	min-height: $grid-gutter * 2;
-	position: relative;
-	clear: both;
+	display: grid;
+	grid-template-columns: 15% auto;
+	column-gap: $grid-gutter / 2;
 
 	h2 {
 
@@ -70,10 +70,7 @@
 
 	.avatar {
 
-		max-width: ( $grid-gutter * 2 );
-		position: absolute;
-		top: 0;
-		left: 0;
+		max-width: 100%;
 
 	}
 
