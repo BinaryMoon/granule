@@ -44,7 +44,7 @@
 					<?php echo wp_get_attachment_link( get_the_ID(), 'granule-attachment' ); ?>
 				</div>
 
-				<div class="attachment-description">
+				<div class="attachment-description entry-single">
 <?php
 			if ( has_excerpt() ) {
 ?>
