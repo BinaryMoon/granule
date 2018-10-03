@@ -48,9 +48,9 @@
 
 	wp_link_pages(
 		array(
-			'before'      => '<div class="pagination">',
-			'after'       => '</div>',
-			'pagelink'    => '<span class="screen-reader-text">' . esc_html__( 'Page', 'granule' ) . ' </span>%',
+			'before' => '<div class="pagination">',
+			'after' => '</div>',
+			'pagelink' => '<span class="screen-reader-text">' . esc_html__( 'Page', 'granule' ) . ' </span>%',
 		)
 	);
 ?>
