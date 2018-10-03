@@ -244,6 +244,14 @@ main {
 
 	}
 
+	.no-comments {
+
+		background: $canvas-color;
+		color: contrast( $canvas-color );
+		padding: $grid-line-height ( $grid-gutter / 2 );
+
+	}
+
 }
 
 // attachment page
