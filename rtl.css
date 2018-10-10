@@ -1,5 +1,5 @@
 q {
-	padding: 0 0.25em;
+	padding: 0.25em 0.5em;
 }
 
 fieldset {
@@ -206,12 +206,15 @@ img#wpstats {
 }
 
 .jetpack-video-wrapper,
-.tiled-gallery,
+.tiled-gallery {
+	margin: 3rem 0;
+}
+
 main #jp-post-flair,
 main div#jp-relatedposts,
 main div.pd-rating,
 main div.sharedaddy {
-	margin: 3rem 0;
+	margin: 0 0 3rem 0;
 }
 
 main div#jp-relatedposts h3.jp-relatedposts-headline em,
@@ -462,6 +465,17 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 	padding: 3rem 3rem;
 }
 
+.wp-block-separator {
+	margin-right: auto;
+	margin-left: auto;
+	border-color: rgba(0,0,0,0.3);
+}
+
+.wp-block-separator.is-style-dots:before {
+	padding-right: 1em;
+	padding-left: 0;
+}
+
 .wp-block-columns .wp-block-column {
 	padding-right: 0.75rem;
 	padding-left: 0.75rem;
@@ -641,6 +655,7 @@ form.search-form input.search-field {
 form.search-form button.search-submit {
 	left: 0;
 	padding: 0 0.5em;
+	box-shadow: none;
 }
 
 .device-click form.search-form button.search-submit,
@@ -679,6 +694,10 @@ object {
 
 .container {
 	margin: 0 auto;
+}
+
+blockquote {
+	padding: 3rem 3rem;
 }
 
 .site-header .menu,
@@ -755,6 +774,10 @@ main.full-width {
 	padding: 3rem 0;
 }
 
+.content-comments .no-comments {
+	padding: 1.5rem 1.5rem;
+}
+
 .pagination > * {
 	padding: 0 0.375em;
 }
@@ -762,10 +785,6 @@ main.full-width {
 .contributor {
 	padding: 0 7.5rem 0 0;
 	margin: 0 0 4.5rem 0;
-}
-
-.contributor .avatar {
-	right: 0;
 }
 
 .child-page {
