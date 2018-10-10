@@ -488,6 +488,10 @@ function granule_svg( $name, $echo = true ) {
 
 	$path = get_template_directory() . '/assets/svg/' . $name . '.svg';
 
+	/**
+	 * If the svg exists, and we are echoing it, then embed the code directly in
+	 * the page.
+	 */
 	if ( $echo ) {
 
 		// Return early if file does not exist.
@@ -495,9 +499,14 @@ function granule_svg( $name, $echo = true ) {
 			return false;
 		}
 
-		// Output existing svg file.
 		require $path;
 
+	/**
+	 * If we are not echoing it then we use the <use> tqag to refer to the
+	 * combined svg that is embedded in the footer of every page.
+	 * The svg icons are included in the page withing the @see granule_include_svg_icons
+	 * function.
+	 */
 	} else {
 
 		// Generate svg 'use' tag to display the svg.
