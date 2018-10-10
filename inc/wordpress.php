@@ -567,7 +567,9 @@ function granule_post_terms( $content = '' ) {
 	}
 
 	// Output everything.
-	$content .= '<div class="entry-terms taxonomies">' . $terms . '</div>';
+	if ( ! empty( $terms ) ) {
+		$content .= '<div class="entry-terms taxonomies">' . $terms . '</div>';
+	}
 
 	return $content;
 
