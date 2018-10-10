@@ -87,7 +87,7 @@ class Granule_DragDrop_List_Control extends WP_Customize_Control {
 
 		// Displays selectable items.
 		echo '<select class="granule-dragdrop-select">';
-		echo '<option disabled selected>' . esc_html__( 'Select a category to display +', 'granule' ) . '</option>';
+		echo '<option disabled selected value="default">' . esc_html__( 'Select a category to display +', 'granule' ) . '</option>';
 		foreach ( get_categories() as $category ) {
 			if ( ! in_array( (int) $category->term_id, $values, true ) ) {
 				echo '<option value="' . (int) $category->term_id . '">' . esc_html( $category->name ) . '</option>';
