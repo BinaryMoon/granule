@@ -238,6 +238,7 @@ body:after {
 	box-sizing: inherit;
 }
 
+:focus:not(:focus-visible),
 [tabindex="-1"]:focus {
 	outline: none;
 }
@@ -307,8 +308,8 @@ var {
 }
 
 q {
-	background: hsla(0,0%,50%,0.5);
-	padding: 0 0.25em;
+	background: hsla(0,0%,50%,0.25);
+	padding: 0.25em 0.5em;
 }
 
 small,
@@ -576,10 +577,6 @@ h6 {
 hr {
 	border: none;
 	border-bottom: 0.2rem solid rgba(0,0,0,0.3);
-}
-
-p:empty {
-	display: none;
 }
 
 pre {
@@ -1086,7 +1083,7 @@ main div#jp-relatedposts,
 main div.pd-rating,
 main div.sharedaddy {
 	clear: both;
-	margin: 3rem 0;
+	margin: 0 0 3rem 0;
 	padding: 0;
 }
 
@@ -1388,6 +1385,10 @@ body #eu-cookie-law.positive input:hover {
 
 body .widgets-list-layout img.widgets-list-layout-blavatar {
 	max-width: 100%;
+}
+
+body .jetpack-social-navigation ul {
+	margin-bottom: 1.5rem;
 }
 
 /*!
@@ -1852,6 +1853,7 @@ p.wp-block-subhead {
 .wp-block-pullquote,
 .wp-block-quote,
 .wp-block-quote.is-large {
+	margin-bottom: 3rem;
 	padding: 3rem 3rem;
 	position: relative;
 	background: rgba(0,0,0,0.05);
@@ -1864,6 +1866,8 @@ p.wp-block-subhead {
 .wp-block-pullquote cite,
 .wp-block-quote.is-large cite,
 .wp-block-quote cite {
+	margin-top: 0.75rem;
+	display: block;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.75;
@@ -1872,10 +1876,37 @@ p.wp-block-subhead {
 	font-style: normal;
 }
 
-.wp-block-quote.is-large {
+.wp-block-quote p {
+	font-size: 20px;
+	font-size: 1.25rem;
+	line-height: 1.5;
+}
+
+.wp-block-quote.is-large p {
 	font-size: 28px;
 	font-size: 1.75rem;
 	line-height: 1.5;
+}
+
+.wp-block-separator {
+	width: 10rem;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+	border-bottom-width: 0.2rem;
+	border-color: rgba(0,0,0,0.3);
+}
+.wp-block-separator.is-style-wide {
+	width: 20rem;
+	border-bottom-width: 0.2rem;
+}
+.wp-block-separator.is-style-dots:before {
+	font-size: 2rem;
+	letter-spacing: 1em;
+	padding-left: 1em;
+	padding-right: 0;
+	line-height: 0;
+	color: rgba(0,0,0,0.3);
 }
 
 .wp-block-audio audio {
@@ -2529,6 +2560,7 @@ form.search-form button.search-submit {
 	border: none;
 	padding: 0 0.5em;
 	opacity: 1;
+	box-shadow: none;
 }
 .device-click form.search-form button.search-submit {
 	transition: all 0.15s ease-in-out;
@@ -2626,6 +2658,15 @@ a:hover {
 	content: "";
 	display: block;
 	clear: both;
+}
+
+blockquote {
+	padding: 3rem 3rem;
+	position: relative;
+	background: rgba(0,0,0,0.05);
+}
+blockquote p:last-child {
+	margin-bottom: 0;
 }
 
 /*!
@@ -2867,7 +2908,9 @@ main.full-width {
 }
 .content-posts article.format-audio .mejs-container,
 .content-posts article.format-audio .wp-playlist,
+.content-posts article.format-gallery .post-gallery,
 .content-posts article.format-gallery .tiled-gallery,
+.content-posts article.format-image .thumbnail,
 .content-posts article.format-video .jetpack-video-wrapper {
 	margin-bottom: 0.75rem;
 }
@@ -2903,6 +2946,11 @@ main.full-width {
 	margin-top: 0.3em;
 	width: 2em;
 	height: 1.2em;
+}
+.content-comments .no-comments {
+	background: #b8960b;
+	color: #ffffff;
+	padding: 1.5rem 1.5rem;
 }
 
 .attachment .attachment-image {
@@ -2953,9 +3001,11 @@ main.full-width {
 .contributor {
 	padding: 0 0 0 7.5rem;
 	margin: 0 0 4.5rem 0;
-	min-height: 6rem;
-	position: relative;
-	clear: both;
+	display: -ms-grid;
+	display:     grid;
+	-ms-grid-columns: 15% auto;
+	grid-template-columns: 15% auto;
+	column-gap: 1.5rem;
 }
 .contributor h2 {
 	margin-bottom: 0;
@@ -2968,10 +3018,7 @@ main.full-width {
 	letter-spacing: 0.1em;
 }
 .contributor .avatar {
-	max-width: 6rem;
-	position: absolute;
-	top: 0;
-	left: 0;
+	max-width: 100%;
 }
 .child-page {
 	width: 50%;
@@ -3283,7 +3330,7 @@ a.thumbnail img {
 	display: block;
 	clear: both;
 }
-.the-content > * {
+.the-content > :first-child {
 	margin-top: 0;
 }
 .the-content h1,

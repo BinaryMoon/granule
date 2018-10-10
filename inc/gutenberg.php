@@ -48,16 +48,30 @@ add_action( 'after_setup_theme', 'granule_gutenberg_init' );
 
 
 /**
- * Enqueue WordPress theme styles within the Gutenberg editor.
+ * Enqueue WordPress theme styles within Gutenberg.
  */
-function granule_gutenberg_styles() {
+function granule_editor_blocks_styles() {
 
 	// Load the theme styles within Gutenberg.
-	// wp_enqueue_style( 'granule-gutenberg', get_theme_file_uri( '/assets/css/gutenberg.css' ), false, '1.0', 'all' );
+	wp_enqueue_style( 'granule-editor-blocks', get_theme_file_uri( '/assets/css/editor-blocks.css' ), null, '1.2' );
+
+	// Editor Style.
+	$fonts_url = granule_fonts();
+
+	if ( $fonts_url ) {
+		wp_enqueue_style( 'granule-fonts', $fonts_url );
+	}
+
+	/**
+	 * Overwrite Core theme styles with empty styles.
+	 * @see https://github.com/WordPress/gutenberg/issues/7776#issuecomment-406700703
+	 */
+	wp_deregister_style( 'wp-block-library-theme' );
+	wp_register_style( 'wp-block-library-theme', '' );
 
 }
 
-add_action( 'enqueue_block_editor_assets', 'granule_gutenberg_styles' );
+add_action( 'enqueue_block_editor_assets', 'granule_editor_blocks_styles' );
 
 
 /**
