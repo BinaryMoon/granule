@@ -14,7 +14,7 @@
 		return;
 	}
 
-	$featured_posts = granule_get_featured_posts( 4 );
+	$featured_posts = granule_get_featured_posts();
 
 ?>
 
