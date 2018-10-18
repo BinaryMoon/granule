@@ -139,10 +139,9 @@ function granule_get_featured_posts() {
 /**
  * Check if Jetpack Featured Content has any featured posts available.
  *
- * @param integer $minimum Minimum number of posts to return. If there's less than this return false.
  * @return boolean True if has featured posts, otherwise false.
  */
-function granule_has_featured_posts( $minimum = 1 ) {
+function granule_has_featured_posts() {
 
 	// If not front page and not static blog page (which is referred to with
 	// is_home).
@@ -154,15 +153,9 @@ function granule_has_featured_posts( $minimum = 1 ) {
 		return false;
 	}
 
-	$minimum = absint( $minimum );
-
 	$featured_posts = apply_filters( 'granule_get_featured_posts', array() );
 
 	if ( ! is_array( $featured_posts ) ) {
-		return false;
-	}
-
-	if ( $minimum > count( $featured_posts ) ) {
 		return false;
 	}
 
