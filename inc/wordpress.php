@@ -223,6 +223,9 @@ function granule_after_setup_theme() {
 	// Attachment page size.
 	add_image_size( 'granule-attachment', 1200, 9999 );
 
+	// Make Gutenberg embeds responsive.
+	add_theme_support( 'responsive-embeds' );
+
 	// Custom background.
 	add_theme_support(
 		'custom-background',
