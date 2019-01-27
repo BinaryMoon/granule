@@ -6,7 +6,7 @@
  * there are no specific archive templates. If there are other templates, for
  * example category.php or tag.php then these will be used instead.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package Granule
  * @subpackage Template
