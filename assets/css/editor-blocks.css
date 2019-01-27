@@ -23,8 +23,10 @@
 	font-family: "Merriweather",serif;
 	color: #333333;
 	direction: ltr;
-	font-feature-settings: "kern" 1,"liga" 1,"clig" 1;
-	font-variant-ligatures: no-discretionary-ligatures;
+	-webkit-font-feature-settings: "kern" 1,"liga" 1,"clig" 1;
+	        font-feature-settings: "kern" 1,"liga" 1,"clig" 1;
+	-webkit-font-variant-ligatures: no-discretionary-ligatures;
+	        font-variant-ligatures: no-discretionary-ligatures;
 	unicode-bidi: normal;
 }
 
@@ -68,7 +70,8 @@
 .edit-post-visual-editor h3 {
 	overflow-wrap: break-word;
 	word-wrap: break-word;
-	font-feature-settings: "kern" 1,"liga" 1,"clig" 1,"swsh" 1;
+	-webkit-font-feature-settings: "kern" 1,"liga" 1,"clig" 1,"swsh" 1;
+	        font-feature-settings: "kern" 1,"liga" 1,"clig" 1,"swsh" 1;
 }
 
 .edit-post-visual-editor h1 {
@@ -117,7 +120,9 @@
 	display: block;
 	word-wrap: normal;
 	white-space: pre;
-	tab-size: 4;
+	-moz-tab-size: 4;
+	  -o-tab-size: 4;
+	     tab-size: 4;
 }
 
 .edit-post-visual-editor pre.compress {
