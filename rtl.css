@@ -279,6 +279,7 @@ div.jetpack-testimonial-shortcode .testimonial-featured-image {
 
 div.jetpack-testimonial-shortcode .testimonial-featured-image img {
 	margin-left: 1rem;
+	margin-right: 0;
 }
 
 .entry-breadcrumbs a {
@@ -459,7 +460,7 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 	right: 6px;
 }
 
-.wp-block-pullquote,
+.wp-block-pullquote blockquote,
 .wp-block-quote,
 .wp-block-quote.is-large {
 	padding: 3rem 3rem;

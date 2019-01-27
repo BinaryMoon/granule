@@ -7,6 +7,7 @@ Author: Pro Theme Design
 Author URI: https://prothemedesign.com/
 Text Domain: granule
 Domain Path: /languages/
+Dev: 1
 Tags:
 
 , black
@@ -1276,6 +1277,7 @@ div.jetpack-testimonial-shortcode .testimonial-featured-image img {
 	max-height: 1.5rem;
 	width: auto;
 	margin-right: 1rem;
+	margin-left: 0;
 }
 div.jetpack-testimonial-shortcode.column-2 .testimonial-entry {
 	width: 50%;
@@ -1850,7 +1852,7 @@ p.wp-block-subhead {
 	margin: 0;
 }
 
-.wp-block-pullquote,
+.wp-block-pullquote blockquote,
 .wp-block-quote,
 .wp-block-quote.is-large {
 	margin-bottom: 3rem;
@@ -1858,12 +1860,12 @@ p.wp-block-subhead {
 	position: relative;
 	background: rgba(0,0,0,0.05);
 }
-.wp-block-pullquote p:last-child,
+.wp-block-pullquote blockquote p:last-child,
 .wp-block-quote.is-large p:last-child,
 .wp-block-quote p:last-child {
 	margin-bottom: 0;
 }
-.wp-block-pullquote cite,
+.wp-block-pullquote blockquote cite,
 .wp-block-quote.is-large cite,
 .wp-block-quote cite {
 	margin-top: 0.75rem;
