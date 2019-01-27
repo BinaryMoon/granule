@@ -39,6 +39,7 @@
  * responsive styles
  * set content_width (in granule_content_width and granule_after_setup_theme)
  * theme_colors
+ * Remove "Dev: 1" from style.scss so that packages get build properly.
  * check custom page template styles
  * check custom logo properties are appropriate
  * rtl.css - "gulp rtl --theme granule"
