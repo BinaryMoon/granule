@@ -159,6 +159,10 @@ function granule_has_featured_posts() {
 		return false;
 	}
 
+	if ( count( $featured_posts ) <= 0 ) {
+		return false;
+	}
+
 	return true;
 
 }
