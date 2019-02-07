@@ -348,7 +348,9 @@ function granule_after_setup_theme() {
 		)
 	);
 
-	// HTML5 FTW.
+	/**
+	 * HTML5 FTW.
+	 */
 	add_theme_support(
 		'html5',
 		apply_filters(
@@ -381,7 +383,11 @@ function granule_after_setup_theme() {
 		)
 	);
 
-	// Custom Logo.
+	/**
+	 * Custom Logo.
+	 *
+	 * @link https://developer.wordpress.org/themes/functionality/custom-logo/
+	 */
 	add_theme_support(
 		'custom-logo',
 		apply_filters(
@@ -395,7 +401,11 @@ function granule_after_setup_theme() {
 		)
 	);
 
-	// Menus.
+	/**
+	 * Menus.
+	 *
+	 * @link https://developer.wordpress.org/themes/functionality/navigation-menus/
+	 */
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Header Top', 'granule' ),
@@ -403,7 +413,9 @@ function granule_after_setup_theme() {
 		)
 	);
 
-	// Editor Style.
+	/**
+	 * Editor Style.
+	 */
 	$fonts_url = granule_fonts();
 	if ( $fonts_url ) {
 		add_editor_style( $fonts_url );
