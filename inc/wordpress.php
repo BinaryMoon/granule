@@ -84,6 +84,76 @@ add_action( 'wp_enqueue_scripts', 'granule_enqueue' );
 
 
 /**
+ * Enqueue WordPress theme styles within Gutenberg.
+ */
+function granule_editor_blocks_styles() {
+
+	// Load the theme styles within Gutenberg.
+	wp_enqueue_style( 'granule-editor-blocks', get_theme_file_uri( '/assets/css/editor-blocks.css' ), null, '1.2' );
+
+	// Editor Style.
+	$fonts_url = granule_fonts();
+
+	if ( $fonts_url ) {
+		wp_enqueue_style( 'granule-fonts', $fonts_url );
+	}
+
+	/**
+	 * Overwrite Core theme styles with empty styles.
+	 * @see https://github.com/WordPress/gutenberg/issues/7776#issuecomment-406700703
+	 */
+	wp_deregister_style( 'wp-block-library-theme' );
+	wp_register_style( 'wp-block-library-theme', '' );
+
+}
+
+add_action( 'enqueue_block_editor_assets', 'granule_editor_blocks_styles' );
+
+
+/**
+ * Modify post type arguments to add default post type templates.
+ *
+ * @param  array  $args      The default post type arguments.
+ * @param  string $post_type The post type for the current request.
+ * @return array             Modified arguments including the new template properties.
+ */
+function granule_post_type_arguments( $args, $post_type ) {
+
+	// Only apply changes to the specified post type.
+	if ( 'post' === $post_type ) {
+
+		/**
+		 * Adds a template property to the specified post type arguments.
+		 *
+		 * You can get a list of available blocks by entering the following js
+		 * command in the console window in your brownser.
+		 * wp.blocks.getBlockTypes()
+		 *
+		 * The output of this command also shows the available attributes for setting defaults.
+		 *
+		 * @var array
+		 */
+		$args['template'] = array(
+			array( 'core/image' ),
+			array(
+				'core/paragraph',
+				array(
+					'placeholder' => esc_attr__( 'Start writing', 'granule' ),
+				),
+			),
+			array( 'core/quote' ),
+		);
+
+	}
+
+	return $args;
+
+}
+
+add_filter( 'register_post_type_args', 'granule_post_type_arguments', 20, 2 );
+
+
+/**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * The theme is responsive so the width is likely to be narrower than the value
@@ -226,7 +296,47 @@ function granule_after_setup_theme() {
 	// Make Gutenberg embeds responsive.
 	add_theme_support( 'responsive-embeds' );
 
-	// Custom background.
+	// Disable custom font sizes, ensuring consistent vertical rhythm.
+	add_theme_support( 'disable-custom-font-sizes' );
+
+	/**
+	 * Custom colours for use in the editor. A nice way to provide consistancy
+	 * in user editable content.
+	 *
+	 * @link https://wordpress.org/gutenberg/handbook/reference/theme-support/
+	 */
+	add_theme_support(
+		'editor-color-palette',
+		array(
+			array(
+				'name' => esc_html__( 'White', 'granule' ),
+				'slug' => 'primary',
+				'color' => '#ffffff',
+			),
+			array(
+				'name' => esc_html__( 'Light Gray', 'granule' ),
+				'slug' => 'secondary',
+				'color' => '#f5f5f5',
+			),
+			array(
+				'name' => esc_html__( 'Black', 'granule' ),
+				'slug' => 'highlight',
+				'color' => '#000000',
+			)
+		)
+	);
+
+	/**
+	 * Add support for full width images and other content such as videos.
+	 * Remove this if the theme does not support a full width layout.
+	 */
+	add_theme_support( 'align-wide' );
+
+	/**
+	 * Custom background.
+	 *
+	 * @link https://developer.wordpress.org/themes/functionality/custom-headers/
+	 */
 	add_theme_support(
 		'custom-background',
 		apply_filters(

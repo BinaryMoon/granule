@@ -46,6 +46,7 @@
  * change google font slugs so they match the font names (in granule_fonts() inc/wordpress.php and inc/wpcom.php)
  * theme scan
  * test site logo
+ * test block colours
  * readme.txt
  * test hiding header and description through customizer works
  * test logo is still visible when you hide the header text
@@ -72,9 +73,6 @@ require get_parent_theme_file_path( 'inc/template-tags.php' );
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_parent_theme_file_path( 'inc/jetpack.php' );
 }
-
-// Support for the Gutenberg content editor.
-require get_parent_theme_file_path( 'inc/gutenberg.php' );
 
 // Custom Custmomizer control that adds a category dropdown select box.
 require get_parent_theme_file_path( 'inc/class-granule-category-dropdown-custom-control.php' );
