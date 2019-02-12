@@ -359,7 +359,7 @@ function granule_contributor( $user_id = null, $post_count = null ) {
 			</h2>
 
 <?php
-	the_author_meta( 'description' );
+	the_author_meta( 'description', $user_id );
 
 	if ( $post_count ) {
 ?>
