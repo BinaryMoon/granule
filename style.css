@@ -1117,9 +1117,7 @@ main div.sharedaddy h3.sd-title:before {
 }
 
 #jp-relatedposts .jp-relatedposts-items {
-	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
 }
 #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
@@ -1695,9 +1693,7 @@ p.demo_store a {
 	right: 0;
 	left: 0;
 	bottom: 0;
-	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-align: center;
 	align-items: center;
 }
 .landing-page main {
@@ -1932,7 +1928,6 @@ p.wp-block-subhead {
 .wp-block-cover-image.aligncenter,
 .wp-block-cover-image.alignleft,
 .wp-block-cover-image.alignright {
-	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -3003,9 +2998,7 @@ main.full-width {
 .contributor {
 	padding: 0 0 0 7.5rem;
 	margin: 0 0 4.5rem 0;
-	display: -ms-grid;
-	display:     grid;
-	-ms-grid-columns: 15% auto;
+	display: grid;
 	grid-template-columns: 15% auto;
 	column-gap: 1.5rem;
 }
@@ -3436,8 +3429,7 @@ a.thumbnail img {
 		border: none;
 	}
 	#jp-relatedposts .jp-relatedposts-items {
-		-ms-flex-wrap: wrap;
-		    flex-wrap: wrap;
+		flex-wrap: wrap;
 	}
 	#jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
 		width: 100%;
