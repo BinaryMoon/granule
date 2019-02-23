@@ -77,7 +77,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 // Custom Custmomizer control that adds a category dropdown select box.
 require get_parent_theme_file_path( 'inc/class-granule-category-dropdown-custom-control.php' );
 
-// Custom Custmomizer control that adds a drag and drop system for rearranging
+// Custom Customizer control that adds a drag and drop system for rearranging
 // content.
 require get_parent_theme_file_path( 'inc/class-granule-dragdrop-list-control.php' );
 
