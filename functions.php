@@ -63,6 +63,9 @@
 // WordPress specific functionality (actions and filters).
 require get_parent_theme_file_path( 'inc/wordpress.php' );
 
+// Add backwards compatability functions.
+require get_parent_theme_file_path( 'inc/compat.php' );
+
 // Custom header.
 require get_parent_theme_file_path( 'inc/custom-header.php' );
 

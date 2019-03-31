@@ -23,6 +23,8 @@
 
 <body <?php body_class(); ?>>
 
+<?php wp_body_open(); ?>
+
 <div class="webpage">
 
 	<a href="#site-content" class="screen-reader-shortcut"><?php esc_html_e( 'Skip to content', 'granule' ); ?></a>
