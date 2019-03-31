@@ -21,9 +21,9 @@
 	<section class="showcase">
 
 <?php
-	foreach ( $featured_posts as $post ) {
+	foreach ( $featured_posts as $featured_post ) {
 
-		setup_postdata( $post );
+		setup_postdata( $featured_post );
 
 		get_template_part( 'parts/content', 'slider' );
 
