@@ -2010,6 +2010,7 @@ p.wp-block-subhead {
 .widget iframe {
 	max-width: 100%;
 	min-width: 0 !important;
+	contain: strict;
 }
 .widget .jetpack-video-wrapper,
 .widget .mejs-container,
