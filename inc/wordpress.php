@@ -31,7 +31,7 @@ function granule_enqueue() {
 	$fonts_url = granule_fonts();
 
 	if ( $fonts_url ) {
-		wp_enqueue_style( 'granule-fonts', $fonts_url, array(), null );
+		wp_enqueue_style( 'granule-fonts', $fonts_url, array(), '1.0' );
 	}
 
 	// Javascript.
@@ -95,15 +95,16 @@ function granule_editor_blocks_styles() {
 	$fonts_url = granule_fonts();
 
 	if ( $fonts_url ) {
-		wp_enqueue_style( 'granule-fonts', $fonts_url );
+		wp_enqueue_style( 'granule-fonts', $fonts_url, array(), '1.0' );
 	}
 
 	/**
 	 * Overwrite Core theme styles with empty styles.
+	 *
 	 * @see https://github.com/WordPress/gutenberg/issues/7776#issuecomment-406700703
 	 */
 	wp_deregister_style( 'wp-block-library-theme' );
-	wp_register_style( 'wp-block-library-theme', '' );
+	wp_register_style( 'wp-block-library-theme', '', null, '1.0' );
 
 }
 
@@ -322,7 +323,7 @@ function granule_after_setup_theme() {
 				'name' => esc_html__( 'Black', 'granule' ),
 				'slug' => 'highlight',
 				'color' => '#000000',
-			)
+			),
 		)
 	);
 
@@ -519,105 +520,6 @@ function granule_nav_menu( $params ) {
 	return $html;
 
 }
-
-
-/**
- * Add additional body classes to body_class function call.
- *
- * Checks to see if theme has featured posts using {@see granule_has_featured_posts}.
- *
- * @param array $classes Array of body classes.
- * @return array
- */
-function granule_body_class( $classes ) {
-
-	if ( is_multi_author() ) {
-		$classes[] = 'multi-author-true';
-	} else {
-		$classes[] = 'multi-author-false';
-	}
-
-	if ( is_active_sidebar( 'sidebar-1' ) ) {
-		$classes[] = 'themes-sidebar1-active';
-	}
-
-	if ( is_active_sidebar( 'sidebar-2' ) ) {
-		$classes[] = 'themes-sidebar2-active';
-	}
-
-	if ( granule_has_featured_posts() ) {
-		$classes[] = 'themes-has-featured-posts';
-	}
-
-	if ( display_header_text() ) {
-		$classes[] = 'has-site-title';
-	}
-
-	if ( get_header_image() ) {
-		$classes[] = 'has-custom-header';
-	}
-
-	if ( ! is_singular() && ! is_404() ) {
-		$classes[] = 'hfeed';
-	}
-
-	return $classes;
-
-}
-
-add_filter( 'body_class', 'granule_body_class' );
-
-
-/**
- * Add additional post classes to post_class function call.
- *
- * @link https://core.trac.wordpress.org/ticket/28482
- * @param array $classes Array of post classes.
- * @return array
- */
-function granule_post_class( $classes ) {
-
-	$image = get_the_post_thumbnail( get_the_ID() );
-
-	if ( $image ) {
-
-		$classes[] = 'post-has-thumbnail';
-
-	} else {
-
-		$classes[] = 'post-no-thumbnail';
-
-	}
-
-	/**
-	 * Removes hentry class from the array of post classes.
-	 * Currently, having the class on pages is not correct use of hentry.
-	 * hentry requires more properties than pages typically have.
-	 * Core is not likely to remove class because of backward compatibility.
-	 */
-	if ( 'page' === get_post_type() ) {
-
-		$classes = array_diff( $classes, array( 'hentry' ) );
-
-	}
-
-	/**
-	 * Remove this if you need to add text contrast to images
-	if ( isset( $image[0] ) ) {
-
-		$tone = granule_image_tone( $image[0] );
-
-		if ( $tone ) {
-			$classes[] = $tone;
-		}
-	}
-	 */
-
-	return $classes;
-
-}
-
-add_filter( 'post_class', 'granule_post_class' );
 
 
 /**
