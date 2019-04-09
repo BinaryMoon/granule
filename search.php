@@ -65,6 +65,7 @@
 				'mid_size' => 2,
 				'prev_text' => esc_html__( 'Newer', 'granule' ),
 				'next_text' => esc_html__( 'Older', 'granule' ),
+				'before_page_number' => '<span class="screen-reader-text"> ' . __( 'page', 'granule' ) . ' </span>',
 			)
 		);
 
