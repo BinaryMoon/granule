@@ -11,7 +11,7 @@
 
 /* global granule_site_settings, wp */
 
-;( function( window, document, $ ) {
+; ( function( window, document, $ ) {
 
 	'use strict';
 
@@ -59,7 +59,7 @@
 
 		if ( element ) {
 
-			if ( ! ( /^(?:a|select|input|button|textarea)$/i.test( element.tagName ) ) ) {
+			if ( !( /^(?:a|select|input|button|textarea)$/i.test( element.tagName ) ) ) {
 				element.tabIndex = -1;
 			}
 
@@ -175,7 +175,7 @@
 	// to events, and not the events themselves.
 	var resize_window = function() {
 
-		if ( typeof( Event ) === 'function' ) {
+		if ( typeof ( Event ) === 'function' ) {
 			window.dispatchEvent( new Event( 'resize' ) );
 		} else {
 			var event = window.document.createEvent( 'UIEvents' );
@@ -200,7 +200,7 @@
 				itemSelector: 'article',
 				columnWidth: '.grid-sizer',
 				gutter: 0,
-				isOriginLeft: ! $( 'body' ).is( '.rtl' ),
+				isOriginLeft: !$( 'body' ).is( '.rtl' ),
 				percentPosition: true
 			}
 		);
@@ -245,7 +245,7 @@
 			function() {
 
 				// Make sure we are viewing a page that uses Masonry.
-				if ( 'undefined' === typeof( $grid ) || 0 === $grid.length ) {
+				if ( 'undefined' === typeof ( $grid ) || 0 === $grid.length ) {
 					return;
 				}
 
@@ -256,7 +256,7 @@
 
 				// When images are loaded appended infinite scroll items to Masonry.
 				$grid.imagesLoaded(
-					function () {
+					function() {
 
 						$grid
 							.masonry( 'appended', $new_articles )
@@ -285,7 +285,7 @@
 						itemSelector: '.widget',
 						columnWidth: '.grid-sizer',
 						gutter: 0,
-						isOriginLeft: ! $( 'body' ).is( '.rtl' ),
+						isOriginLeft: !$( 'body' ).is( '.rtl' ),
 						percentPosition: true
 					}
 				);
@@ -392,17 +392,50 @@
 			);
 
 			// Dropdown menu touch screen improvements.
-			$( '.menu' ).find( 'a' ).on(
-				'focus blur',
-				function() {
+			// Only performed on touch devices.
+			if ( is_touch_device() ) {
 
-					$( this ).parents().toggleClass( 'focus' );
+				// If a dropdown menu is tapped on a touch device then focus the menu.
+				$( '.menu-item-has-children > a' ).on(
+					'touchstart',
+					function( e ) {
 
-				}
-			);
+						// Hide any visible menus.
+						$( '.menu li' ).removeClass( 'focus' );
 
-			// Add href to links without so that dropdowns work properly on
-			// touch devices.
+						var $parent = $( this ).parent( 'li' );
+
+						/**
+						 * If the parent is not focused then cancel the click.
+						 * This prevents the page from changing before children can
+						 * be seen and selected.
+						 * If you click a link again then the link will be followed.
+						 */
+						if ( !$parent.hasClass( 'focus' ) && !$( '.menu' ).hasClass( 'menu-on' ) ) {
+							e.preventDefault();
+						}
+
+						$parent.toggleClass( 'focus' );
+
+					}
+				);
+
+				// If you tap on the page body then the page will remove focus from all menu items.
+				$( 'body' ).on(
+					'touchstart',
+					function( e ) {
+						if ( !$( e.target ).closest( '.menu li' ).length ) {
+							$( '.menu li' ).removeClass( 'focus' );
+						}
+					}
+				);
+
+			}
+
+			/**
+			 * Add href to links without so that dropdowns work properly on
+			 * touch devices.
+			 */
 			$( '.menu' ).find( 'a:not([href])' ).on(
 				'click',
 				function( e ) {
@@ -446,7 +479,7 @@
 
 						var id = location.hash.substring( 1 );
 
-						if ( ! ( /^[A-z0-9_-]+$/.test( id ) ) ) {
+						if ( !( /^[A-z0-9_-]+$/.test( id ) ) ) {
 							return;
 						}
 
