@@ -15,10 +15,6 @@
 
 	<main id="main">
 
-<?php
-	if ( have_posts() ) {
-?>
-
 		<header class="entry-archive-header">
 
 			<h1 class="entry-title entry-archive-title">
@@ -47,6 +43,9 @@
 			<div id="main-content" class="main-content content-posts content-masonry">
 
 <?php
+
+	if ( have_posts() ) {
+
 		while ( have_posts() ) {
 
 			the_post();
@@ -60,6 +59,7 @@
 		</div>
 
 <?php
+
 		the_posts_pagination(
 			array(
 				'mid_size' => 2,
@@ -69,17 +69,8 @@
 			)
 		);
 
-	} else {
-?>
-
-		<div class="main-content">
-
-			<?php get_template_part( 'parts/content-empty' ); ?>
-
-		</div>
-
-<?php
 	}
+
 ?>
 
 	</main>
