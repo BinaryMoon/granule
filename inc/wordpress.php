@@ -109,6 +109,7 @@ function granule_editor_blocks_styles() {
 }
 
 add_action( 'enqueue_block_editor_assets', 'granule_editor_blocks_styles' );
+add_action( 'enqueue_block_assets', 'granule_editor_blocks_styles' );
 
 
 /**
@@ -210,6 +211,7 @@ function granule_fonts() {
 		$query_args = array(
 			'family' => rawurlencode( implode( '|', $fonts ) ),
 			'subset' => rawurlencode( 'latin,latin-ext' ),
+			'display' => 'swap',
 		);
 
 		return add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
