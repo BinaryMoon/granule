@@ -256,21 +256,6 @@ function granule_testimonials_image() {
 
 
 /**
- * Flush rewrite rules for custom post types on theme setup and switch.
- *
- * This is so that Projects, Testimonials, and other Custom Post Types work as
- * expected. Is hooked into `after_switch_theme`.
- */
-function granule_flush_rewrite_rules() {
-
-	flush_rewrite_rules();
-
-}
-
-add_action( 'after_switch_theme', 'granule_flush_rewrite_rules' );
-
-
-/**
  * Add breadcrumbs to a page.
  *
  * Breadcrumbs will not display on blog posts, but may display on other custom
