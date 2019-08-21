@@ -311,7 +311,11 @@ function granule_contributor( $user_id = null, $post_count = null ) {
 
 		<div class="entry">
 
-			<h2><?php granule_post_author(); ?></h2>
+			<h2 class="author v-card">
+				<a class="url fn n p-name u-url" href="<?php echo esc_url( get_author_posts_url( $user_id ) ); ?>">
+					<?php the_author_meta( 'display_name', $user_id ); ?>
+				</a>
+			</h2>
 
 <?php
 	the_author_meta( 'description', $user_id );
