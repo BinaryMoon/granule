@@ -64,7 +64,10 @@
 require get_parent_theme_file_path( 'inc/wordpress.php' );
 
 // Add backwards compatability functions.
-require get_parent_theme_file_path( 'inc/compat.php' );
+// require get_parent_theme_file_path( 'inc/compat.php' );
+
+// Filters that modify/ add to WordPress html classes to make them more useful.
+require get_parent_theme_file_path( 'inc/wordpress-html-classes.php' );
 
 // Custom header.
 require get_parent_theme_file_path( 'inc/custom-header.php' );
@@ -73,9 +76,7 @@ require get_parent_theme_file_path( 'inc/custom-header.php' );
 require get_parent_theme_file_path( 'inc/template-tags.php' );
 
 // Jetpack specific functionality (if Jetpack is enabled).
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_parent_theme_file_path( 'inc/jetpack.php' );
-}
+require get_parent_theme_file_path( 'inc/jetpack.php' );
 
 // Custom Custmomizer control that adds a category dropdown select box.
 require get_parent_theme_file_path( 'inc/class-granule-category-dropdown-custom-control.php' );
